@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-// create-profile-api — scaffolds a "Profile as an API" site with fictional sample content.
+// create-mycv — scaffolds a mycv site (your CV as a site, six designs) with fictional sample content.
 //
-//   npm create profile-api my-site [-- --theme git --lang en]
+//   npm create mycv my-site [-- --theme git --lang en]
 //
 // Downloads the template (the GitHub repo tarball, or a local checkout with --from <dir>), keeps a
 // single language, drops the sample persona in, names the package after the folder and runs git init.
@@ -27,7 +27,7 @@ const flag = (name, fallback) => {
 };
 if (args.includes("--help") || args.includes("-h")) {
   console.log(
-    `usage: create-profile-api [dir] [--theme ${THEMES.join("|")}] [--lang en] [--from <url|dir>]`,
+    `usage: create-mycv [dir] [--theme ${THEMES.join("|")}] [--lang en] [--from <url|dir>]`,
   );
   process.exit(0);
 }
@@ -37,7 +37,7 @@ for (let i = 0; i < args.length; i++) {
     i++; // skip the flag's value
   else positional.push(args[i]);
 }
-const dir = resolve(positional[0] ?? "profile-api");
+const dir = resolve(positional[0] ?? "mycv");
 const theme = flag("theme", "console");
 const lang = flag("lang", "en");
 const from = flag("from", REPO_TARBALL);

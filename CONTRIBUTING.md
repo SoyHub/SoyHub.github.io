@@ -11,7 +11,7 @@ pnpm lint && pnpm typecheck && pnpm test
 pnpm build            # static export in out/, plus PDFs and favicon
 ```
 
-CI runs the same, then scaffolds a fresh project with `packages/create-profile-api` and builds it.
+CI runs the same, then scaffolds a fresh project with `packages/create-mycv` and builds it.
 
 ## Add a theme
 
@@ -36,11 +36,11 @@ or `messages/` — the tests enforce it. Describe clients by sector.
 
 ## Publishing the scaffolder
 
-`packages/create-profile-api` has no dependencies and fetches the `main` tarball at run time, so
+`packages/create-mycv` has no dependencies and fetches the `main` tarball at run time, so
 it only needs a new version when its own script changes:
 
 ```
-cd packages/create-profile-api
+cd packages/create-mycv
 npm version patch
 npm publish
 ```

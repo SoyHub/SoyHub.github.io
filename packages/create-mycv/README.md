@@ -1,5 +1,5 @@
 <p align="center">
-  <img src=".github/brand/banner.svg" alt="mycv" width="100%">
+  <img src="https://raw.githubusercontent.com/SoyHub/SoyHub.github.io/main/.github/brand/banner.svg" alt="mycv" width="100%">
 </p>
 
 <p align="center">
@@ -22,13 +22,13 @@
   <a href="#the-stack-explained">Stack</a>
 </p>
 
-|             `console` — API explorer              |                  `terminal` — CLI                   |
-| :-----------------------------------------------: | :-------------------------------------------------: |
-| ![console](.github/brand/screenshots/console.png) | ![terminal](.github/brand/screenshots/terminal.png) |
-|           **`openapi`** — Swagger spec            |               **`git`** — repository                |
-| ![openapi](.github/brand/screenshots/openapi.png) |      ![git](.github/brand/screenshots/git.png)      |
-|            **`status`** — status page             |             **`rpg`** — character sheet             |
-|  ![status](.github/brand/screenshots/status.png)  |      ![rpg](.github/brand/screenshots/rpg.png)      |
+|                                             `console` — API explorer                                             |                                                  `terminal` — CLI                                                  |
+| :--------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------: |
+| ![console](https://raw.githubusercontent.com/SoyHub/SoyHub.github.io/main/.github/brand/screenshots/console.png) | ![terminal](https://raw.githubusercontent.com/SoyHub/SoyHub.github.io/main/.github/brand/screenshots/terminal.png) |
+|                                           **`openapi`** — Swagger spec                                           |                                               **`git`** — repository                                               |
+| ![openapi](https://raw.githubusercontent.com/SoyHub/SoyHub.github.io/main/.github/brand/screenshots/openapi.png) |      ![git](https://raw.githubusercontent.com/SoyHub/SoyHub.github.io/main/.github/brand/screenshots/git.png)      |
+|                                            **`status`** — status page                                            |                                            **`rpg`** — character sheet                                             |
+|  ![status](https://raw.githubusercontent.com/SoyHub/SoyHub.github.io/main/.github/brand/screenshots/status.png)  |      ![rpg](https://raw.githubusercontent.com/SoyHub/SoyHub.github.io/main/.github/brand/screenshots/rpg.png)      |
 
 ## Why
 
@@ -60,6 +60,21 @@ pnpm dev
 pnpm test           # guards: valid JSON, no placeholders, no phone numbers, no denylisted names
 pnpm build          # static export in out/ — also regenerates the PDFs and the favicon
 ```
+
+## Scaffolder options
+
+```
+npm create mycv [dir] -- [--theme console|terminal|openapi|git|status|rpg] [--lang en] [--from <url|dir>]
+```
+
+| Flag      | Default                      | What it does                                                |
+| --------- | ---------------------------- | ----------------------------------------------------------- |
+| `--theme` | `console`                    | The design to start with (`"theme"` in `content/site.json`) |
+| `--lang`  | `en`                         | The single language kept; add more later                    |
+| `--from`  | the GitHub tarball of `main` | A URL to a `.tar.gz`, or a local checkout for development   |
+
+Requires Node 20+ and `tar` on the PATH. The package has no dependencies; the template is fetched
+from the repository at run time, so it is always the current version.
 
 ## Deploy to GitHub Pages
 
@@ -242,10 +257,10 @@ samples/            the fictional persona a scaffolded project starts with
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md): the checks, how to add a theme or a language, and how the
+See [CONTRIBUTING.md](https://github.com/SoyHub/SoyHub.github.io/blob/main/CONTRIBUTING.md): the checks, how to add a theme or a language, and how the
 scaffolder is published.
 
 ## License
 
-[MIT](LICENSE). The profile content and photo describe a real person and are not part of the
+[MIT](https://github.com/SoyHub/SoyHub.github.io/blob/main/LICENSE). The profile content and photo describe a real person and are not part of the
 licence — replace them with your own.

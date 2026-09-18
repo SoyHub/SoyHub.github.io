@@ -1,8 +1,8 @@
 {
-  "name": "profile-as-an-api",
+  "name": "mycv",
   "version": "1.0.0",
   "private": true,
-  "description": "Portfolio template: every section of your CV is an endpoint. Static, SEO-ready, GitHub Pages.",
+  "description": "Your CV as a site: six designs, ten languages, one JSON file. Static, SEO-ready, GitHub Pages.",
   "license": "MIT",
   "repository": "github:SoyHub/SoyHub.github.io",
   "homepage": "https://soyhub.github.io",

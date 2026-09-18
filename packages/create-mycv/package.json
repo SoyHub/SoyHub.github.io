@@ -1,11 +1,11 @@
 {
-  "name": "create-profile-api",
+  "name": "create-mycv",
   "version": "0.1.0",
-  "description": "Scaffold a “Profile as an API” portfolio: your CV as browsable endpoints, six designs, ten languages, static, deploys to GitHub Pages.",
+  "description": "Scaffold mycv: your CV as a site — six designs (API explorer, terminal, OpenAPI spec, git repo, status page, RPG sheet), ten languages, static, deploys to GitHub Pages.",
   "license": "MIT",
   "type": "module",
   "bin": {
-    "create-profile-api": "index.mjs"
+    "create-mycv": "index.mjs"
   },
   "files": [
     "index.mjs",
@@ -17,7 +17,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SoyHub/SoyHub.github.io.git",
-    "directory": "packages/create-profile-api"
+    "directory": "packages/create-mycv"
   },
   "homepage": "https://github.com/SoyHub/SoyHub.github.io#readme",
   "bugs": "https://github.com/SoyHub/SoyHub.github.io/issues",
@@ -32,5 +32,8 @@
     "create",
     "scaffold",
     "developer-portfolio"
-  ]
+  ],
+  "scripts": {
+    "prepublishOnly": "node sync-readme.mjs"
+  }
 }

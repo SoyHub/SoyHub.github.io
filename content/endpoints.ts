@@ -96,7 +96,7 @@ export const endpoints: Endpoint[] = [
     path: "/ask",
     href: "/ask",
     title: "Ask",
-    description: "free-form endpoint · RAG console",
+    description: "chat console · coming soon",
     indexable: false,
   },
 ];

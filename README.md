@@ -24,7 +24,7 @@
 Recruiters skim; engineers click. This site gives both something to do: an endpoint list with keyboard
 navigation, a request bar you can type into, a response frame with a Rendered tab and a JSON tab, and
 real machine-readable outputs (`/cv.json`, `/cv.txt`, `/llms.txt`) for the tools that read profiles
-these days. Everything renders from **one typed file**, `content/profile.ts`, so the site, the JSON
+these days. Everything renders from **one typed file**, `content/profile.json`, so the site, the JSON
 Resume, the plain-text CV and the PDF never drift apart.
 
 ## Quick start
@@ -38,7 +38,7 @@ pnpm install
 pnpm dev            # http://localhost:3000
 ```
 
-Then edit the files in `content/` (see below), and:
+Then edit the JSON files in `content/` (see below — no code involved), and:
 
 ```bash
 pnpm test           # guards: no placeholders, no phone numbers, no denylisted names
@@ -57,24 +57,44 @@ Any other static host works too: `pnpm build` and upload the `out/` folder.
 
 ## Make it yours
 
-Everything personal lives in `content/`. Nothing outside it mentions a person.
+Everything personal lives in `content/` as plain JSON — no code to touch. Each file points at a
+schema, so an editor like VS Code autocompletes the fields and underlines mistakes as you type, and
+`pnpm build` refuses a file that doesn't fit, telling you exactly which field is wrong.
 
-| Edit                     | To change                                                                                                                                                                    |
-| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `content/profile.ts`     | Every CV fact: name, title, contact links, summary, three headline tiles, experience, projects, skills, education, languages. Typed — your editor tells you what goes where. |
-| `content/site.ts`        | Page title and description, the social-preview subtitle, the hero caption, the request-bar easter egg, the chat's starter questions.                                         |
-| `content/endpoints.ts`   | The endpoint list. Each entry has a method, path, title, one-line description and the SEO text of its page.                                                                  |
-| `content/now.ts`         | The dated `/now` page.                                                                                                                                                       |
-| `content/hero-diff.ts`   | The before/after code in the animated hero. Write your own — the sample is COBOL → Java.                                                                                     |
-| `content/knowledge/*.md` | The chat console's corpus (also published as `/llms-full.txt`). Skip it if you don't switch the chat on.                                                                     |
-| `public/photo.png`       | Your photo, square.                                                                                                                                                          |
+| Edit                     | To change                                                                                                                                                                                                                |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `content/profile.json`   | Every CV fact: name, title, contact links, summary, three headline tiles, experience, projects, skills, education, languages.                                                                                            |
+| `content/site.json`      | The theme, page title and description, the social-preview subtitle, the hero (caption and before/after code), the request-bar easter egg, the chat's starter questions, and the endpoint list with each page's SEO text. |
+| `content/now.json`       | The dated `/now` page.                                                                                                                                                                                                   |
+| `content/knowledge/*.md` | The chat console's corpus (also published as `/llms-full.txt`). Skip it if you don't switch the chat on.                                                                                                                 |
+| `public/photo.png`       | Your photo, square.                                                                                                                                                                                                      |
 
-To add an endpoint: add an entry in `content/endpoints.ts`, create `app/(explorer)/<path>/page.tsx`
-(copy `education/page.tsx`), and put your view in `components/views/`. A test fails if the two lists
-don't match.
+To add an endpoint: add an entry to `endpoints` in `content/site.json`, create
+`app/(explorer)/<path>/page.tsx` (copy `education/page.tsx`), and put your view in `components/views/`.
+A test fails if the two lists don't match.
 
-Colours and fonts are CSS variables at the top of `app/globals.css`; light and dark themes are both
-defined there. Fonts are IBM Plex (sans, mono, serif) loaded through `next/font`.
+### Themes
+
+Set `"theme"` in `content/site.json` to one of:
+
+| Theme      | Look                                                            |
+| ---------- | --------------------------------------------------------------- |
+| `console`  | Teal-black engineering console with brass accents (the default) |
+| `paper`    | Warm cream paper and oxblood ink — reads like a printed CV      |
+| `terminal` | Black terminal, phosphor green, amber for the write verbs       |
+| `slate`    | Neutral slate with an electric-blue accent — the corporate one  |
+
+Each theme has a dark and a light variant (the toggle in the top bar switches between them; the
+visitor's choice is remembered). The palette also colours the favicon, the share cards and the PDF.
+To add a theme, add an entry to `lib/themes.ts` and to the `theme` enum in `content/schema.ts` —
+fourteen colours, documented at the top of that file. Fonts are IBM Plex (sans, mono, serif) via `next/font`.
+
+### Icons and share cards
+
+All generated from your content at build time — nothing to draw: `favicon.ico` (16/32/48), PNG
+icons, the Apple touch icon and the 192/512 manifest icons (from the initial of your name), and a
+1200×630 Open Graph card per page (the home card carries your photo). Change the design once, in
+`lib/icon.tsx` or `lib/og.tsx`.
 
 ### Publishing rules
 
@@ -106,15 +126,16 @@ clients and colleagues there). Describe clients by sector, not by name. See `con
 | [Tailwind CSS](https://tailwindcss.com)                                         | 4       | Styling, with the palette declared once as CSS variables in `globals.css` and exposed as utilities (`text-brass`, `bg-sunk`, `border-hair`…).                                                                                                                                                            |
 | [TypeScript](https://www.typescriptlang.org)                                    | 5       | Types for the content model (`content/profile.types.ts`) so a typo in your CV data fails the build, not the visitor.                                                                                                                                                                                     |
 | [`next/og`](https://nextjs.org/docs/app/api-reference/functions/image-response) | —       | Renders the social-preview PNGs from JSX at build time (`lib/og.tsx`).                                                                                                                                                                                                                                   |
-| [@react-pdf/renderer](https://react-pdf.org)                                    | 4       | Renders `content/profile.ts` to `public/cv.pdf` in `prebuild` (`scripts/build-pdf.tsx`) — the download can't drift from the site.                                                                                                                                                                        |
+| [@react-pdf/renderer](https://react-pdf.org)                                    | 4       | Renders `content/profile.json` to `public/cv.pdf` in `prebuild` (`scripts/build-pdf.tsx`) — the download can't drift from the site.                                                                                                                                                                      |
 | [gray-matter](https://github.com/jonschlinkert/gray-matter)                     | 4       | Parses the front matter of the knowledge chunks for `/llms-full.txt` and the search index.                                                                                                                                                                                                               |
-| [zod](https://zod.dev)                                                          | 4       | Validates chat requests and tool inputs (only used by the chat console).                                                                                                                                                                                                                                 |
+| [zod](https://zod.dev)                                                          | 4       | Validates the content JSON on load (`content/schema.ts`) and generates the `*.schema.json` editors use; also validates chat requests.                                                                                                                                                                    |
 | [@anthropic-ai/sdk](https://github.com/anthropics/anthropic-sdk-typescript)     | —       | Streams Claude answers with strict tools for the chat console (optional, see below).                                                                                                                                                                                                                     |
 | [@upstash/ratelimit](https://github.com/upstash/ratelimit) + redis              | —       | Per-IP and daily caps for the chat console (optional).                                                                                                                                                                                                                                                   |
 | [Vitest](https://vitest.dev) · ESLint · Prettier                                | —       | `pnpm test`, `pnpm lint`, `pnpm format`.                                                                                                                                                                                                                                                                 |
 
 Scripts: `pnpm dev`, `pnpm build` (runs `prebuild`: search index + PDF), `pnpm test`, `pnpm lint`,
-`pnpm typecheck`, `pnpm build-pdf`, `pnpm build-index`, `pnpm evals`.
+`pnpm typecheck`, `pnpm build-pdf`, `pnpm build-favicon`, `pnpm build-schemas` (after editing
+`content/schema.ts`), `pnpm build-index`, `pnpm evals`.
 
 ## The chat console (optional)
 
@@ -146,8 +167,8 @@ To switch it on, deploy to a Node host (Vercel works with zero config):
 app/                Next.js routes: (explorer)/* pages, cv.json, cv.txt, llms.txt, sitemap, robots, OG images
 components/         explorer/ (frame, request bar, endpoint list), views/ (one per endpoint), ui/, console/
 content/            ← everything you edit
-lib/                serializers (json-resume, json-ld, plain-text, llms-txt), seo, og, chat/, rag/
-scripts/            build-pdf.tsx, build-index.ts
+lib/                themes, icon, og, seo, serializers (json-resume, json-ld, plain-text, llms-txt), chat/, rag/
+scripts/            build-pdf.tsx, build-favicon.tsx, build-schemas.ts, build-index.ts
 tests/  evals/      publishing guards, serializer tests, retrieval and scope evals
 .github/            deploy workflow, brand assets
 ```

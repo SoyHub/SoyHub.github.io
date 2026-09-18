@@ -1,5 +1,4 @@
-import { heroDiff } from "@/content/hero-diff";
-import { site } from "@/content/site";
+import { heroDiff, site } from "@/content/site";
 import { DiffView } from "@/components/ui/DiffView";
 import { LED } from "@/components/ui/LED";
 import { StatusChip } from "@/components/ui/StatusChip";

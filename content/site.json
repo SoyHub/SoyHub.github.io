@@ -1,0 +1,183 @@
+{
+  "$schema": "./site.schema.json",
+  "theme": "console",
+  "title": "Sohayb Hassan — Full-Stack Engineer, Java / Spring Boot, React",
+  "description": "Full-stack engineer — Java / Spring Boot, React Native, Kubernetes — six years in banking and financial services. Browse the profile as an API.",
+  "ogSubtitle": "Full-stack engineer · Java / Spring Boot · React · six years in banking. Browse the profile as an API.",
+  "locale": "en_GB",
+  "hero": {
+    "label": "COBOL to Java",
+    "caption": "2020: migrated a COBOL policy-listing system to Spring Boot. Now: LLM-assisted migration where the generated code is proven equivalent by differential execution — in progress.",
+    "left": {
+      "title": "POLICY-LIST.cbl",
+      "lang": "COBOL",
+      "lines": [
+        "       PROCEDURE DIVISION.",
+        "       0000-MAIN.",
+        "           OPEN INPUT POLICY-FILE",
+        "           PERFORM UNTIL WS-EOF = 'Y'",
+        "               READ POLICY-FILE",
+        "                   AT END MOVE 'Y' TO WS-EOF",
+        "                   NOT AT END PERFORM 1000-LIST",
+        "               END-READ",
+        "           END-PERFORM",
+        "           CLOSE POLICY-FILE",
+        "           STOP RUN."
+      ]
+    },
+    "right": {
+      "title": "PolicyController.java",
+      "lang": "Java 17 · Spring Boot 3",
+      "lines": [
+        "@RestController",
+        "@RequestMapping(\"/policies\")",
+        "class PolicyController {",
+        "  private final PolicyRepository repo;",
+        "",
+        "  @GetMapping",
+        "  List<PolicySummary> list(@RequestParam String holder) {",
+        "    return repo.findByHolder(holder).stream()",
+        "        .map(PolicySummary::from)",
+        "        .toList();",
+        "  }",
+        "}"
+      ]
+    }
+  },
+  "easterEgg": {
+    "path": "/cobol",
+    "message": "405 Method Not Allowed — COBOL is migrated, not deleted."
+  },
+  "consoleSuggestions": [
+    "What did he build on the mobile banking platform?",
+    "Walk me through his career.",
+    "Does he know Kafka?",
+    "Cosa sta imparando adesso?",
+    "هل يتحدث العربية؟",
+    "How does this console work?"
+  ],
+  "endpoints": [
+    {
+      "method": "GET",
+      "path": "/",
+      "href": "/",
+      "title": "Sohayb Hassan",
+      "description": "root index · who, what, links",
+      "indexable": true
+    },
+    {
+      "method": "GET",
+      "path": "/experience",
+      "href": "/experience",
+      "title": "Experience",
+      "description": "four roles, 2020 → present",
+      "indexable": true,
+      "seo": {
+        "description": "Four roles from 2020 to today: mobile banking microservices and BFF, a digital HR platform, media and oil & gas clients, and a COBOL to Spring Boot migration.",
+        "og": "Four roles, 2020 → present: mobile banking microservices and BFF, digital HR, media, oil & gas, COBOL → Spring Boot."
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/skills?filter=",
+      "href": "/skills",
+      "title": "Skills",
+      "description": "six groups, filterable",
+      "indexable": true,
+      "seo": {
+        "description": "Java 17/21, Spring Boot 3, React and React Native, Kubernetes, Azure DevOps, PostgreSQL and more — six groups, filterable.",
+        "og": "Java 17/21 · Spring Boot 3 · React · React Native · Kubernetes · Azure DevOps · PostgreSQL · Kafka — six groups, filterable."
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/projects",
+      "href": "/projects",
+      "title": "Projects",
+      "description": "what he builds on his own time",
+      "indexable": true,
+      "seo": {
+        "description": "LLM-assisted legacy modernisation with differential-execution verification, and engineering-workflow automation for a banking programme.",
+        "og": "LLM-assisted legacy modernisation with differential-execution verification. Workflow automation for a banking programme."
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/now",
+      "href": "/now",
+      "title": "Now",
+      "description": "this month, dated",
+      "indexable": true,
+      "seo": {
+        "description": "What Sohayb Hassan is working on this month.",
+        "og": "What he is working on this month — dated, updated monthly."
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/education",
+      "href": "/education",
+      "title": "Education",
+      "description": "degrees, bootcamp, languages",
+      "indexable": true,
+      "seo": {
+        "description": "BSc Computer Science in progress at University of the People, Powercoders bootcamp, four languages."
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/health",
+      "href": "/health",
+      "title": "Health",
+      "description": "uptime and status LEDs",
+      "indexable": true,
+      "seo": {
+        "description": "Status board: uptime since 2020, current role, what is being learned now."
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cv",
+      "href": "/cv",
+      "title": "CV",
+      "description": "pdf · json · txt · curl",
+      "indexable": true,
+      "seo": {
+        "description": "Download the CV as PDF, JSON Resume or plain text — or curl /cv.txt."
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/contact",
+      "href": "/contact",
+      "title": "Contact",
+      "description": "email, LinkedIn, GitHub",
+      "indexable": true,
+      "seo": {
+        "description": "Email, LinkedIn and GitHub for Sohayb Hassan."
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/hire",
+      "href": "/hire",
+      "title": "Hire",
+      "description": "send a request body, get a 202",
+      "indexable": false,
+      "seo": {
+        "description": "Send a hiring request as a JSON body — it opens your mail client."
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ask",
+      "href": "/ask",
+      "title": "Ask",
+      "description": "chat console · coming soon",
+      "indexable": false,
+      "seo": {
+        "description": "A chat console that answers questions about the profile — coming soon."
+      }
+    }
+  ]
+}

@@ -2,43 +2,7 @@
 
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
-/* Palette: dark by default, light via [data-theme="light"]. */
-:root,
-[data-theme="dark"] {
-  color-scheme: dark;
-  --paper: #0b171d;
-  --surface: #122630;
-  --sunk: #0e1f27;
-  --ink: #e6ecee;
-  --body: #b9c8ce;
-  --muted: #7d949d;
-  --hair: #24404c;
-  --brass: #d5a93f;
-  --brass-soft: #2e2716;
-  --verdant: #6fb08d;
-  --verdant-soft: #172c24;
-  --signal: #e3796a;
-  --signal-soft: #33201d;
-  --shadow: 0 1px 0 rgba(0, 0, 0, 0.4), 0 12px 32px -16px rgba(0, 0, 0, 0.6);
-}
-
-[data-theme="light"] {
-  color-scheme: light;
-  --paper: #edf0f1;
-  --surface: #ffffff;
-  --sunk: #e3e8ea;
-  --ink: #10222b;
-  --body: #2c424e;
-  --muted: #61757f;
-  --hair: #cbd5d9;
-  --brass: #8f6a1b;
-  --brass-soft: #ebdfc4;
-  --verdant: #2c6349;
-  --verdant-soft: #d8e7df;
-  --signal: #a8332a;
-  --signal-soft: #f2dcd9;
-  --shadow: 0 1px 0 rgba(16, 34, 43, 0.06), 0 12px 32px -16px rgba(16, 34, 43, 0.25);
-}
+/* Palette variables (--paper, --ink, --brass…) are injected by app/layout.tsx from lib/themes.ts. */
 
 @theme inline {
   --color-paper: var(--paper);

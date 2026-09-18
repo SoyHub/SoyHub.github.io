@@ -3,7 +3,10 @@ import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { SITE_HOST } from "@/lib/site";
 import { profile } from "@/content/profile";
-import { findEndpoint } from "@/content/endpoints";
+import { endpoints, findEndpoint } from "@/content/endpoints";
+import { theme } from "@/lib/themes";
+
+const c = theme.dark;
 
 export const ogSize = { width: 1200, height: 630 };
 
@@ -19,6 +22,12 @@ export function endpointOg(href: string) {
 }
 
 const font = (file: string) => readFile(join(process.cwd(), "assets/fonts", file));
+const photoUri = async () =>
+  `data:image/png;base64,${(await readFile(join(process.cwd(), "public/photo.png"))).toString("base64")}`;
+const strip = endpoints
+  .filter((e) => e.indexable && e.href !== "/")
+  .map((e) => e.path)
+  .join("  ·  ");
 
 /** Shared OG frame: a response card in the site's dark palette. */
 export async function ogImage({
@@ -26,17 +35,21 @@ export async function ogImage({
   path,
   title,
   subtitle,
+  photo = false,
 }: {
   method: "GET" | "POST";
   path: string;
   title: string;
   subtitle: string;
+  /** show the profile photo on the card (home page) */
+  photo?: boolean;
 }) {
-  const [mono, serif] = await Promise.all([
+  const [mono, serif, src] = await Promise.all([
     font("IBMPlexMono-Medium.ttf"),
     font("IBMPlexSerif-SemiBold.ttf"),
+    photo ? photoUri() : Promise.resolve(null),
   ]);
-  const methodColor = method === "GET" ? "#6fb08d" : "#d5a93f";
+  const methodColor = method === "GET" ? c.ok : c.accent;
   return new ImageResponse(
     <div
       style={{
@@ -45,26 +58,25 @@ export async function ogImage({
         display: "flex",
         flexDirection: "column",
         padding: 56,
-        background: "#0b171d",
-        backgroundImage:
-          "linear-gradient(rgba(36,64,76,0.45) 1px, transparent 1px), linear-gradient(90deg, rgba(36,64,76,0.45) 1px, transparent 1px)",
+        background: c.paper,
+        backgroundImage: `linear-gradient(${c.hair}73 1px, transparent 1px), linear-gradient(90deg, ${c.hair}73 1px, transparent 1px)`,
         backgroundSize: "40px 40px",
-        color: "#e6ecee",
+        color: c.ink,
         fontFamily: "Plex Mono",
       }}
     >
       <div style={{ display: "flex", alignItems: "center", gap: 18, fontSize: 26 }}>
         <span style={{ color: methodColor }}>{method}</span>
         <span>{path}</span>
-        <span style={{ marginLeft: "auto", color: "#7d949d", fontSize: 20 }}>{SITE_HOST}</span>
+        <span style={{ marginLeft: "auto", color: c.muted, fontSize: 20 }}>{SITE_HOST}</span>
       </div>
       <div
         style={{
           display: "flex",
           flex: 1,
           marginTop: 36,
-          border: "2px solid #24404c",
-          background: "#122630",
+          border: `2px solid ${c.hair}`,
+          background: c.surface,
           flexDirection: "column",
         }}
       >
@@ -74,25 +86,51 @@ export async function ogImage({
             alignItems: "center",
             gap: 16,
             padding: "18px 28px",
-            borderBottom: "2px solid #24404c",
+            borderBottom: `2px solid ${c.hair}`,
             fontSize: 22,
           }}
         >
           <span
             style={{
-              color: "#6fb08d",
-              border: "2px solid rgba(111,176,141,0.4)",
-              background: "#172c24",
+              color: c.ok,
+              border: `2px solid ${c.ok}66`,
+              background: c.okSoft,
               padding: "4px 12px",
             }}
           >
             200 OK
           </span>
-          <span style={{ color: "#7d949d" }}>content-type: text/html</span>
+          <span style={{ color: c.muted }}>content-type: text/html</span>
         </div>
-        <div style={{ display: "flex", flexDirection: "column", padding: "36px 40px", gap: 18 }}>
-          <div style={{ fontFamily: "Plex Serif", fontSize: 72, lineHeight: 1.05 }}>{title}</div>
-          <div style={{ fontSize: 28, color: "#b9c8ce", lineHeight: 1.35 }}>{subtitle}</div>
+        <div style={{ display: "flex", flex: 1, padding: "36px 40px", gap: 40 }}>
+          <div style={{ display: "flex", flex: 1, flexDirection: "column", gap: 18 }}>
+            <div style={{ fontFamily: "Plex Serif", fontSize: 72, lineHeight: 1.05 }}>{title}</div>
+            <div style={{ fontSize: 28, color: c.body, lineHeight: 1.35 }}>{subtitle}</div>
+          </div>
+          {src && (
+            // satori renders plain <img>; next/image has no meaning inside an ImageResponse
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              alt=""
+              src={src}
+              width={220}
+              height={220}
+              style={{ borderRadius: 12, border: `2px solid ${c.hair}`, objectFit: "cover" }}
+            />
+          )}
+        </div>
+        <div
+          style={{
+            display: "flex",
+            gap: 12,
+            padding: "14px 28px",
+            borderTop: `2px solid ${c.hair}`,
+            fontSize: 18,
+            color: c.muted,
+          }}
+        >
+          <span style={{ color: c.ok }}>GET</span>
+          <span>{strip}</span>
         </div>
       </div>
     </div>,

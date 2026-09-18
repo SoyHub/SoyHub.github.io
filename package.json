@@ -7,7 +7,7 @@
   "repository": "github:SoyHub/SoyHub.github.io",
   "scripts": {
     "dev": "next dev",
-    "prebuild": "tsx scripts/build-index.ts && tsx scripts/build-pdf.tsx",
+    "prebuild": "tsx scripts/build-index.ts && tsx scripts/build-pdf.tsx && tsx scripts/build-favicon.tsx",
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
@@ -17,6 +17,8 @@
     "test": "vitest run",
     "build-index": "tsx scripts/build-index.ts",
     "build-pdf": "tsx scripts/build-pdf.tsx",
+    "build-favicon": "tsx scripts/build-favicon.tsx",
+    "build-schemas": "tsx scripts/build-schemas.ts",
     "evals": "tsx evals/run.ts"
   },
   "dependencies": {

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { IBM_Plex_Mono, IBM_Plex_Sans, IBM_Plex_Serif } from "next/font/google";
 import { profile } from "@/content/profile";
 import { site } from "@/content/site";
+import { theme, themeCss } from "@/lib/themes";
 import { SITE_URL } from "@/lib/site";
 import { jsonLd } from "@/lib/serializers/json-ld";
 import "./globals.css";
@@ -54,6 +55,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       suppressHydrationWarning
     >
       <head>
+        <style dangerouslySetInnerHTML={{ __html: themeCss(theme) }} />
         <script dangerouslySetInnerHTML={{ __html: themeBoot }} />
         <script
           type="application/ld+json"

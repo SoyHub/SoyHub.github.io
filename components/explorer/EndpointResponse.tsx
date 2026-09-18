@@ -27,7 +27,7 @@ export function EndpointResponse({
         statusText={statusText}
         headers={[
           ["content-type", "text/html; charset=utf-8"],
-          ["x-source", "content/profile.ts"],
+          ["x-source", "content/profile.json"],
           ["x-cv-version", profile.meta.cvVersion],
         ]}
         json={endpointJson(href, profile, SITE_URL)}

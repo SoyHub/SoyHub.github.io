@@ -21,7 +21,7 @@ export default function ExplorerLayout({ children }: LayoutProps<"/">) {
         </main>
       </div>
       <footer className="mx-auto w-full max-w-6xl px-4 pb-6">
-        <p className="lbl">no cookies · no analytics · content from content/profile.ts</p>
+        <p className="lbl">no cookies · no analytics · content from content/profile.json</p>
       </footer>
     </ExplorerProvider>
   );

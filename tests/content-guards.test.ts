@@ -11,7 +11,7 @@ const contentFiles = (): string[] => {
       d.isDirectory() ? walk(join(dir, d.name)) : [join(dir, d.name)],
     );
   return walk(join(root, "content")).filter(
-    (f) => /\.(ts|md)$/.test(f) && !f.endsWith("README.md"),
+    (f) => /\.(ts|md|json)$/.test(f) && !/README\.md|\.schema\.json$/.test(f),
   );
 };
 

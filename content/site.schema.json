@@ -1,0 +1,157 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "theme": {
+      "type": "string",
+      "enum": ["console", "paper", "terminal", "slate"],
+      "description": "Palette, from lib/themes.ts. Dark and light variants come with it."
+    },
+    "title": {
+      "type": "string",
+      "description": "Home <title>; other pages use “<Page> · <name>”"
+    },
+    "description": {
+      "type": "string"
+    },
+    "ogSubtitle": {
+      "type": "string",
+      "description": "Subtitle on the home page's social-preview image"
+    },
+    "locale": {
+      "type": "string",
+      "description": "Open Graph locale, e.g. en_GB"
+    },
+    "hero": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "type": "string",
+          "description": "Accessible name of the animated diff"
+        },
+        "caption": {
+          "type": "string"
+        },
+        "left": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "description": "File name shown above the column"
+            },
+            "lang": {
+              "type": "string"
+            },
+            "lines": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": ["title", "lang", "lines"]
+        },
+        "right": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "description": "File name shown above the column"
+            },
+            "lang": {
+              "type": "string"
+            },
+            "lines": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": ["title", "lang", "lines"]
+        }
+      },
+      "required": ["label", "caption", "left", "right"]
+    },
+    "easterEgg": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "description": "Typing DELETE <path> in the request bar answers with the message"
+        },
+        "message": {
+          "type": "string"
+        }
+      },
+      "required": ["path", "message"]
+    },
+    "consoleSuggestions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "endpoints": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "method": {
+            "type": "string",
+            "enum": ["GET", "POST"]
+          },
+          "path": {
+            "type": "string",
+            "description": "As displayed, e.g. \"/skills?filter=\""
+          },
+          "href": {
+            "type": "string",
+            "description": "The page folder under app/(explorer), e.g. /skills"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string",
+            "description": "One line in the endpoint list"
+          },
+          "indexable": {
+            "type": "boolean",
+            "description": "In the sitemap and llms.txt; false for form-like pages"
+          },
+          "seo": {
+            "type": "object",
+            "properties": {
+              "description": {
+                "type": "string",
+                "description": "<meta name=description> of the page"
+              },
+              "og": {
+                "description": "Subtitle of the page's social-preview image",
+                "type": "string"
+              }
+            },
+            "required": ["description"]
+          }
+        },
+        "required": ["method", "path", "href", "title", "description", "indexable"]
+      }
+    }
+  },
+  "required": [
+    "theme",
+    "title",
+    "description",
+    "ogSubtitle",
+    "locale",
+    "hero",
+    "easterEgg",
+    "consoleSuggestions",
+    "endpoints"
+  ]
+}

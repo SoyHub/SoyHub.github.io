@@ -1,0 +1,252 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "cvVersion": {
+          "type": "string",
+          "description": "Bump when facts change, e.g. \"2026.10\""
+        }
+      },
+      "required": ["cvVersion"]
+    },
+    "header": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string",
+          "description": "One line under the name, e.g. role · stack · domain"
+        },
+        "location": {
+          "type": "string",
+          "description": "Shown as text, e.g. \"Turin, Italy\""
+        },
+        "city": {
+          "type": "string"
+        },
+        "countryCode": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 2,
+          "description": "ISO 3166-1 alpha-2, e.g. IT"
+        },
+        "nationality": {
+          "type": "string"
+        },
+        "permit": {
+          "type": "string",
+          "description": "Work-permit line shown on the CV; empty string to omit"
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "pattern": "^(?:[A-Za-z0-9_'+\\-]+\\.)*[A-Za-z0-9_'+\\-]*[A-Za-z0-9_+-]@(?:[A-Za-z0-9][A-Za-z0-9\\-]*\\.)+[A-Za-z]{2,}$"
+        },
+        "linkedin": {
+          "type": "string",
+          "format": "uri"
+        },
+        "github": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "name",
+        "title",
+        "location",
+        "city",
+        "countryCode",
+        "nationality",
+        "permit",
+        "email",
+        "linkedin",
+        "github"
+      ]
+    },
+    "summary": {
+      "type": "string"
+    },
+    "headline": {
+      "minItems": 3,
+      "maxItems": 3,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          }
+        },
+        "required": ["value", "label"]
+      },
+      "description": "Three tiles under the summary"
+    },
+    "experience": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "company": {
+            "type": "string"
+          },
+          "place": {
+            "type": "string"
+          },
+          "role": {
+            "type": "string"
+          },
+          "dates": {
+            "type": "string",
+            "description": "\"MM/YYYY – MM/YYYY\" or \"MM/YYYY – present\""
+          },
+          "subtitle": {
+            "type": "string"
+          },
+          "blocks": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "dates": {
+                  "type": "string",
+                  "description": "\"MM/YYYY – MM/YYYY\" or \"MM/YYYY – present\""
+                },
+                "bullets": {
+                  "minItems": 1,
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": ["bullets"]
+            }
+          }
+        },
+        "required": ["company", "place", "role", "dates", "blocks"]
+      }
+    },
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["in-progress", "shipped"]
+          },
+          "summary": {
+            "type": "string"
+          },
+          "stack": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "repo": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": ["label", "url"]
+          }
+        },
+        "required": ["id", "title", "status", "summary", "stack"]
+      }
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Used in /skills?filter=<id>"
+          },
+          "label": {
+            "type": "string"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": ["id", "label", "items"]
+      }
+    },
+    "education": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "what": {
+            "type": "string"
+          },
+          "where": {
+            "type": "string"
+          },
+          "when": {
+            "type": "string"
+          }
+        },
+        "required": ["what", "where"]
+      }
+    },
+    "languages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "level": {
+            "type": "string"
+          }
+        },
+        "required": ["name", "level"]
+      }
+    }
+  },
+  "required": [
+    "meta",
+    "header",
+    "summary",
+    "headline",
+    "experience",
+    "projects",
+    "skills",
+    "education",
+    "languages"
+  ]
+}

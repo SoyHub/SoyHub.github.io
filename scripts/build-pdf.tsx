@@ -14,6 +14,7 @@ import {
 } from "@react-pdf/renderer";
 import { profile } from "../content/profile";
 import { SITE_HOST, SITE_URL } from "../lib/site";
+import { theme } from "../lib/themes";
 
 const root = join(import.meta.dirname, "..");
 Font.register({
@@ -25,10 +26,7 @@ Font.register({ family: "Mono", src: join(root, "assets/fonts/IBMPlexMono-Medium
 // Hyphenation off: bullets are hand-written sentences, split them only at spaces.
 Font.registerHyphenationCallback((word) => [word]);
 
-const ink = "#0b171d";
-const muted = "#5b6d75";
-const brass = "#9a7420";
-const hair = "#c9d3d7";
+const { ink, muted, accent: brass, hair } = theme.light;
 
 const s = StyleSheet.create({
   page: {

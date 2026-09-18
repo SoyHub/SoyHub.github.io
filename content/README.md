@@ -1,23 +1,22 @@
 # content/
 
-Everything a fork changes lives here. Nothing outside this folder mentions a person.
+Everything a fork changes lives here, as JSON. Nothing outside this folder mentions a person.
 
-| File             | What it holds                                                                                                                                                        |
-| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `profile.ts`     | Every CV fact: header, summary, headline tiles, experience, projects, skills, education, languages. Typed by `profile.types.ts`.                                     |
-| `site.ts`        | Site copy that is not a CV fact: page title and description, social-preview subtitle, the hero caption, the request-bar easter egg, the console's starter questions. |
-| `endpoints.ts`   | The endpoint list — method, path, title, one-line description, per-page SEO text. Add or remove an entry here and the matching folder under `app/(explorer)/`.       |
-| `now.ts`         | The `/now` page, dated. A stale "now" is worse than none — the date is shown next to it.                                                                             |
-| `hero-diff.ts`   | The before/after code shown in the animated hero. Write your own; never paste code from a client system.                                                             |
-| `owner-todo.ts`  | Facts you have not decided yet. `null` hides the fragment everywhere; fill it and rebuild.                                                                           |
-| `knowledge/*.md` | The chat console's corpus, one chunk per file with front matter (`id`, `section`, `title`, `url`, `keywords`). Also published as `/llms-full.txt`.                   |
+| File             | What it holds                                                                                                                                                                                                           |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `profile.json`   | Every CV fact: header, summary, headline tiles, experience, projects, skills, education, languages.                                                                                                                     |
+| `site.json`      | The theme; page title and description; social-preview subtitle; the hero (caption and the before/after code); the request-bar easter egg; the console's starter questions; the endpoint list with each page's SEO text. |
+| `now.json`       | The `/now` page, dated (`YYYY-MM`). A stale "now" is worse than none — the date is shown next to it.                                                                                                                    |
+| `*.schema.json`  | Generated from `schema.ts` (`pnpm build-schemas`). Each JSON file's `$schema` points at its own, so editors autocomplete and validate. Don't edit by hand.                                                              |
+| `schema.ts`      | The shape of the JSON, with a description per field. The loaders (`profile.ts`, `site.ts`, `now.ts`) parse with it, so a wrong file fails the build with the path of the wrong field.                                   |
+| `knowledge/*.md` | The chat console's corpus, one chunk per file with front matter (`id`, `section`, `title`, `url`, `keywords`). Also published as `/llms-full.txt`.                                                                      |
 
 ## When a fact changes
 
-1. Edit `profile.ts` — and `knowledge/*.md` if the chat console is on.
-2. Bump `meta.cvVersion` in `profile.ts` (e.g. `2026.10`). It shows in response headers, `cv.json` and the PDF footer.
+1. Edit `profile.json` — and `knowledge/*.md` if the chat console is on.
+2. Bump `meta.cvVersion` in `profile.json` (e.g. `2026.10`). It shows in response headers, `cv.json` and the PDF footer.
 3. `pnpm test` — guards fail on unfilled `[[placeholders]]`, phone numbers, birth dates, and any name listed in `denylist.local.json`.
-4. `pnpm build` regenerates the search index and `public/cv.pdf`.
+4. `pnpm build` regenerates the search index, `public/cv.pdf` and the favicon.
 
 ## Publishing rules the tests enforce
 

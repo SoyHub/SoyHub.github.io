@@ -13,5 +13,6 @@ export default function Image() {
     path: "/",
     title: profile.header.name,
     subtitle: site.ogSubtitle,
+    photo: true,
   });
 }

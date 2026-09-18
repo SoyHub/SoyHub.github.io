@@ -1,5 +1,6 @@
 import type { Profile } from "@/content/profile.types";
 import { splitRange } from "@/lib/dates";
+import { handle } from "@/lib/handle";
 
 /** JSON Resume v1.0.0 — https://jsonresume.org/schema */
 export const jsonResume = (p: Profile, site: string) => ({
@@ -10,10 +11,10 @@ export const jsonResume = (p: Profile, site: string) => ({
     email: p.header.email,
     url: site,
     summary: p.summary,
-    location: { city: "Turin", countryCode: "IT" },
+    location: { city: p.header.city, countryCode: p.header.countryCode },
     profiles: [
-      { network: "LinkedIn", username: "sohayb", url: p.header.linkedin },
-      { network: "GitHub", username: "soyhub", url: p.header.github },
+      { network: "LinkedIn", username: handle(p.header.linkedin), url: p.header.linkedin },
+      { network: "GitHub", username: handle(p.header.github), url: p.header.github },
     ],
   },
   work: p.experience.map((job) => {

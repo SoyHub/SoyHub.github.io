@@ -28,7 +28,11 @@ export type Profile = {
   header: {
     name: string;
     title: string;
+    /** shown on the site, e.g. "Turin, Italy" */
     location: string;
+    /** structured twin of `location`, for JSON-LD and JSON Resume */
+    city: string;
+    countryCode: string;
     nationality: string;
     permit: string;
     email: string;

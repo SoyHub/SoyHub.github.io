@@ -10,7 +10,9 @@ const contentFiles = (): string[] => {
     readdirSync(dir, { withFileTypes: true }).flatMap((d) =>
       d.isDirectory() ? walk(join(dir, d.name)) : [join(dir, d.name)],
     );
-  return walk(join(root, "content")).filter((f) => /\.(ts|md)$/.test(f));
+  return walk(join(root, "content")).filter(
+    (f) => /\.(ts|md)$/.test(f) && !f.endsWith("README.md"),
+  );
 };
 
 // Real names live in a gitignored file: {"names": ["..."]}. Absent locally → the check is skipped.
@@ -28,10 +30,13 @@ describe("publishing rules", () => {
   });
 
   it("no phone number, no date of birth", () => {
-    const all = JSON.stringify(profile);
-    expect(all).not.toMatch(/\+39|347\s?543|1995/);
+    const phone = /\+\d{1,3}(?:[\s.-]?\d{2,4}){3,4}/;
+    const birth = /\b(born|date of birth)\b[^.\n]{0,24}\d{4}/i;
+    expect(JSON.stringify(profile)).not.toMatch(phone);
     for (const f of contentFiles()) {
-      expect(readFileSync(f, "utf8"), f).not.toMatch(/\+39\s?3\d\d|347\s?543|5 August 1995|born/i);
+      const text = readFileSync(f, "utf8");
+      expect(text, f).not.toMatch(phone);
+      expect(text, f).not.toMatch(birth);
     }
   });
 

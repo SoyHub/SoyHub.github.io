@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+<g transform="translate(0,0)">
+  <rect width="256" height="256" rx="20.48" fill="#122630" stroke="#24404c" stroke-width="3.072"/>
+  <circle cx="40.96" cy="40.96" r="8.96" fill="#6fb08d"/>
+  <circle cx="40.96" cy="40.96" r="17.92" fill="#6fb08d" fill-opacity="0.18"/>
+  <text x="69.12" y="49.92" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="28.16" font-weight="500" fill="#6fb08d" letter-spacing="2.56">GET</text>
+  <text x="128.0" y="179.2" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="102.4" font-weight="500" fill="#d5a93f">/me</text>
+  <rect x="40.96" y="204.8" width="174.08" height="3.072" fill="#24404c"/>
+  <text x="40.96" y="230.4" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="15.872" fill="#7d949d">200 OK</text>
+</g>
+</svg>

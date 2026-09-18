@@ -14,6 +14,8 @@ export const profile: Profile = {
     name: "Sohayb Hassan",
     title: "Full-Stack Engineer · Java / Spring Boot · React · Banking & Financial Services",
     location: "Turin, Italy",
+    city: "Turin",
+    countryCode: "IT",
     nationality: "Egyptian",
     permit: "Italian work residence permit (renewable)",
     email: "sohaybmohammed@icloud.com",

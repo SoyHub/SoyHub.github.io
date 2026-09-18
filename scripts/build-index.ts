@@ -11,7 +11,7 @@ import { normalize } from "../lib/rag/vector";
 import { embed, VOYAGE_MODEL } from "../lib/rag/voyage";
 import type { Chunk, IndexFile } from "../lib/rag/types";
 
-const root = join(__dirname, "..");
+const root = join(import.meta.dirname, "..");
 const src = join(root, "content/knowledge");
 const out = join(root, "data/index.json");
 

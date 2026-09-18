@@ -1,10 +1,13 @@
 {
-  "name": "site",
-  "version": "0.1.0",
+  "name": "profile-as-an-api",
+  "version": "1.0.0",
   "private": true,
+  "description": "Portfolio template: every section of your CV is an endpoint. Static, SEO-ready, GitHub Pages.",
+  "license": "MIT",
+  "repository": "github:SoyHub/SoyHub.github.io",
   "scripts": {
     "dev": "next dev",
-    "prebuild": "tsx scripts/build-index.ts",
+    "prebuild": "tsx scripts/build-index.ts && tsx scripts/build-pdf.tsx",
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
@@ -13,8 +16,8 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "build-index": "tsx scripts/build-index.ts",
-    "evals": "tsx evals/run.ts",
-    "sync:assets": "node scripts/sync-assets.mjs"
+    "build-pdf": "tsx scripts/build-pdf.tsx",
+    "evals": "tsx evals/run.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.125.0",
@@ -27,6 +30,7 @@
     "zod": "^4.6.2"
   },
   "devDependencies": {
+    "@react-pdf/renderer": "^4.9.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^26.5.1",
     "@types/react": "^19",

@@ -3,6 +3,7 @@
 import { useState, type FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import { endpoints, type Endpoint } from "@/content/endpoints";
+import { site } from "@/content/site";
 import { MethodBadge } from "@/components/ui/MethodBadge";
 import { useExplorer } from "./ExplorerProvider";
 
@@ -18,7 +19,7 @@ export function RequestBar({ endpoint }: { endpoint: Endpoint }) {
     const [maybeMethod, ...rest] = raw.split(/\s+/);
     const method = rest.length ? maybeMethod.toUpperCase() : null;
     const path = (rest.length ? rest.join(" ") : raw) || "/";
-    if (method === "DELETE" && /^\/cobol/i.test(path)) {
+    if (method === "DELETE" && path.toLowerCase().startsWith(site.easterEgg.path)) {
       setEasterEgg(true);
       return;
     }
@@ -53,7 +54,7 @@ export function RequestBar({ endpoint }: { endpoint: Endpoint }) {
       </form>
       {easterEgg && (
         <p role="status" className="text-signal mt-2 font-mono text-[12px]">
-          405 Method Not Allowed — COBOL is migrated, not deleted.
+          {site.easterEgg.message}
         </p>
       )}
     </div>

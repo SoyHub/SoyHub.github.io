@@ -26,7 +26,7 @@ export const TOOLS: Tool[] = [
   {
     name: "show_contact",
     description:
-      "Render the contact card (email, LinkedIn, GitHub). Call when the visitor wants to reach Sohayb, asks about hiring or availability, or when you cannot answer from knowledge.",
+      "Render the contact card (email, LinkedIn, GitHub). Call when the visitor wants to reach the owner, asks about hiring or availability, or when you cannot answer from knowledge.",
     strict: true,
     input_schema: obj(
       {
@@ -174,7 +174,8 @@ export const TOOLS: Tool[] = [
 
 export const isUiTool = (name: string): name is UiTool => TOOLS.some((t) => t.name === name);
 
-const PHONE = /\+39\s?3\d\d|347\s?543/;
+// Any international number: the model must never hand one out, whatever the corpus says.
+const PHONE = /\+\d{1,3}(?:[\s.-]?\d{2,4}){3,4}/;
 
 const strings = (v: unknown): string[] =>
   typeof v === "string"

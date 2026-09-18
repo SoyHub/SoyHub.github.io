@@ -4,11 +4,7 @@ import { useState, type FormEvent } from "react";
 import { profile } from "@/content/profile";
 import { StatusChip } from "@/components/ui/StatusChip";
 
-const initial = JSON.stringify(
-  { role: "", location: "", start: "", message: "" },
-  null,
-  2,
-);
+const initial = JSON.stringify({ role: "", location: "", start: "", message: "" }, null, 2);
 
 export function HireForm() {
   const [body, setBody] = useState(initial);

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono, IBM_Plex_Sans, IBM_Plex_Serif } from "next/font/google";
 import { profile } from "@/content/profile";
+import { site } from "@/content/site";
 import { SITE_URL } from "@/lib/site";
 import { jsonLd } from "@/lib/serializers/json-ld";
 import "./globals.css";
@@ -23,22 +24,18 @@ const plexSerif = IBM_Plex_Serif({
   preload: false,
 });
 
-const description =
-  "Full-stack engineer — Java / Spring Boot, React Native, Kubernetes — six years in banking and financial services. Browse the profile as an API.";
+const [firstName, ...rest] = profile.header.name.split(" ");
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: {
-    default: "Sohayb Hassan — Full-Stack Engineer, Java / Spring Boot, React",
-    template: "%s · Sohayb Hassan",
-  },
-  description,
+  title: { default: site.title, template: `%s · ${profile.header.name}` },
+  description: site.description,
   openGraph: {
     type: "profile",
-    siteName: "Sohayb Hassan",
-    locale: "en_GB",
-    firstName: "Sohayb",
-    lastName: "Hassan",
+    siteName: profile.header.name,
+    locale: site.locale,
+    firstName,
+    lastName: rest.join(" "),
   },
   twitter: { card: "summary_large_image" },
   robots: { index: true, follow: true },

@@ -2,8 +2,21 @@ import { ImageResponse } from "next/og";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { SITE_HOST } from "@/lib/site";
+import { profile } from "@/content/profile";
+import { findEndpoint } from "@/content/endpoints";
 
 export const ogSize = { width: 1200, height: 630 };
+
+/** Social-preview image of an endpoint, from its content entry. */
+export function endpointOg(href: string) {
+  const e = findEndpoint(href);
+  if (!e?.seo?.og) throw new Error(`no og subtitle for ${href}`);
+  const { og } = e.seo;
+  return {
+    alt: `${e.title} — ${profile.header.name}`,
+    render: () => ogImage({ method: e.method, path: e.href, title: e.title, subtitle: og }),
+  };
+}
 
 const font = (file: string) => readFile(join(process.cwd(), "assets/fonts", file));
 

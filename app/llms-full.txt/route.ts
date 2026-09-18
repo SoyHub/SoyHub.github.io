@@ -1,6 +1,7 @@
 import { readdir, readFile } from "node:fs/promises";
 import { join } from "node:path";
 import matter from "gray-matter";
+import { profile } from "@/content/profile";
 
 export const dynamic = "force-static";
 
@@ -14,7 +15,7 @@ export async function GET() {
     if (data.owner_todo) continue;
     parts.push(`## ${data.title}\n\n${content.trim()}\n`);
   }
-  return new Response(`# Sohayb Hassan — knowledge corpus\n\n${parts.join("\n")}`, {
+  return new Response(`# ${profile.header.name} — knowledge corpus\n\n${parts.join("\n")}`, {
     headers: {
       "Content-Type": "text/markdown; charset=utf-8",
       "Cache-Control": "public, max-age=3600, s-maxage=86400",

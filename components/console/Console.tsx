@@ -5,15 +5,9 @@ import { useChatStream } from "./useChatStream";
 import { Transcript } from "./Transcript";
 import { LED } from "@/components/ui/LED";
 import { cx } from "@/lib/cx";
+import { site } from "@/content/site";
 
-const suggestions = [
-  "What did he build on the mobile banking platform?",
-  "Walk me through his career.",
-  "Does he know Kafka?",
-  "Cosa sta imparando adesso?",
-  "هل يتحدث العربية؟",
-  "How does this console work?",
-];
+const suggestions = site.consoleSuggestions;
 
 export function Console() {
   const { messages, busy, send, stop, reset } = useChatStream();

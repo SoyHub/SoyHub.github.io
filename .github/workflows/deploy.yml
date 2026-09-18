@@ -24,11 +24,13 @@ jobs:
         with:
           node-version-file: .node-version
           cache: pnpm
-      - uses: actions/configure-pages@v5
+      - id: pages
+        uses: actions/configure-pages@v5
       - run: pnpm install --frozen-lockfile
       - run: pnpm build
         env:
-          NEXT_PUBLIC_SITE_URL: https://soyhub.github.io
+          # The URL GitHub Pages serves this repo on — nothing to edit for a fork.
+          NEXT_PUBLIC_SITE_URL: ${{ steps.pages.outputs.origin }}${{ steps.pages.outputs.base_path }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out

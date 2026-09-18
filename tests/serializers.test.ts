@@ -46,21 +46,21 @@ describe("plain-text CV", () => {
     expect(stripAnsi(ansi)).toBe(txt);
   });
   it("never prints a phone number", () => {
-    expect(txt).not.toMatch(/\+39/);
+    expect(txt).not.toMatch(/\+\d{1,3}(?:[\s.-]?\d{2,4}){3,4}/);
   });
 });
 
 describe("JSON Resume", () => {
   const r = jsonResume(profile, site);
   it("has ISO dates and no endDate for the current role", () => {
-    expect(r.work[0].startDate).toBe("2023-08");
+    const first = profile.experience[0];
+    expect(r.work[0].startDate).toBe(splitRange(first.dates).start);
     expect(r.work[0]).not.toHaveProperty("endDate");
-    expect(r.work.at(-1)?.endDate).toBe("2020-09");
+    expect(r.work.at(-1)?.endDate).toBe(splitRange(profile.experience.at(-1)!.dates).end);
   });
   it("folds blocks into highlights with their title", () => {
-    expect(r.work[0].highlights[0]).toMatch(
-      /^Mobile banking platform — major Italian retail banking group \(02\/2025 – present\): /,
-    );
+    const block = profile.experience[0].blocks[0];
+    expect(r.work[0].highlights[0]).toBe(`${block.title} (${block.dates}): ${block.bullets[0]}`);
   });
 });
 

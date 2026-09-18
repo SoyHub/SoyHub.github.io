@@ -38,7 +38,7 @@ describe("tools", () => {
     expect(
       validateToolCall(
         "show_contact",
-        { reason: "hiring", note: "call +39 347 543 3938" },
+        { reason: "hiring", note: "call +44 20 7946 0958" },
         allowed,
         [],
       ).ok,
@@ -100,7 +100,7 @@ describe("prompt", () => {
     expect(last[0].text).toContain('<chunk id="c1"');
   });
   it("system prompt carries nothing volatile", () => {
-    expect(SYSTEM_PROMPT).not.toMatch(/\d{4}-\d{2}-\d{2}|\+39/);
+    expect(SYSTEM_PROMPT).not.toMatch(/\d{4}-\d{2}-\d{2}|\+\d{2}\s?\d{3}/);
   });
 });
 

@@ -1,4 +1,5 @@
 import { heroDiff } from "@/content/hero-diff";
+import { site } from "@/content/site";
 import { DiffView } from "@/components/ui/DiffView";
 import { LED } from "@/components/ui/LED";
 import { StatusChip } from "@/components/ui/StatusChip";
@@ -10,7 +11,7 @@ const total = lineCount * 90 + 400;
 export function HeroDiff() {
   return (
     <section
-      aria-label="COBOL to Java"
+      aria-label={site.hero.label}
       className="border-hair bg-surface shadow-panel mb-4 rounded-sm border"
     >
       <div
@@ -38,10 +39,7 @@ export function HeroDiff() {
         </div>
       </div>
       <div className="border-hair flex flex-wrap items-center justify-between gap-2 border-t px-3 py-2">
-        <p className="text-body max-w-3xl text-[13px]">
-          2020: migrated a COBOL policy-listing system to Spring Boot. Now: LLM-assisted migration
-          where the generated code is proven equivalent by differential execution — in progress.
-        </p>
+        <p className="text-body max-w-3xl text-[13px]">{site.hero.caption}</p>
         <ReplayButton targetId="hero-diff" />
       </div>
       <span className="sr-only">{lineCount} lines</span>

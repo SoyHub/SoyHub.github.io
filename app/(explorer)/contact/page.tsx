@@ -1,12 +1,9 @@
 import type { Metadata } from "next";
 import { EndpointResponse } from "@/components/explorer/EndpointResponse";
+import { endpointMetadata } from "@/lib/seo";
 import { ContactCard } from "@/components/views/ContactCard";
 
-export const metadata: Metadata = {
-  title: "Contact",
-  description: "Email, LinkedIn and GitHub for Sohayb Hassan.",
-  alternates: { canonical: "/contact" },
-};
+export const metadata: Metadata = endpointMetadata("/contact");
 
 export default function Page() {
   return (

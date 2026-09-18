@@ -1,15 +1,17 @@
 import type { MetadataRoute } from "next";
+import { profile } from "@/content/profile";
+import { site } from "@/content/site";
 
 export const dynamic = "force-static";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Sohayb Hassan",
-    short_name: "sohayb",
-    description: "Full-stack engineer — profile as an API.",
+    name: profile.header.name,
+    short_name: profile.header.name.split(" ")[0].toLowerCase(),
+    description: site.description,
     start_url: "/",
     display: "browser",
-    background_color: "#0b171d",
-    theme_color: "#0b171d",
+    background_color: site.themeColor,
+    theme_color: site.themeColor,
   };
 }

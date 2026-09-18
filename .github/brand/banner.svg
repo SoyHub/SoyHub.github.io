@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="320" viewBox="0 0 1280 320">
+<defs><pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse">
+  <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#24404c" stroke-opacity="0.45" stroke-width="1"/>
+</pattern></defs>
+<rect width="1280" height="320" fill="#0b171d"/><rect width="1280" height="320" fill="url(#g)"/>
+<g transform="translate(64,60)">
+  <rect width="200" height="200" rx="16.0" fill="#122630" stroke="#24404c" stroke-width="2.4"/>
+  <circle cx="32.0" cy="32.0" r="7.000000000000001" fill="#6fb08d"/>
+  <circle cx="32.0" cy="32.0" r="14.000000000000002" fill="#6fb08d" fill-opacity="0.18"/>
+  <text x="54.0" y="39.0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="22.0" font-weight="500" fill="#6fb08d" letter-spacing="2.0">GET</text>
+  <text x="100.0" y="140.0" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="80.0" font-weight="500" fill="#d5a93f">/me</text>
+  <rect x="32.0" y="160.0" width="136.0" height="2.4" fill="#24404c"/>
+  <text x="32.0" y="180.0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.4" fill="#7d949d">200 OK</text>
+</g>
+<text x="316" y="128" font-family="Georgia, 'Times New Roman', serif" font-size="60" font-weight="600" fill="#e6ecee">Profile as an API</text>
+<text x="318" y="172" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="20" fill="#7d949d">A portfolio template where every section of your CV is an endpoint.</text>
+<text x="318" y="202" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="20" fill="#7d949d">Static export · SEO-ready · deploys to GitHub Pages on push.</text>
+<g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="16" transform="translate(318,250)">
+  <rect x="-1" y="-18" width="66" height="26" fill="#172c24" stroke="#6fb08d" stroke-opacity="0.4"/>
+  <text x="8" y="0" fill="#6fb08d">200 OK</text>
+  <text x="82" y="0" fill="#7d949d">content-type: text/html  ·  x-source: content/profile.ts</text>
+</g>
+</svg>

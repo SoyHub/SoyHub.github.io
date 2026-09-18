@@ -23,7 +23,7 @@ export function ContactCard({ note }: { reason: string; note: string }) {
                 href={h.linkedin}
                 rel="me noopener"
               >
-                linkedin.com/in/sohayb
+                {h.linkedin.replace(/^https?:\/\/(www\.)?/, "")}
               </a>
             ),
           },
@@ -35,7 +35,7 @@ export function ContactCard({ note }: { reason: string; note: string }) {
                 href={h.github}
                 rel="me noopener"
               >
-                github.com/soyhub
+                {h.github.replace(/^https?:\/\//, "")}
               </a>
             ),
           },

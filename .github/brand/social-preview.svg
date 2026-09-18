@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640">
+<defs><pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse">
+  <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#24404c" stroke-opacity="0.45" stroke-width="1"/>
+</pattern></defs>
+<rect width="1280" height="640" fill="#0b171d"/><rect width="1280" height="640" fill="url(#g)"/>
+<g transform="translate(96,160)">
+  <rect width="320" height="320" rx="25.6" fill="#122630" stroke="#24404c" stroke-width="3.84"/>
+  <circle cx="51.2" cy="51.2" r="11.200000000000001" fill="#6fb08d"/>
+  <circle cx="51.2" cy="51.2" r="22.400000000000002" fill="#6fb08d" fill-opacity="0.18"/>
+  <text x="86.4" y="62.400000000000006" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="35.2" font-weight="500" fill="#6fb08d" letter-spacing="3.2">GET</text>
+  <text x="160.0" y="224.0" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="128.0" font-weight="500" fill="#d5a93f">/me</text>
+  <rect x="51.2" y="256.0" width="217.60000000000002" height="3.84" fill="#24404c"/>
+  <text x="51.2" y="288.0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="19.84" fill="#7d949d">200 OK</text>
+</g>
+<text x="480" y="250" font-family="Georgia, 'Times New Roman', serif" font-size="76" font-weight="600" fill="#e6ecee">Profile as an API</text>
+<text x="483" y="308" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="24" fill="#7d949d">Every section of your CV is an endpoint.</text>
+<text x="483" y="346" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="24" fill="#7d949d">GET /experience · GET /skills · POST /hire</text>
+<text x="483" y="384" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="24" fill="#7d949d">Static · SEO-ready · GitHub Pages in one push</text>
+<g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="20" transform="translate(483,460)">
+  <rect x="-1" y="-22" width="84" height="32" fill="#172c24" stroke="#6fb08d" stroke-opacity="0.4"/>
+  <text x="10" y="0" fill="#6fb08d">200 OK</text>
+  <text x="104" y="0" fill="#7d949d">Next.js 16 · React 19 · Tailwind 4 · MIT</text>
+</g>
+</svg>

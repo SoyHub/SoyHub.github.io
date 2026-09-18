@@ -1,0 +1,29 @@
+name: Publish to GitHub Packages
+
+# The npmjs package is `create-mycv` (published by hand). This mirrors it to GitHub Packages as
+# `@soyhub/create-mycv` so the repository's Packages panel is populated.
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          registry-url: https://npm.pkg.github.com
+          scope: "@soyhub"
+      - working-directory: packages/create-mycv
+        run: |
+          npm pkg set name=@soyhub/create-mycv publishConfig.registry=https://npm.pkg.github.com
+          npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

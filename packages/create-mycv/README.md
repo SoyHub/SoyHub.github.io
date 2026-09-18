@@ -22,12 +22,12 @@
   <a href="#the-stack-explained">Stack</a>
 </p>
 
-|                                             `console` — API explorer                                             |                                                  `terminal` — CLI                                                  |
-| :--------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------: |
+|             `console` — API explorer              |                  `terminal` — CLI                   |
+| :-----------------------------------------------: | :-------------------------------------------------: |
 | ![console](https://raw.githubusercontent.com/SoyHub/SoyHub.github.io/main/.github/brand/screenshots/console.png) | ![terminal](https://raw.githubusercontent.com/SoyHub/SoyHub.github.io/main/.github/brand/screenshots/terminal.png) |
-|                                           **`openapi`** — Swagger spec                                           |                                               **`git`** — repository                                               |
+|           **`openapi`** — Swagger spec            |               **`git`** — repository                |
 | ![openapi](https://raw.githubusercontent.com/SoyHub/SoyHub.github.io/main/.github/brand/screenshots/openapi.png) |      ![git](https://raw.githubusercontent.com/SoyHub/SoyHub.github.io/main/.github/brand/screenshots/git.png)      |
-|                                            **`status`** — status page                                            |                                            **`rpg`** — character sheet                                             |
+|            **`status`** — status page             |             **`rpg`** — character sheet             |
 |  ![status](https://raw.githubusercontent.com/SoyHub/SoyHub.github.io/main/.github/brand/screenshots/status.png)  |      ![rpg](https://raw.githubusercontent.com/SoyHub/SoyHub.github.io/main/.github/brand/screenshots/rpg.png)      |
 
 ## Why

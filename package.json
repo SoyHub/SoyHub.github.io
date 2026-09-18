@@ -27,7 +27,7 @@
     "lint": "eslint .",
     "format": "prettier --check .",
     "format:write": "prettier --write .",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "next typegen && tsc --noEmit",
     "test": "vitest run",
     "build-index": "tsx scripts/build-index.ts",
     "build-pdf": "tsx scripts/build-pdf.tsx",

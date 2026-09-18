@@ -13,9 +13,9 @@
   <text x="51.2" y="288.0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="19.84" fill="#7d949d">200 OK</text>
 </g>
 <text x="480" y="250" font-family="Georgia, 'Times New Roman', serif" font-size="76" font-weight="600" fill="#e6ecee">Profile as an API</text>
-<text x="483" y="308" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="24" fill="#7d949d">Every section of your CV is an endpoint.</text>
-<text x="483" y="346" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="24" fill="#7d949d">GET /experience · GET /skills · POST /hire</text>
-<text x="483" y="384" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="24" fill="#7d949d">Static · SEO-ready · GitHub Pages in one push</text>
+<text x="483" y="308" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="24" fill="#7d949d">Your CV as a browsable API.</text>
+<text x="483" y="346" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="24" fill="#7d949d">Six designs · ten languages · one JSON file</text>
+<text x="483" y="384" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="24" fill="#7d949d">npm create profile-api my-site</text>
 <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="20" transform="translate(483,460)">
   <rect x="-1" y="-22" width="84" height="32" fill="#172c24" stroke="#6fb08d" stroke-opacity="0.4"/>
   <text x="10" y="0" fill="#6fb08d">200 OK</text>

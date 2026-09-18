@@ -1,0 +1,248 @@
+{
+  "$schema": "../profile.schema.json",
+  "meta": {
+    "cvVersion": "2026.09"
+  },
+  "header": {
+    "name": "Sohayb Hassan",
+    "title": "مهندس Full-Stack · Java / Spring Boot · React · الخدمات المصرفية والمالية",
+    "location": "تورينو، إيطاليا",
+    "city": "Turin",
+    "countryCode": "IT",
+    "nationality": "مصري",
+    "permit": "تصريح إقامة عمل إيطالي (قابل للتجديد)",
+    "email": "sohaybmohammed@icloud.com",
+    "linkedin": "https://www.linkedin.com/in/sohayb/",
+    "github": "https://github.com/soyhub"
+  },
+  "summary": "مهندس Full-stack بخبرة ست سنوات في Capgemini في بناء أنظمة الواجهة الخلفية والويب للبنوك وشركات التأمين والعملاء المؤسسيين. يعمل حاليًا على تسليم الميزات من طرف إلى طرف على منصة الهاتف المحمول لبنك تجزئة: خدمات مصغّرة بـ Java 17 / Spring Boot 3، وطبقة BFF مبنية على OpenAPI أولًا على JDK 21، وتطبيق React Native. متمكّن من الجانب غير اللامع للتكامل المصرفي (الأنظمة القديمة، عمليات BPM، خطوط إصدار متعددة البيئات) ومن الأدوات التي تُبقي برنامجًا كبيرًا متعدد المستودعات في حركة. بدأ بترحيل COBOL إلى Spring Boot؛ ويكرّس وقته الشخصي اليوم لأدوات التحديث بمساعدة نماذج اللغة الكبيرة حيث يُتحقَّق من المخرجات بدل الوثوق بها.",
+  "availability": {
+    "state": "employed",
+    "label": "موظّف · أقبل العروض"
+  },
+  "headline": [
+    {
+      "value": "6 سنوات",
+      "label": "Capgemini · الخدمات المصرفية والمالية"
+    },
+    {
+      "value": "3 طبقات",
+      "label": "خدمات مصغّرة · BFF · تطبيق محمول"
+    },
+    {
+      "value": "COBOL → Java",
+      "label": "تحديث الأنظمة القديمة، عمليًا"
+    }
+  ],
+  "experience": [
+    {
+      "company": "Capgemini",
+      "place": "تورينو، إيطاليا",
+      "role": "مستشار – Full Stack",
+      "dates": "08/2023 – present",
+      "blocks": [
+        {
+          "title": "منصة الخدمات المصرفية عبر الهاتف — مجموعة مصرفية إيطالية كبرى للتجزئة",
+          "dates": "02/2025 – present",
+          "bullets": [
+            "تسليم الميزات من طرف إلى طرف عبر الطبقات الثلاث: خدمات مصغّرة Java 17 / Spring Boot 3، وBFF مبني على OpenAPI أولًا على JDK 21، وتطبيق React Native / Redux Toolkit.",
+            "تصميم وبناء تدفقات منتجات مصرفية جديدة وواجهات REST، من عقد OpenAPI مرورًا بـ BFF والخدمة المصغّرة وصولًا إلى حالة التطبيق، بما في ذلك التسليم إلى عمليات BPM في البنك.",
+            "تكامل الأنظمة المصرفية القديمة عبر SOAP وREST — المدفوعات والبطاقات والحدود ومعالجة المستندات — مع معالجة أخطاء تُبقي التطبيق قابلًا للاستخدام عندما يتعطل أحد الأنظمة.",
+            "التخزين المؤقت والمرونة والمراقبة في بيئة الإنتاج (Hazelcast، Resilience4j، Micrometer/Prometheus، Splunk، Dynatrace)؛ نشر على Kubernetes عبر خطوط إصدار Azure DevOps في بيئات متعددة.",
+            "بنى أدوات الفريق الداخلية: مولّدات البيئات ومجموعات API، خطافات git الحارسة، أطر اختبار من طرف إلى طرف، سير عمل بوكلاء مدعومين بنماذج اللغة الكبيرة مع مجموعة اختبارات انحدار، ودليل الهندسة.",
+            "إرشاد المطورين المبتدئين وإدارة جلسات نقل المعرفة حول ممارسات Spring Boot وReact."
+          ]
+        },
+        {
+          "title": "منصة موارد بشرية رقمية — مجموعة مؤسسية",
+          "dates": "08/2023 – 02/2025",
+          "bullets": [
+            "بنى منصة الويب الموجهة للموظفين بـ React + TypeScript على SharePoint Framework، من نماذج Figma الأولية إلى الإنتاج؛ تكامل REST مع نظام الموارد البشرية الخلفي؛ إعداد CI/CD على Azure DevOps بالتعاون مع فريق DevOps."
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Capgemini",
+      "place": "تورينو، إيطاليا",
+      "role": "مستشار محلل – Full Stack",
+      "dates": "01/2021 – 08/2023",
+      "subtitle": "عملاء في الإعلام والتأمين والنفط والغاز",
+      "blocks": [
+        {
+          "bullets": [
+            "أداة تقسيم إعلاني لشبكة تلفزيون مدفوع ألمانية: واجهة React لاستهداف الجمهور، خدمات مصغّرة مبنية على Akka وElasticsearch للتقسيم الفوري؛ اختبارات Mocha/Chai، وإصدارات من UAT إلى الإنتاج.",
+            "عميل في النفط والغاز: خدمات Spring Boot على Hibernate/PostgreSQL تغذّي لوحات Angular.js؛ ضبط خط أنابيب البيانات خلفها."
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Capgemini",
+      "place": "تورينو، إيطاليا",
+      "role": "متدرب – Full Stack",
+      "dates": "10/2020 – 01/2021",
+      "subtitle": "عميل في التأمين",
+      "blocks": [
+        {
+          "bullets": [
+            "رحّل نظام COBOL قديم لعرض وثائق التأمين إلى خدمات Java Spring Boot (Hibernate/JDBC على PostgreSQL) تستهلكها واجهة Angular.js؛ وحافظ على تشغيل CI بـ Maven/Git للفريق."
+          ]
+        }
+      ]
+    },
+    {
+      "company": "TogoMetrics",
+      "place": "تورينو، إيطاليا",
+      "role": "متدرب – Full Stack",
+      "dates": "06/2020 – 09/2020",
+      "blocks": [
+        {
+          "bullets": [
+            "منتج أولي React + TypeScript / Node.js لعميل في التقنية الزراعية، بُني من طرف إلى طرف ضمن فريق من أربعة."
+          ]
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "legacy-modernisation",
+      "title": "تحديث الأنظمة القديمة بمساعدة نماذج اللغة الكبيرة",
+      "status": "in-progress",
+      "summary": "من COBOL إلى Spring Boot مع التحقق من الكود المولَّد بالتنفيذ التفاضلي: يُبنى الحَكَم الذي يثبت التكافؤ قبل الوكيل الذي يكتب الكود. مشروع شخصي.",
+      "stack": [
+        "Python",
+        "Java 17",
+        "Spring Boot 3",
+        "Claude API",
+        "tool-calling agents",
+        "evaluation harness"
+      ]
+    },
+    {
+      "id": "workflow-automation",
+      "title": "أتمتة سير العمل الهندسي",
+      "status": "shipped",
+      "summary": "للبرنامج المصرفي أعلاه: وكلاء ومهارات نماذج اللغة الكبيرة موصولة بخطافات git، وبوابة موافقة، ومجموعة اختبارات انحدار، بحيث يتبع المساعد قواعد الفروع والمراجعة في الفريق بدل تجاوزها.",
+      "stack": ["LLM agents", "git hooks", "regression suite", "Azure DevOps"]
+    }
+  ],
+  "skills": [
+    {
+      "id": "backend",
+      "label": "الواجهة الخلفية",
+      "items": [
+        "Java 17/21",
+        "Spring Boot 3",
+        "Spring Integration",
+        "Hibernate/JPA",
+        "MapStruct",
+        "Apache CXF/JAXB (SOAP)",
+        "OpenAPI Generator",
+        "Kafka",
+        "Hazelcast",
+        "Resilience4j",
+        "jBPM client",
+        "Node.js",
+        "Akka Streams"
+      ]
+    },
+    {
+      "id": "frontend",
+      "label": "الواجهة الأمامية والمحمول",
+      "items": [
+        "React",
+        "TypeScript",
+        "React Native",
+        "Redux Toolkit",
+        "SharePoint Framework (SPFx)",
+        "Bootstrap",
+        "Angular.js (legacy)"
+      ]
+    },
+    {
+      "id": "data",
+      "label": "البيانات",
+      "items": ["Oracle", "PostgreSQL", "SQL Server", "MongoDB", "Couchbase", "Elasticsearch"]
+    },
+    {
+      "id": "platform",
+      "label": "المنصة",
+      "items": [
+        "Kubernetes",
+        "Docker",
+        "Jib",
+        "Istio",
+        "Azure DevOps pipelines",
+        "GitLab CI",
+        "GitHub Actions",
+        "Jenkins",
+        "WSO2 API Manager",
+        "Splunk",
+        "Dynatrace",
+        "Prometheus/Micrometer"
+      ]
+    },
+    {
+      "id": "testing",
+      "label": "الاختبار والممارسة",
+      "items": [
+        "JUnit 5",
+        "Mockito",
+        "WireMock",
+        "JaCoCo",
+        "Jest",
+        "Mocha/Chai",
+        "OpenAPI-first design",
+        "Scrum",
+        "code review",
+        "Sonar"
+      ]
+    },
+    {
+      "id": "learning",
+      "label": "يتعلّم الآن",
+      "items": ["Python", "LLM APIs and tool-calling agents", "evaluation harnesses"]
+    }
+  ],
+  "education": [
+    {
+      "what": "بكالوريوس علوم الحاسوب (عن بُعد)",
+      "where": "University of the People، باسادينا، كاليفورنيا",
+      "when": "قيد الدراسة"
+    },
+    {
+      "what": "درجة مشارك في العلوم، علوم الحاسوب",
+      "where": "University of the People",
+      "when": "2020 – 2023"
+    },
+    {
+      "what": "معسكر تدريبي في تطوير البرمجيات",
+      "where": "Powercoders، تورينو",
+      "when": "12/2019 – 03/2020"
+    },
+    {
+      "what": "مقررات في علوم الحاسوب",
+      "where": "جامعة ساراتوف الحكومية، روسيا"
+    }
+  ],
+  "languages": [
+    {
+      "name": "العربية",
+      "level": "اللغة الأم"
+    },
+    {
+      "name": "الإنجليزية",
+      "level": "C1"
+    },
+    {
+      "name": "الإيطالية",
+      "level": "C1"
+    },
+    {
+      "name": "الروسية",
+      "level": "B1"
+    }
+  ]
+}

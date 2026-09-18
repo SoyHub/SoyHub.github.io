@@ -1,4 +1,3 @@
-import { NowSchema } from "./schema";
-import data from "./now.json";
+import { getNow } from "./index";
 
-export const now = NowSchema.parse(data);
+export const now = getNow();

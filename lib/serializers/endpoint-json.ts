@@ -1,10 +1,9 @@
 import type { Profile } from "@/content/profile.types";
-import { now } from "@/content/now";
-import { endpoints } from "@/content/endpoints";
+import { endpoints, endpointText } from "@/content/endpoints";
 import { splitRange, monthsBetween, humanDuration } from "@/lib/dates";
 
 /** The JSON tab of each endpoint: the real slice of profile.ts that the view rendered. */
-export const endpointJson = (href: string, p: Profile, site: string): unknown => {
+export const endpointJson = (href: string, p: Profile, site: string, now: unknown): unknown => {
   switch (href) {
     case "/":
       return {
@@ -13,7 +12,7 @@ export const endpointJson = (href: string, p: Profile, site: string): unknown =>
         location: p.header.location,
         headline: p.headline,
         _links: Object.fromEntries(
-          endpoints.map((e) => [e.title.toLowerCase(), `${site}${e.href}`]),
+          endpoints.map((e) => [endpointText(e.href).title.toLowerCase(), `${site}${e.href}`]),
         ),
       };
     case "/experience":
@@ -46,7 +45,8 @@ export const healthJson = (p: Profile) => {
   const first = splitRange(p.experience.at(-1)!.dates).start;
   const current = splitRange(p.experience[0].dates).start;
   return {
-    status: "UP",
+    status: p.availability.label,
+    availability: p.availability.state,
     uptime: humanDuration(monthsBetween(first)),
     since: first,
     current_role: {

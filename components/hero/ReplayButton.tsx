@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export function ReplayButton({ targetId }: { targetId: string }) {
+export function ReplayButton({ targetId, label }: { targetId: string; label: string }) {
   const [, tick] = useState(0);
   const replay = () => {
     const el = document.getElementById(targetId);
@@ -18,7 +18,7 @@ export function ReplayButton({ targetId }: { targetId: string }) {
       onClick={replay}
       className="lbl border-hair hover:border-brass hover:text-ink rounded-sm border px-2 py-1"
     >
-      replay ↻
+      {label} ↻
     </button>
   );
 }

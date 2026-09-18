@@ -19,7 +19,7 @@ export function StatusChip({
   return (
     <span
       className={cx(
-        "inline-flex items-center gap-1.5 rounded-sm border px-1.5 py-0.5 font-mono text-[11px] font-medium tracking-wider",
+        "inline-flex shrink-0 items-center gap-1.5 rounded-sm border px-1.5 py-0.5 font-mono text-[11px] font-medium tracking-wider whitespace-nowrap",
         tone(code),
         className,
       )}

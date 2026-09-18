@@ -29,12 +29,81 @@ html {
   background: var(--paper);
 }
 
-body {
-  background-color: var(--paper);
+/* Each design has its own surface: the console's blueprint grid, the terminal's CRT scanlines,
+   the spec's plain paper, the repository's flat panel, the status page's dot matrix. */
+[data-skin="console"] body {
   background-image:
     linear-gradient(color-mix(in oklab, var(--hair) 40%, transparent) 1px, transparent 1px),
     linear-gradient(90deg, color-mix(in oklab, var(--hair) 40%, transparent) 1px, transparent 1px);
   background-size: 24px 24px;
+}
+[data-skin="terminal"] body {
+  font-family: var(--font-mono);
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent 0 2px,
+    color-mix(in oklab, var(--ink) 4%, transparent) 2px 3px
+  );
+  text-shadow: 0 0 6px color-mix(in oklab, var(--verdant) 18%, transparent);
+}
+[data-skin="terminal"] pre,
+[data-skin="terminal"] code,
+[data-skin="terminal"] img {
+  text-shadow: none;
+}
+[data-skin="status"] body {
+  background-image: radial-gradient(
+    color-mix(in oklab, var(--hair) 80%, transparent) 1px,
+    transparent 1px
+  );
+  background-size: 18px 18px;
+}
+[data-skin="rpg"] body {
+  background-image: repeating-conic-gradient(
+    color-mix(in oklab, var(--hair) 22%, transparent) 0 25%,
+    transparent 0 50%
+  );
+  background-size: 16px 16px;
+}
+/* RPG theme: pixel headings and the double "dialog box" border. */
+.rpg-h {
+  font-family: var(--font-pixel), var(--font-plex-serif), Georgia, serif;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  line-height: 1.6;
+}
+.rpg-box {
+  background: var(--surface);
+  border: 2px solid var(--hair);
+  border-radius: 2px;
+  box-shadow:
+    inset 0 0 0 2px var(--paper),
+    inset 0 0 0 3px var(--hair),
+    var(--shadow);
+}
+@keyframes rpg-fill {
+  from {
+    transform: scaleX(0);
+  }
+}
+.rpg-fill {
+  transform-origin: left;
+  animation: rpg-fill 900ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+[dir="rtl"] .rpg-fill {
+  transform-origin: right;
+}
+[data-skin="git"] body {
+  background-image: linear-gradient(
+    180deg,
+    color-mix(in oklab, var(--surface) 60%, var(--paper)) 0,
+    var(--paper) 240px
+  );
+  background-repeat: no-repeat;
+}
+
+body {
+  background-color: var(--paper);
   color: var(--body);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
@@ -45,9 +114,12 @@ body {
   color: var(--paper);
 }
 
-:focus-visible {
-  outline: 2px solid var(--brass);
-  outline-offset: 2px;
+/* In the base layer so `outline-none` on a control wins (inputs and selects show focus on their frame). */
+@layer base {
+  :focus-visible {
+    outline: 2px solid var(--brass);
+    outline-offset: 2px;
+  }
 }
 
 /* Mono uppercase label, the console's typographic unit. */
@@ -111,4 +183,14 @@ body {
   50% {
     opacity: 0.35;
   }
+}
+
+/* Terminal theme: the prompt cursor. */
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+.cursor-blink {
+  animation: blink 1s steps(1) infinite;
 }

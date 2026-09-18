@@ -4,7 +4,24 @@ import { wrapText } from "@/lib/text/wrap";
 
 const W = 80;
 
-export const plainTextCv = (p: Profile, site: string, opts: { ansi: boolean }) => {
+export type CvLabels = {
+  profile: string;
+  experience: string;
+  projects: string;
+  skills: string;
+  education: string;
+  languages: string;
+  inProgress: string;
+  present: string;
+};
+
+export const plainTextCv = (
+  p: Profile,
+  site: string,
+  opts: { ansi: boolean; labels: CvLabels },
+) => {
+  const L = opts.labels;
+  const dates = (d: string) => d.replace(/present/i, L.present);
   const c = opts.ansi
     ? ansi
     : {
@@ -34,36 +51,36 @@ export const plainTextCv = (p: Profile, site: string, opts: { ansi: boolean }) =
   out.push(
     `${p.header.linkedin.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "")} · ${p.header.github.replace(/^https?:\/\//, "")} · ${site}`,
   );
-  out.push(`${p.header.nationality} · ${p.header.permit}`);
+  out.push([p.header.nationality, p.header.permit].filter(Boolean).join(" · "));
 
-  section("Profile");
+  section(L.profile);
   wrapText(p.summary, W).forEach((l) => out.push(l));
 
-  section("Experience");
+  section(L.experience);
   for (const job of p.experience) {
     out.push("");
-    row(`${c.bold(job.role)} · ${job.company}, ${job.place}`, job.dates);
+    row(`${c.bold(job.role)} · ${job.company}, ${job.place}`, dates(job.dates));
     if (job.subtitle) out.push(c.dim(job.subtitle));
     for (const b of job.blocks) {
-      if (b.title) row(`  ${b.title}`, b.dates ?? "");
+      if (b.title) row(`  ${b.title}`, b.dates ? dates(b.dates) : "");
       b.bullets.forEach(bullet);
     }
   }
 
-  section("Projects");
+  section(L.projects);
   p.projects.forEach((pr) =>
-    bullet(`${pr.title} — ${pr.summary}${pr.status === "in-progress" ? " (in progress)" : ""}`),
+    bullet(`${pr.title} — ${pr.summary}${pr.status === "in-progress" ? ` (${L.inProgress})` : ""}`),
   );
 
-  section("Skills");
+  section(L.skills);
   p.skills.forEach((g) =>
     wrapText(`${g.label}: ${g.items.join(", ")}`, W, 2).forEach((l) => out.push(l)),
   );
 
-  section("Education");
+  section(L.education);
   p.education.forEach((e) => row(`${c.bold(e.what)} · ${e.where}`, e.when ?? ""));
 
-  section("Languages");
+  section(L.languages);
   out.push(p.languages.map((l) => `${l.name} (${l.level})`).join(" · "));
 
   out.push("");

@@ -22,6 +22,14 @@ export const ProfileSchema = z.object({
     github: z.url(),
   }),
   summary: z.string(),
+  availability: z.object({
+    state: z
+      .enum(["employed", "open", "available"])
+      .describe(
+        "Colours the LED: employed = steady green, open = pulsing amber, available = pulsing green",
+      ),
+    label: z.string().describe('Shown next to the LED, e.g. "hired · accepting offers"'),
+  }),
   headline: z
     .array(z.object({ value: z.string(), label: z.string() }))
     .length(3)
@@ -74,38 +82,30 @@ const diffSide = z.object({
 export const SiteSchema = z.object({
   $schema: z.string().optional(),
   theme: z
-    .enum(["console", "paper", "terminal", "slate"])
-    .describe("Palette, from lib/themes.ts. Dark and light variants come with it."),
-  title: z.string().describe("Home <title>; other pages use “<Page> · <name>”"),
-  description: z.string(),
-  ogSubtitle: z.string().describe("Subtitle on the home page's social-preview image"),
-  locale: z.string().describe("Open Graph locale, e.g. en_GB"),
-  hero: z.object({
-    label: z.string().describe("Accessible name of the animated diff"),
-    caption: z.string(),
-    left: diffSide,
-    right: diffSide,
-  }),
+    .enum(["console", "terminal", "openapi", "git", "status", "rpg"])
+    .describe(
+      "The design: console (API explorer), terminal (CLI), openapi (Swagger spec), git (repository), status (status page), rpg (character sheet).",
+    ),
+  locales: z
+    .array(z.string().min(2).max(5))
+    .min(1)
+    .describe(
+      "Languages the site is built in; each needs messages/<locale>.json and content/<locale>/",
+    ),
+  defaultLocale: z
+    .string()
+    .describe("Where / redirects when the visitor's language is not available"),
+  hero: z.object({ left: diffSide, right: diffSide }),
   easterEgg: z.object({
     path: z.string().describe("Typing DELETE <path> in the request bar answers with the message"),
-    message: z.string(),
   }),
-  consoleSuggestions: z.array(z.string()),
   endpoints: z
     .array(
       z.object({
         method: z.enum(["GET", "POST"]),
         path: z.string().describe('As displayed, e.g. "/skills?filter="'),
-        href: z.string().describe("The page folder under app/(explorer), e.g. /skills"),
-        title: z.string(),
-        description: z.string().describe("One line in the endpoint list"),
+        href: z.string().describe("The page folder under app/[locale]/(explorer), e.g. /skills"),
         indexable: z.boolean().describe("In the sitemap and llms.txt; false for form-like pages"),
-        seo: z
-          .object({
-            description: z.string().describe("<meta name=description> of the page"),
-            og: z.string().optional().describe("Subtitle of the page's social-preview image"),
-          })
-          .optional(),
       }),
     )
     .min(1),

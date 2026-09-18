@@ -1,7 +1,11 @@
-import { profile } from "@/content/profile";
+import { getLocale, getTranslations } from "next-intl/server";
+import { getProfile } from "@/content";
 import { StatusChip } from "@/components/ui/StatusChip";
 
-export function ProjectCards() {
+export async function ProjectCards() {
+  const locale = await getLocale();
+  const profile = getProfile(locale);
+  const t = await getTranslations();
   return (
     <ul className="grid gap-3 md:grid-cols-2">
       {profile.projects.map((p) => (
@@ -9,9 +13,9 @@ export function ProjectCards() {
           <div className="flex items-start justify-between gap-3">
             <h2 className="text-ink text-[15px] font-semibold">{p.title}</h2>
             {p.status === "in-progress" ? (
-              <StatusChip code={202} text="in progress" />
+              <StatusChip code={202} text={t("ui.inProgress")} />
             ) : (
-              <StatusChip code={200} text="shipped" />
+              <StatusChip code={200} text={t("ui.shipped")} />
             )}
           </div>
           <p className="mt-2 text-[13.5px] leading-relaxed">{p.summary}</p>

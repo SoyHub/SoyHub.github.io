@@ -44,4 +44,6 @@ next-env.d.ts
 /content/denylist.local.json
 /evals/results.json
 /public/cv.pdf
+/public/*/cv.pdf
 /app/favicon.ico
+/assets/fonts/.cache/

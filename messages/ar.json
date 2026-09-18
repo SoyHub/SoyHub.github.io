@@ -1,0 +1,182 @@
+{
+  "site": {
+    "title": "صهيب حسن — مهندس Full-Stack، Java / Spring Boot، React",
+    "description": "مهندس Full-stack — Java / Spring Boot، React Native، Kubernetes — ست سنوات في الخدمات المصرفية والمالية. تصفّح الملف الشخصي كواجهة API.",
+    "ogSubtitle": "مهندس Full-stack · Java / Spring Boot · React · ست سنوات في القطاع المصرفي. تصفّح الملف الشخصي كواجهة API.",
+    "hero": {
+      "label": "من COBOL إلى Java",
+      "caption": "2020: ترحيل نظام COBOL لعرض وثائق التأمين إلى Spring Boot. اليوم: ترحيل بمساعدة نماذج اللغة الكبيرة يُثبَت فيه تكافؤ الكود المولَّد بالتنفيذ التفاضلي — قيد العمل.",
+      "kicker": "diff · عرض الوثائق",
+      "migrating": "جارٍ الترحيل…",
+      "equivalent": "مكافئ",
+      "replay": "إعادة"
+    },
+    "easterEgg": "405 Method Not Allowed — COBOL يُرحَّل ولا يُحذَف.",
+    "consoleSuggestions": [
+      "ماذا بنى على منصة الخدمات المصرفية عبر الهاتف؟",
+      "استعرض لي مسيرته المهنية.",
+      "هل يعرف Kafka؟",
+      "What is he learning right now?",
+      "هل يتحدث العربية؟",
+      "كيف تعمل وحدة التحكم هذه؟"
+    ]
+  },
+  "endpoints": {
+    "/": {
+      "title": "Sohayb Hassan",
+      "description": "الفهرس · من، ماذا، روابط"
+    },
+    "/experience": {
+      "title": "الخبرة",
+      "description": "أربعة أدوار، 2020 → الآن",
+      "seo": {
+        "description": "أربعة أدوار من 2020 حتى اليوم: خدمات مصغّرة وBFF للخدمات المصرفية عبر الهاتف، منصة موارد بشرية رقمية، عملاء في الإعلام والنفط والغاز، وترحيل من COBOL إلى Spring Boot.",
+        "og": "أربعة أدوار، 2020 → الآن: خدمات مصغّرة وBFF مصرفية، موارد بشرية رقمية، إعلام، نفط وغاز، COBOL → Spring Boot."
+      }
+    },
+    "/skills": {
+      "title": "المهارات",
+      "description": "ست مجموعات، قابلة للتصفية",
+      "seo": {
+        "description": "Java 17/21، Spring Boot 3، React وReact Native، Kubernetes، Azure DevOps، PostgreSQL وغيرها — ست مجموعات، قابلة للتصفية.",
+        "og": "Java 17/21 · Spring Boot 3 · React · React Native · Kubernetes · Azure DevOps · PostgreSQL · Kafka — ست مجموعات، قابلة للتصفية."
+      }
+    },
+    "/projects": {
+      "title": "المشاريع",
+      "description": "ما يبنيه في وقته الخاص",
+      "seo": {
+        "description": "تحديث الأنظمة القديمة بمساعدة نماذج اللغة الكبيرة مع التحقق بالتنفيذ التفاضلي، وأتمتة سير العمل الهندسي لبرنامج مصرفي.",
+        "og": "تحديث الأنظمة القديمة بمساعدة نماذج اللغة الكبيرة مع التحقق بالتنفيذ التفاضلي. أتمتة سير العمل لبرنامج مصرفي."
+      }
+    },
+    "/now": {
+      "title": "الآن",
+      "description": "هذا الشهر، مؤرَّخ",
+      "seo": {
+        "description": "ما يعمل عليه صهيب حسن هذا الشهر.",
+        "og": "ما يعمل عليه هذا الشهر — مؤرَّخ، يُحدَّث شهريًا."
+      }
+    },
+    "/education": {
+      "title": "التعليم",
+      "description": "الشهادات، المعسكر التدريبي، اللغات",
+      "seo": {
+        "description": "بكالوريوس علوم الحاسوب قيد الدراسة في University of the People، معسكر Powercoders، أربع لغات."
+      }
+    },
+    "/health": {
+      "title": "الحالة",
+      "description": "مدة التشغيل ومؤشرات الحالة",
+      "seo": {
+        "description": "لوحة الحالة: مدة التشغيل منذ 2020، الدور الحالي، ما يتعلّمه الآن."
+      }
+    },
+    "/cv": {
+      "title": "السيرة الذاتية",
+      "description": "pdf · json · txt · curl",
+      "seo": {
+        "description": "نزّل السيرة الذاتية بصيغة PDF أو JSON Resume أو نص عادي — أو curl /cv.txt."
+      }
+    },
+    "/contact": {
+      "title": "التواصل",
+      "description": "البريد، LinkedIn، GitHub",
+      "seo": {
+        "description": "البريد الإلكتروني وLinkedIn وGitHub لصهيب حسن."
+      }
+    },
+    "/hire": {
+      "title": "توظيف",
+      "description": "أرسل جسم طلب، واحصل على 202",
+      "seo": {
+        "description": "أرسل طلب توظيف كجسم JSON — يفتح برنامج البريد لديك."
+      }
+    },
+    "/ask": {
+      "title": "اسأل",
+      "description": "وحدة تحكم للدردشة · قريبًا",
+      "seo": {
+        "description": "وحدة تحكم للدردشة تجيب عن الأسئلة حول الملف الشخصي — قريبًا."
+      }
+    }
+  },
+  "ui": {
+    "skip": "انتقل إلى المحتوى",
+    "focus": "تركيز",
+    "move": "تنقّل",
+    "send": "إرسال",
+    "sendButton": "إرسال ◀",
+    "email": "email",
+    "linkedin": "linkedin",
+    "github": "github",
+    "profiles": "الملفات",
+    "theme": "المظهر",
+    "switchTheme": "التبديل إلى المظهر {theme}",
+    "dark": "الداكن",
+    "light": "الفاتح",
+    "language": "اللغة",
+    "endpoints": "نقاط النهاية",
+    "request": "الطلب",
+    "endpointPath": "مسار نقطة النهاية",
+    "response": "الاستجابة",
+    "rendered": "معروض",
+    "json": "json",
+    "footer": "بلا كوكيز · بلا تحليلات · المحتوى من content/{locale}/profile.json",
+    "links": "_links",
+    "all": "الكل",
+    "filter": "تصفية",
+    "updated": "محدَّث {date}",
+    "languages": "اللغات",
+    "inProgress": "قيد العمل",
+    "shipped": "تم الإطلاق",
+    "notFound": "Not Found",
+    "noSuchEndpoint": "لا توجد نقطة نهاية بهذا الاسم.",
+    "registryKnows": "السجل يعرف هذه:",
+    "basedIn": "المقر",
+    "terminal": "الطرفية",
+    "emailNote": "البريد الإلكتروني هو القناة الموثوقة. عنوان يتضمن الدور والموقع يحصل على رد أسرع.",
+    "fromTerminal": "من الطرفية",
+    "cvNotes": {
+      "pdf": "صفحتان، A4",
+      "json": "JSON Resume v1.0.0",
+      "txt": "80 عمودًا، ANSI",
+      "llms": "للزواحف التي تقرأ"
+    },
+    "health": {
+      "leds": [
+        "الواجهة الخلفية · java / spring boot",
+        "الواجهة الأمامية · react / react native",
+        "المنصة · kubernetes / azure devops",
+        "هندسة الذكاء الاصطناعي · قيد العمل"
+      ],
+      "status": "status",
+      "uptime": "مدة التشغيل",
+      "since": "منذ",
+      "currentRole": "current_role",
+      "learning": "يتعلّم",
+      "cvVersion": "cv_version"
+    },
+    "hire": {
+      "lead": "عدّل جسم الطلب واضغط إرسال. سيفتح برنامج البريد لديك — لا يُخزَّن شيء هنا.",
+      "body": "الجسم · application/json",
+      "badRequest": "Bad Request",
+      "accepted": "Accepted"
+    },
+    "ask": {
+      "title": "اسأل — قريبًا",
+      "lead": "ستكون نقطة النهاية هذه وحدة تحكم للدردشة تجيب عن الأسئلة حول الملف الشخصي، مستندةً إلى المحتوى نفسه الذي تعتمده نقاط النهاية الأخرى: Claude مع استرجاع من السيرة الذاتية، يجيب ضمن النطاق فقط ويعرض المصادر التي استخدمها. وحدة التحكم جاهزة؛ وهي بانتظار خادم تعمل عليه، وهو ما لا يوفره هذا الاستضافة الثابتة.",
+      "meanwhile": "حتى ذلك الحين، أسرع طريقة للسؤال هي البريد الإلكتروني — عادةً ما يصل الرد خلال يوم.",
+      "unavailable": "Service Unavailable"
+    },
+    "pdf": {
+      "profile": "الملف الشخصي",
+      "experience": "الخبرة",
+      "projects": "المشاريع",
+      "skills": "المهارات",
+      "education": "التعليم",
+      "languages": "اللغات"
+    },
+    "present": "الآن"
+  }
+}

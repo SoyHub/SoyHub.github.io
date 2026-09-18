@@ -5,10 +5,24 @@
   "description": "Portfolio template: every section of your CV is an endpoint. Static, SEO-ready, GitHub Pages.",
   "license": "MIT",
   "repository": "github:SoyHub/SoyHub.github.io",
+  "homepage": "https://soyhub.github.io",
+  "bugs": "https://github.com/SoyHub/SoyHub.github.io/issues",
+  "keywords": [
+    "portfolio",
+    "cv",
+    "resume",
+    "template",
+    "nextjs",
+    "github-pages",
+    "static-site",
+    "i18n",
+    "developer-portfolio"
+  ],
   "scripts": {
     "dev": "next dev",
     "prebuild": "tsx scripts/build-index.ts && tsx scripts/build-pdf.tsx && tsx scripts/build-favicon.tsx",
     "build": "next build",
+    "postbuild": "mv out/not-found-page/index.html out/404.html && rm -r out/not-found-page",
     "start": "next start",
     "lint": "eslint .",
     "format": "prettier --check .",
@@ -19,6 +33,7 @@
     "build-pdf": "tsx scripts/build-pdf.tsx",
     "build-favicon": "tsx scripts/build-favicon.tsx",
     "build-schemas": "tsx scripts/build-schemas.ts",
+    "screenshots": "node scripts/screenshots.mjs",
     "evals": "tsx evals/run.ts"
   },
   "dependencies": {
@@ -27,6 +42,7 @@
     "@upstash/redis": "^1.38.4",
     "gray-matter": "^4.0.3",
     "next": "16.3.5",
+    "next-intl": "^4.14.5",
     "react": "19.2.8",
     "react-dom": "19.2.8",
     "zod": "^4.6.2"

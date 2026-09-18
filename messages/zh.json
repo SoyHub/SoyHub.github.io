@@ -1,0 +1,182 @@
+{
+  "site": {
+    "title": "Sohayb Hassan — 全栈工程师，Java / Spring Boot，React",
+    "description": "全栈工程师 — Java / Spring Boot、React Native、Kubernetes — 六年银行与金融服务经验。像浏览 API 一样浏览这份简历。",
+    "ogSubtitle": "全栈工程师 · Java / Spring Boot · React · 六年银行业经验。像浏览 API 一样浏览这份简历。",
+    "hero": {
+      "label": "从 COBOL 到 Java",
+      "caption": "2020 年：把一套 COBOL 保单列表系统迁移到 Spring Boot。现在：LLM 辅助迁移，生成的代码通过差分执行证明等价——进行中。",
+      "kicker": "diff · 保单列表",
+      "migrating": "迁移中…",
+      "equivalent": "等价",
+      "replay": "重放"
+    },
+    "easterEgg": "405 Method Not Allowed — COBOL 只能迁移，不能删除。",
+    "consoleSuggestions": [
+      "他在移动银行平台上做了什么？",
+      "介绍一下他的职业经历。",
+      "他会 Kafka 吗？",
+      "What is he learning right now?",
+      "هل يتحدث العربية؟",
+      "这个控制台是怎么工作的？"
+    ]
+  },
+  "endpoints": {
+    "/": {
+      "title": "Sohayb Hassan",
+      "description": "根索引 · 是谁、做什么、链接"
+    },
+    "/experience": {
+      "title": "经历",
+      "description": "四段职位，2020 → 至今",
+      "seo": {
+        "description": "2020 年至今的四段职位：移动银行微服务与 BFF、数字化人力资源平台、媒体与油气客户，以及一次 COBOL 到 Spring Boot 的迁移。",
+        "og": "四段职位，2020 → 至今：移动银行微服务与 BFF、数字化 HR、媒体、油气，COBOL → Spring Boot。"
+      }
+    },
+    "/skills": {
+      "title": "技能",
+      "description": "六个分组，可筛选",
+      "seo": {
+        "description": "Java 17/21、Spring Boot 3、React 与 React Native、Kubernetes、Azure DevOps、PostgreSQL 等——六个分组，可筛选。",
+        "og": "Java 17/21 · Spring Boot 3 · React · React Native · Kubernetes · Azure DevOps · PostgreSQL · Kafka — 六个分组，可筛选。"
+      }
+    },
+    "/projects": {
+      "title": "项目",
+      "description": "他在业余时间做的东西",
+      "seo": {
+        "description": "带差分执行验证的 LLM 辅助遗留系统现代化，以及面向银行项目的工程工作流自动化。",
+        "og": "带差分执行验证的 LLM 辅助遗留系统现代化。面向银行项目的工作流自动化。"
+      }
+    },
+    "/now": {
+      "title": "近况",
+      "description": "本月，标注日期",
+      "seo": {
+        "description": "Sohayb Hassan 本月在做什么。",
+        "og": "他本月在做什么——标注日期，每月更新。"
+      }
+    },
+    "/education": {
+      "title": "教育",
+      "description": "学位、训练营、语言",
+      "seo": {
+        "description": "University of the People 计算机科学学士在读，Powercoders 训练营，四门语言。"
+      }
+    },
+    "/health": {
+      "title": "状态",
+      "description": "运行时长与状态指示灯",
+      "seo": {
+        "description": "状态面板：自 2020 年起的运行时长、当前职位、正在学习的内容。"
+      }
+    },
+    "/cv": {
+      "title": "简历",
+      "description": "pdf · json · txt · curl",
+      "seo": {
+        "description": "下载 PDF、JSON Resume 或纯文本简历——或者 curl /cv.txt。"
+      }
+    },
+    "/contact": {
+      "title": "联系",
+      "description": "邮箱、LinkedIn、GitHub",
+      "seo": {
+        "description": "Sohayb Hassan 的邮箱、LinkedIn 与 GitHub。"
+      }
+    },
+    "/hire": {
+      "title": "招聘",
+      "description": "发送请求体，得到 202",
+      "seo": {
+        "description": "以 JSON 请求体发送招聘请求——会打开你的邮件客户端。"
+      }
+    },
+    "/ask": {
+      "title": "提问",
+      "description": "聊天控制台 · 即将上线",
+      "seo": {
+        "description": "回答关于这份简历的问题的聊天控制台——即将上线。"
+      }
+    }
+  },
+  "ui": {
+    "skip": "跳到内容",
+    "focus": "聚焦",
+    "move": "移动",
+    "send": "发送",
+    "sendButton": "发送 ▶",
+    "email": "email",
+    "linkedin": "linkedin",
+    "github": "github",
+    "profiles": "个人主页",
+    "theme": "主题",
+    "switchTheme": "切换到{theme}主题",
+    "dark": "深色",
+    "light": "浅色",
+    "language": "语言",
+    "endpoints": "端点",
+    "request": "请求",
+    "endpointPath": "端点路径",
+    "response": "响应",
+    "rendered": "渲染",
+    "json": "json",
+    "footer": "无 cookie · 无统计 · 内容来自 content/{locale}/profile.json",
+    "links": "_links",
+    "all": "全部",
+    "filter": "筛选",
+    "updated": "更新于 {date}",
+    "languages": "语言",
+    "inProgress": "进行中",
+    "shipped": "已上线",
+    "notFound": "Not Found",
+    "noSuchEndpoint": "没有这个端点。",
+    "registryKnows": "注册表里有这些：",
+    "basedIn": "所在地",
+    "terminal": "终端",
+    "emailNote": "邮件是可靠的渠道。主题里写明职位和地点，回复会更快。",
+    "fromTerminal": "在终端里",
+    "cvNotes": {
+      "pdf": "两页，A4",
+      "json": "JSON Resume v1.0.0",
+      "txt": "80 列，ANSI",
+      "llms": "给会阅读的爬虫"
+    },
+    "health": {
+      "leds": [
+        "后端 · java / spring boot",
+        "前端 · react / react native",
+        "平台 · kubernetes / azure devops",
+        "ai 工程 · 进行中"
+      ],
+      "status": "status",
+      "uptime": "运行时长",
+      "since": "自",
+      "currentRole": "current_role",
+      "learning": "学习中",
+      "cvVersion": "cv_version"
+    },
+    "hire": {
+      "lead": "编辑请求体，点击发送。会打开你的邮件客户端——这里不存储任何内容。",
+      "body": "请求体 · application/json",
+      "badRequest": "Bad Request",
+      "accepted": "Accepted"
+    },
+    "ask": {
+      "title": "提问 — 即将上线",
+      "lead": "这个端点将是一个聊天控制台，基于与其他端点相同的内容回答关于这份简历的问题：Claude 配合对简历的检索，只在范围内作答并展示所用来源。控制台已经做好；它在等一台可以运行的服务器，而这个静态托管无法提供。",
+      "meanwhile": "在此之前，最快的提问方式是邮件——通常一天内回复。",
+      "unavailable": "Service Unavailable"
+    },
+    "pdf": {
+      "profile": "简介",
+      "experience": "经历",
+      "projects": "项目",
+      "skills": "技能",
+      "education": "教育",
+      "languages": "语言"
+    },
+    "present": "至今"
+  }
+}

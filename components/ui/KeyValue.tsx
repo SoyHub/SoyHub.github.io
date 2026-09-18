@@ -6,7 +6,9 @@ export function KeyValue({ rows }: { rows: { k: string; v: ReactNode }[] }) {
       {rows.map((r) => (
         <div key={r.k} className="contents">
           <dt className="text-muted">{r.k}</dt>
-          <dd className="text-ink break-words">{r.v}</dd>
+          <dd dir="auto" className="text-ink break-words">
+            {r.v}
+          </dd>
         </div>
       ))}
     </dl>

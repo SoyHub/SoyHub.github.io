@@ -1,8 +1,10 @@
-import { profile } from "@/content/profile";
+"use client";
+
+import { useContact } from "../ContactContext";
 import { KeyValue } from "@/components/ui/KeyValue";
 
 export function ContactCard({ note }: { reason: string; note: string }) {
-  const h = profile.header;
+  const h = useContact();
   return (
     <div className="border-hair bg-surface rounded-sm border p-3">
       <KeyValue

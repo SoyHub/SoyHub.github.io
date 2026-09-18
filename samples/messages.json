@@ -1,0 +1,180 @@
+{
+  "site": {
+    "title": "Alex Rivera — Backend Engineer, Go / PostgreSQL",
+    "description": "Backend engineer — Go, PostgreSQL, Kafka, Kubernetes — five years in fintech. Browse the profile as an API.",
+    "ogSubtitle": "Backend engineer · Go / PostgreSQL · five years in fintech. Browse the profile as an API.",
+    "hero": {
+      "label": "Before and after",
+      "caption": "Before: one INSERT per transaction and a nightly reconciliation job. After: batched double-entry writes with the invariant enforced by the database — the pipeline went from 40 to 4,000 requests per second.",
+      "kicker": "diff · ledger writes",
+      "migrating": "migrating…",
+      "equivalent": "equivalent",
+      "replay": "Replay"
+    },
+    "easterEgg": "405 Method Not Allowed — ledgers are appended to, never deleted.",
+    "consoleSuggestions": [
+      "What did they build at Northbank Labs?",
+      "Walk me through their career.",
+      "Do they know Kafka?",
+      "How does this console work?"
+    ]
+  },
+  "endpoints": {
+    "/": {
+      "title": "Alex Rivera",
+      "description": "root index · who, what, links"
+    },
+    "/experience": {
+      "title": "Experience",
+      "description": "three roles, 2020 → present",
+      "seo": {
+        "description": "Three roles from 2020 to today: settlement and ledger services for a card-issuing platform, merchant payouts, internal tooling.",
+        "og": "Three roles, 2020 → present: settlement pipeline, merchant payouts, internal tooling."
+      }
+    },
+    "/skills": {
+      "title": "Skills",
+      "description": "five groups, filterable",
+      "seo": {
+        "description": "Go, PostgreSQL, Kafka, Kubernetes, Terraform and more — five groups, filterable.",
+        "og": "Go · PostgreSQL · Kafka · gRPC · Kubernetes · Terraform — five groups, filterable."
+      }
+    },
+    "/projects": {
+      "title": "Projects",
+      "description": "what they build on their own time",
+      "seo": {
+        "description": "A dependency-free Go rate limiter, and a double-entry ledger implemented three ways.",
+        "og": "ratelimit-go and a double-entry ledger kata in Go, Rust and PostgreSQL."
+      }
+    },
+    "/now": {
+      "title": "Now",
+      "description": "this month, dated",
+      "seo": {
+        "description": "What Alex Rivera is working on this month.",
+        "og": "What he is working on this month — dated, updated monthly."
+      }
+    },
+    "/education": {
+      "title": "Education",
+      "description": "degrees, bootcamp, languages",
+      "seo": {
+        "description": "BSc Computer Engineering, University of Porto; three languages."
+      }
+    },
+    "/health": {
+      "title": "Health",
+      "description": "uptime and status LEDs",
+      "seo": {
+        "description": "Status board: uptime since 2020, current role, what is being learned now."
+      }
+    },
+    "/cv": {
+      "title": "CV",
+      "description": "pdf · json · txt · curl",
+      "seo": {
+        "description": "Download the CV as PDF, JSON Resume or plain text — or curl /cv.txt."
+      }
+    },
+    "/contact": {
+      "title": "Contact",
+      "description": "email, LinkedIn, GitHub",
+      "seo": {
+        "description": "Email, LinkedIn and GitHub for Alex Rivera."
+      }
+    },
+    "/hire": {
+      "title": "Hire",
+      "description": "send a request body, get a 202",
+      "seo": {
+        "description": "Send a hiring request as a JSON body — it opens your mail client."
+      }
+    },
+    "/ask": {
+      "title": "Ask",
+      "description": "chat console · coming soon",
+      "seo": {
+        "description": "A chat console that answers questions about the profile — coming soon."
+      }
+    }
+  },
+  "ui": {
+    "skip": "Skip to content",
+    "focus": "focus",
+    "move": "move",
+    "send": "send",
+    "sendButton": "Send ▶",
+    "email": "email",
+    "linkedin": "linkedin",
+    "github": "github",
+    "profiles": "Profiles",
+    "theme": "theme",
+    "switchTheme": "Switch to {theme} theme",
+    "dark": "dark",
+    "light": "light",
+    "language": "Language",
+    "endpoints": "endpoints",
+    "request": "Request",
+    "endpointPath": "Endpoint path",
+    "response": "Response",
+    "rendered": "rendered",
+    "json": "json",
+    "footer": "no cookies · no analytics · content from content/{locale}/profile.json",
+    "links": "_links",
+    "all": "all",
+    "filter": "Filter",
+    "updated": "updated {date}",
+    "languages": "languages",
+    "inProgress": "in progress",
+    "shipped": "shipped",
+    "notFound": "Not Found",
+    "noSuchEndpoint": "No such endpoint.",
+    "registryKnows": "The registry knows these:",
+    "basedIn": "based in",
+    "terminal": "terminal",
+    "emailNote": "Email is the reliable channel. A subject line with the role and the location gets a faster answer.",
+    "fromTerminal": "from a terminal",
+    "cvNotes": {
+      "pdf": "two pages, A4",
+      "json": "JSON Resume v1.0.0",
+      "txt": "80 columns, ANSI",
+      "llms": "for crawlers that read"
+    },
+    "health": {
+      "leds": [
+        "backend · go / postgresql",
+        "platform · kubernetes / terraform",
+        "data · clickhouse / dbt",
+        "rust · in progress"
+      ],
+      "status": "status",
+      "uptime": "uptime",
+      "since": "since",
+      "currentRole": "current_role",
+      "learning": "learning",
+      "cvVersion": "cv_version"
+    },
+    "hire": {
+      "lead": "Edit the request body, press Send. It opens your mail client — nothing is stored here.",
+      "body": "body · application/json",
+      "badRequest": "Bad Request",
+      "accepted": "Accepted"
+    },
+    "ask": {
+      "title": "Ask — coming soon",
+      "lead": "This endpoint will be a chat console that answers questions about the profile, grounded in the same content as the other endpoints: Claude with retrieval over the CV, answering in scope only and showing which sources it used. The console is built; it is waiting for a server to run on, which this static host does not provide.",
+      "meanwhile": "Until then, the fastest way to ask something is email — a reply usually comes within a day.",
+      "unavailable": "Service Unavailable"
+    },
+    "pdf": {
+      "profile": "PROFILE",
+      "experience": "EXPERIENCE",
+      "projects": "PROJECTS",
+      "skills": "SKILLS",
+      "education": "EDUCATION",
+      "languages": "LANGUAGES"
+    },
+    "present": "present"
+  }
+}

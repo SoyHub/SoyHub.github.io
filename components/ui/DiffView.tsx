@@ -6,7 +6,11 @@ function Column({ side, sign, offset }: { side: Side; sign: "-" | "+"; offset: n
   const tone = sign === "-" ? "text-signal" : "text-verdant";
   const bg = sign === "-" ? "bg-signal-soft/60" : "bg-verdant-soft/60";
   return (
-    <div className="min-w-0" style={{ "--col-offset": `${offset}ms` } as React.CSSProperties}>
+    <div
+      dir="ltr"
+      className="min-w-0"
+      style={{ "--col-offset": `${offset}ms` } as React.CSSProperties}
+    >
       <div className="border-hair flex flex-wrap items-baseline justify-between gap-x-3 border-b px-3 py-1.5">
         <span className="text-ink font-mono text-[12px]">{side.title}</span>
         <span className="lbl">{side.lang}</span>
@@ -18,7 +22,7 @@ function Column({ side, sign, offset }: { side: Side; sign: "-" | "+"; offset: n
             className={cx("diff-line flex", bg)}
             style={{ "--i": i } as React.CSSProperties}
           >
-            <span className="text-muted w-8 shrink-0 pr-2 text-right select-none">{i + 1}</span>
+            <span className="text-muted w-8 shrink-0 pe-2 text-end select-none">{i + 1}</span>
             <span className={cx("w-4 shrink-0 select-none", tone)}>{sign}</span>
             <pre className="text-ink whitespace-pre">{line || " "}</pre>
           </li>

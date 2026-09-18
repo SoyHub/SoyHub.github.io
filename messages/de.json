@@ -1,0 +1,182 @@
+{
+  "site": {
+    "title": "Sohayb Hassan — Full-Stack-Engineer, Java / Spring Boot, React",
+    "description": "Full-Stack-Engineer — Java / Spring Boot, React Native, Kubernetes — sechs Jahre in Banken und Finanzdienstleistungen. Das Profil als API durchstöbern.",
+    "ogSubtitle": "Full-Stack-Engineer · Java / Spring Boot · React · sechs Jahre im Banking. Das Profil als API durchstöbern.",
+    "hero": {
+      "label": "Von COBOL zu Java",
+      "caption": "2020: Migration eines COBOL-Systems zur Policenauflistung nach Spring Boot. Heute: LLM-gestützte Migration, bei der der generierte Code durch differentielle Ausführung als äquivalent bewiesen wird — in Arbeit.",
+      "kicker": "diff · Policenauflistung",
+      "migrating": "migriere…",
+      "equivalent": "äquivalent",
+      "replay": "Wiederholen"
+    },
+    "easterEgg": "405 Method Not Allowed — COBOL wird migriert, nicht gelöscht.",
+    "consoleSuggestions": [
+      "Was hat er auf der Mobile-Banking-Plattform gebaut?",
+      "Führ mich durch seinen Werdegang.",
+      "Kennt er Kafka?",
+      "What is he learning right now?",
+      "هل يتحدث العربية؟",
+      "Wie funktioniert diese Konsole?"
+    ]
+  },
+  "endpoints": {
+    "/": {
+      "title": "Sohayb Hassan",
+      "description": "Index · wer, was, Links"
+    },
+    "/experience": {
+      "title": "Erfahrung",
+      "description": "vier Positionen, 2020 → heute",
+      "seo": {
+        "description": "Vier Positionen von 2020 bis heute: Mobile-Banking-Microservices und BFF, eine digitale HR-Plattform, Kunden aus Medien und Öl & Gas sowie eine Migration von COBOL nach Spring Boot.",
+        "og": "Vier Positionen, 2020 → heute: Mobile-Banking-Microservices und BFF, digitales HR, Medien, Öl & Gas, COBOL → Spring Boot."
+      }
+    },
+    "/skills": {
+      "title": "Skills",
+      "description": "sechs Gruppen, filterbar",
+      "seo": {
+        "description": "Java 17/21, Spring Boot 3, React und React Native, Kubernetes, Azure DevOps, PostgreSQL und mehr — sechs Gruppen, filterbar.",
+        "og": "Java 17/21 · Spring Boot 3 · React · React Native · Kubernetes · Azure DevOps · PostgreSQL · Kafka — sechs Gruppen, filterbar."
+      }
+    },
+    "/projects": {
+      "title": "Projekte",
+      "description": "was er in seiner Freizeit baut",
+      "seo": {
+        "description": "LLM-gestützte Legacy-Modernisierung mit Verifikation durch differentielle Ausführung und Automatisierung des Engineering-Workflows für ein Bankprogramm.",
+        "og": "LLM-gestützte Legacy-Modernisierung mit Verifikation durch differentielle Ausführung. Workflow-Automatisierung für ein Bankprogramm."
+      }
+    },
+    "/now": {
+      "title": "Jetzt",
+      "description": "diesen Monat, datiert",
+      "seo": {
+        "description": "Woran Sohayb Hassan diesen Monat arbeitet.",
+        "og": "Woran er diesen Monat arbeitet — datiert, monatlich aktualisiert."
+      }
+    },
+    "/education": {
+      "title": "Ausbildung",
+      "description": "Abschlüsse, Bootcamp, Sprachen",
+      "seo": {
+        "description": "BSc Informatik laufend an der University of the People, Powercoders-Bootcamp, vier Sprachen."
+      }
+    },
+    "/health": {
+      "title": "Status",
+      "description": "Uptime und Status-LEDs",
+      "seo": {
+        "description": "Statusboard: Uptime seit 2020, aktuelle Position, was gerade gelernt wird."
+      }
+    },
+    "/cv": {
+      "title": "Lebenslauf",
+      "description": "pdf · json · txt · curl",
+      "seo": {
+        "description": "Lebenslauf als PDF, JSON Resume oder Klartext herunterladen — oder curl /cv.txt."
+      }
+    },
+    "/contact": {
+      "title": "Kontakt",
+      "description": "E-Mail, LinkedIn, GitHub",
+      "seo": {
+        "description": "E-Mail, LinkedIn und GitHub von Sohayb Hassan."
+      }
+    },
+    "/hire": {
+      "title": "Einstellen",
+      "description": "Body senden, 202 bekommen",
+      "seo": {
+        "description": "Eine Einstellungsanfrage als JSON-Body senden — öffnet dein Mailprogramm."
+      }
+    },
+    "/ask": {
+      "title": "Fragen",
+      "description": "Chat-Konsole · demnächst",
+      "seo": {
+        "description": "Eine Chat-Konsole, die Fragen zum Profil beantwortet — demnächst."
+      }
+    }
+  },
+  "ui": {
+    "skip": "Zum Inhalt springen",
+    "focus": "Fokus",
+    "move": "bewegen",
+    "send": "senden",
+    "sendButton": "Senden ▶",
+    "email": "email",
+    "linkedin": "linkedin",
+    "github": "github",
+    "profiles": "Profile",
+    "theme": "Theme",
+    "switchTheme": "Theme wechseln: {theme}",
+    "dark": "dunkel",
+    "light": "hell",
+    "language": "Sprache",
+    "endpoints": "Endpoints",
+    "request": "Anfrage",
+    "endpointPath": "Endpoint-Pfad",
+    "response": "Antwort",
+    "rendered": "gerendert",
+    "json": "json",
+    "footer": "keine Cookies · keine Analytics · Inhalt aus content/{locale}/profile.json",
+    "links": "_links",
+    "all": "alle",
+    "filter": "Filter",
+    "updated": "aktualisiert {date}",
+    "languages": "Sprachen",
+    "inProgress": "laufend",
+    "shipped": "ausgeliefert",
+    "notFound": "Not Found",
+    "noSuchEndpoint": "Diesen Endpoint gibt es nicht.",
+    "registryKnows": "Die Registry kennt diese:",
+    "basedIn": "Standort",
+    "terminal": "Terminal",
+    "emailNote": "E-Mail ist der zuverlässige Kanal. Ein Betreff mit Position und Standort bekommt schneller eine Antwort.",
+    "fromTerminal": "aus dem Terminal",
+    "cvNotes": {
+      "pdf": "zwei Seiten, A4",
+      "json": "JSON Resume v1.0.0",
+      "txt": "80 Spalten, ANSI",
+      "llms": "für Crawler, die lesen"
+    },
+    "health": {
+      "leds": [
+        "backend · java / spring boot",
+        "frontend · react / react native",
+        "plattform · kubernetes / azure devops",
+        "ai engineering · in arbeit"
+      ],
+      "status": "status",
+      "uptime": "Uptime",
+      "since": "seit",
+      "currentRole": "current_role",
+      "learning": "lernt",
+      "cvVersion": "cv_version"
+    },
+    "hire": {
+      "lead": "Body bearbeiten, auf Senden drücken. Es öffnet sich dein Mailprogramm — hier wird nichts gespeichert.",
+      "body": "Body · application/json",
+      "badRequest": "Bad Request",
+      "accepted": "Accepted"
+    },
+    "ask": {
+      "title": "Fragen — demnächst",
+      "lead": "Dieser Endpoint wird eine Chat-Konsole, die Fragen zum Profil beantwortet, gestützt auf denselben Inhalt wie die anderen Endpoints: Claude mit Retrieval über den Lebenslauf, antwortet nur im Rahmen des Themas und zeigt die genutzten Quellen. Die Konsole ist fertig; sie wartet auf einen Server, den dieses statische Hosting nicht bietet.",
+      "meanwhile": "Bis dahin ist E-Mail der schnellste Weg für Fragen — eine Antwort kommt meist innerhalb eines Tages.",
+      "unavailable": "Service Unavailable"
+    },
+    "pdf": {
+      "profile": "PROFIL",
+      "experience": "ERFAHRUNG",
+      "projects": "PROJEKTE",
+      "skills": "SKILLS",
+      "education": "AUSBILDUNG",
+      "languages": "SPRACHEN"
+    },
+    "present": "heute"
+  }
+}

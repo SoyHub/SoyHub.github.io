@@ -1,9 +1,10 @@
 import { site } from "@/content/site";
 
 /**
- * Palettes. Pick one in content/site.json → "theme". Each has a dark and a light variant; the
- * toggle in the top bar switches between the two. The CSS variables are injected by app/layout.tsx,
- * and the same values colour the icons, the share cards and the PDF.
+ * One palette pair per theme (the components live in themes/<name>/; content/site.json picks one).
+ * Each has a dark and a light variant; the toggle in the top bar switches between the two. The CSS
+ * variables are injected by app/html-shell.tsx, and the same values colour the icons, the share
+ * cards and the PDF.
  *
  *   paper    page background          ink      headings, strong text
  *   surface  panels                   body     paragraphs
@@ -29,15 +30,24 @@ export type Palette = {
   shadow: string;
 };
 
-export type Theme = { dark: Palette; light: Palette };
+export type Theme = {
+  dark: Palette;
+  light: Palette;
+  /** the variant a first-time visitor gets */
+  mode: "dark" | "light";
+  /** body typeface; the chrome components decide the rest */
+  font: "sans" | "mono";
+};
 
 const darkShadow = "0 1px 0 rgba(0, 0, 0, 0.4), 0 12px 32px -16px rgba(0, 0, 0, 0.6)";
 const lightShadow = (ink: string) =>
   `0 1px 0 color-mix(in oklab, ${ink} 6%, transparent), 0 12px 32px -16px color-mix(in oklab, ${ink} 25%, transparent)`;
 
 export const themes: Record<string, Theme> = {
-  /** Teal-black engineering console with brass accents. The original. */
+  /** The API explorer: teal-black console, brass accents, request bar and response frames. */
   console: {
+    mode: "dark",
+    font: "sans",
     dark: {
       paper: "#0b171d",
       surface: "#122630",
@@ -72,44 +82,10 @@ export const themes: Record<string, Theme> = {
     },
   },
 
-  /** Warm cream paper and oxblood ink — reads like a printed CV. */
-  paper: {
-    dark: {
-      paper: "#1a1512",
-      surface: "#241d19",
-      sunk: "#1f1815",
-      ink: "#f1e9df",
-      body: "#cfc3b5",
-      muted: "#94867a",
-      hair: "#3d322b",
-      accent: "#d98c6b",
-      accentSoft: "#3a241c",
-      ok: "#9bb87c",
-      okSoft: "#25301c",
-      signal: "#e07a6c",
-      signalSoft: "#3b211d",
-      shadow: darkShadow,
-    },
-    light: {
-      paper: "#f4efe6",
-      surface: "#fffdf8",
-      sunk: "#ece5d8",
-      ink: "#231a14",
-      body: "#4a3d33",
-      muted: "#7d6e62",
-      hair: "#d9cfc0",
-      accent: "#8c2f1e",
-      accentSoft: "#f2dcd3",
-      ok: "#4a6b2f",
-      okSoft: "#e2ead6",
-      signal: "#b03a2e",
-      signalSoft: "#f5dad5",
-      shadow: lightShadow("#231a14"),
-    },
-  },
-
-  /** Black terminal, phosphor green, amber for the write verbs. */
+  /** The CLI: `<name> --help`, a shell prompt, command output, phosphor green on black. */
   terminal: {
+    mode: "dark",
+    font: "mono",
     dark: {
       paper: "#050705",
       surface: "#0c110c",
@@ -144,44 +120,162 @@ export const themes: Record<string, Theme> = {
     },
   },
 
-  /** Neutral slate with an electric-blue accent — the corporate one. */
-  slate: {
+  /** The API contract: a Swagger-style spec, light and clean, blue GET / green POST pills. */
+  openapi: {
+    mode: "light",
+    font: "sans",
+    light: {
+      paper: "#f7f8fa",
+      surface: "#ffffff",
+      sunk: "#eef1f5",
+      ink: "#1b2733",
+      body: "#3b4b5a",
+      muted: "#6b7a89",
+      hair: "#d6dde6",
+      accent: "#1a6fd6",
+      accentSoft: "#e3eefc",
+      ok: "#1f9d61",
+      okSoft: "#dff3e8",
+      signal: "#d1433b",
+      signalSoft: "#fbe1df",
+      shadow: lightShadow("#1b2733"),
+    },
     dark: {
-      paper: "#0f1218",
-      surface: "#171b23",
-      sunk: "#12161d",
-      ink: "#e8ebf0",
-      body: "#bcc3cf",
-      muted: "#7f8898",
-      hair: "#2a3040",
-      accent: "#5b9dff",
-      accentSoft: "#17233a",
-      ok: "#4fc08d",
-      okSoft: "#132a22",
-      signal: "#ff7a70",
-      signalSoft: "#3a1e1c",
+      paper: "#101720",
+      surface: "#182230",
+      sunk: "#131b26",
+      ink: "#e8eef5",
+      body: "#b8c4d2",
+      muted: "#7f8fa1",
+      hair: "#2a3646",
+      accent: "#61affe",
+      accentSoft: "#17304a",
+      ok: "#49cc90",
+      okSoft: "#12352a",
+      signal: "#f0605a",
+      signalSoft: "#3b1e1c",
+      shadow: darkShadow,
+    },
+  },
+
+  /** The repository: roles as commits, projects as branches, GitHub-like greys and blues. */
+  git: {
+    mode: "dark",
+    font: "sans",
+    dark: {
+      paper: "#0d1117",
+      surface: "#161b22",
+      sunk: "#0f141b",
+      ink: "#e6edf3",
+      body: "#c9d1d9",
+      muted: "#8b949e",
+      hair: "#30363d",
+      accent: "#58a6ff",
+      accentSoft: "#132a45",
+      ok: "#3fb950",
+      okSoft: "#12301b",
+      signal: "#f85149",
+      signalSoft: "#3d1a19",
       shadow: darkShadow,
     },
     light: {
-      paper: "#f0f2f5",
+      paper: "#f6f8fa",
       surface: "#ffffff",
-      sunk: "#e5e8ee",
-      ink: "#141922",
-      body: "#333c4d",
-      muted: "#67717f",
-      hair: "#cdd3dc",
-      accent: "#1f5fd1",
-      accentSoft: "#dce6fa",
-      ok: "#1e7a53",
-      okSoft: "#d6ede3",
-      signal: "#c0392b",
-      signalSoft: "#f7dad7",
-      shadow: lightShadow("#141922"),
+      sunk: "#eff2f5",
+      ink: "#1f2328",
+      body: "#3d444d",
+      muted: "#656d76",
+      hair: "#d0d7de",
+      accent: "#0969da",
+      accentSoft: "#ddf4ff",
+      ok: "#1a7f37",
+      okSoft: "#dafbe1",
+      signal: "#cf222e",
+      signalSoft: "#ffebe9",
+      shadow: lightShadow("#1f2328"),
+    },
+  },
+
+  /** The status page: components, uptime bars, metric tiles, the profile as a service. */
+  status: {
+    mode: "light",
+    font: "sans",
+    light: {
+      paper: "#f2f5f9",
+      surface: "#ffffff",
+      sunk: "#e9eef5",
+      ink: "#15202b",
+      body: "#3a4856",
+      muted: "#6e7d8c",
+      hair: "#d3dbe5",
+      accent: "#3d6fe0",
+      accentSoft: "#e4ecfb",
+      ok: "#2da44e",
+      okSoft: "#dcf3e3",
+      signal: "#e0553f",
+      signalSoft: "#fbe3de",
+      shadow: lightShadow("#15202b"),
+    },
+    dark: {
+      paper: "#0f141b",
+      surface: "#171e27",
+      sunk: "#121820",
+      ink: "#e8edf3",
+      body: "#b9c3cf",
+      muted: "#7f8c9b",
+      hair: "#2a3441",
+      accent: "#6b93ff",
+      accentSoft: "#1a2745",
+      ok: "#3fb950",
+      okSoft: "#12301b",
+      signal: "#ff6b5b",
+      signalSoft: "#3a1e1c",
+      shadow: darkShadow,
+    },
+  },
+
+  /** The character sheet: deep navy, parchment ink, gold accents, HP green; a parchment light variant. */
+  rpg: {
+    mode: "dark",
+    font: "sans",
+    dark: {
+      paper: "#0f0b1e",
+      surface: "#1b1533",
+      sunk: "#140f28",
+      ink: "#f3ecd6",
+      body: "#cfc6b2",
+      muted: "#8f8770",
+      hair: "#3a3160",
+      accent: "#f2c14e",
+      accentSoft: "#3a2f14",
+      ok: "#7ed957",
+      okSoft: "#1e3418",
+      signal: "#ff5a5a",
+      signalSoft: "#3f1c1c",
+      shadow: darkShadow,
+    },
+    light: {
+      paper: "#f1e6cc",
+      surface: "#fbf4e2",
+      sunk: "#e8dcbd",
+      ink: "#2b2113",
+      body: "#4d3f2b",
+      muted: "#7d6d52",
+      hair: "#c9b891",
+      accent: "#9a6b00",
+      accentSoft: "#f0dfae",
+      ok: "#2f7a2a",
+      okSoft: "#d9ead2",
+      signal: "#b3261e",
+      signalSoft: "#f3d6d0",
+      shadow: lightShadow("#2b2113"),
     },
   },
 };
 
 export const theme = themes[site.theme];
+/** The palette a first-time visitor sees; icons, share cards and the PDF use it too. */
+export const palette = theme[theme.mode];
 
 /** CSS custom properties for both variants; the names match `@theme inline` in globals.css. */
 export function themeCss({ dark, light }: Theme) {
@@ -202,5 +296,5 @@ export function themeCss({ dark, light }: Theme) {
       `--signal-soft:${p.signalSoft}`,
       `--shadow:${p.shadow}`,
     ].join(";");
-  return `:root,[data-theme="dark"]{color-scheme:dark;${vars(dark)}}[data-theme="light"]{color-scheme:light;${vars(light)}}`;
+  return `[data-theme="dark"]{color-scheme:dark;${vars(dark)}}[data-theme="light"]{color-scheme:light;${vars(light)}}`;
 }

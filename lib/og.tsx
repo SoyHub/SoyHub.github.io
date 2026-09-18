@@ -2,23 +2,26 @@ import { ImageResponse } from "next/og";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { SITE_HOST } from "@/lib/site";
-import { profile } from "@/content/profile";
+import { getTranslations } from "next-intl/server";
 import { endpoints, findEndpoint } from "@/content/endpoints";
-import { theme } from "@/lib/themes";
+import { palette } from "@/lib/themes";
+import { fontLocale } from "@/i18n/routing";
 
-const c = theme.dark;
+const c = palette;
 
 export const ogSize = { width: 1200, height: 630 };
 
-/** Social-preview image of an endpoint, from its content entry. */
-export function endpointOg(href: string) {
+/** Social-preview image of an endpoint page, texts from messages/<locale>.json. */
+export async function endpointOg(href: string, locale: string) {
   const e = findEndpoint(href);
-  if (!e?.seo?.og) throw new Error(`no og subtitle for ${href}`);
-  const { og } = e.seo;
-  return {
-    alt: `${e.title} — ${profile.header.name}`,
-    render: () => ogImage({ method: e.method, path: e.href, title: e.title, subtitle: og }),
-  };
+  if (!e) throw new Error(`unknown endpoint ${href}`);
+  const t = await getTranslations({ locale: fontLocale(locale), namespace: "endpoints" });
+  return ogImage({
+    method: e.method,
+    path: e.href,
+    title: t(`${href}.title`),
+    subtitle: t(`${href}.seo.og`),
+  });
 }
 
 const font = (file: string) => readFile(join(process.cwd(), "assets/fonts", file));

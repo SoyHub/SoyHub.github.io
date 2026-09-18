@@ -1,7 +1,7 @@
 import type { Profile } from "@/content/profile.types";
-import type { Endpoint } from "@/content/endpoints";
+import { endpointText, type Endpoint } from "@/content/endpoints";
 
-export const llmsTxt = (p: Profile, endpoints: Endpoint[], site: string) =>
+export const llmsTxt = (p: Profile, endpoints: Endpoint[], site: string, defaultLocale: string) =>
   [
     `# ${p.header.name}`,
     "",
@@ -11,7 +11,10 @@ export const llmsTxt = (p: Profile, endpoints: Endpoint[], site: string) =>
     "",
     ...endpoints
       .filter((e) => e.indexable)
-      .map((e) => `- [${e.title}](${site}${e.href}): ${e.description}`),
+      .map(
+        (e) =>
+          `- [${endpointText(e.href).title}](${site}/${defaultLocale}${e.href}/): ${endpointText(e.href).description}`,
+      ),
     "",
     "## Machine-readable",
     "",

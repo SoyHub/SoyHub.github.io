@@ -1,0 +1,9 @@
+{
+  "$schema": "../content/now.schema.json",
+  "updated": "2026-01",
+  "items": [
+    "Shipping the new settlement pipeline; watching the 4,000 rps number hold on real traffic.",
+    "Rust, an hour a day, through the ledger kata.",
+    "This site — an API you can browse."
+  ]
+}

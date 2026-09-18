@@ -1,0 +1,182 @@
+{
+  "site": {
+    "title": "Sohayb Hassan — Full-Stack-инженер, Java / Spring Boot, React",
+    "description": "Full-stack-инженер — Java / Spring Boot, React Native, Kubernetes — шесть лет в банках и финансовых услугах. Профиль как API.",
+    "ogSubtitle": "Full-stack-инженер · Java / Spring Boot · React · шесть лет в банковской сфере. Профиль как API.",
+    "hero": {
+      "label": "С COBOL на Java",
+      "caption": "2020: миграция системы списка полисов с COBOL на Spring Boot. Сейчас: миграция с помощью LLM, где эквивалентность сгенерированного кода доказывается дифференциальным выполнением — в работе.",
+      "kicker": "diff · список полисов",
+      "migrating": "миграция…",
+      "equivalent": "эквивалентно",
+      "replay": "Повторить"
+    },
+    "easterEgg": "405 Method Not Allowed — COBOL мигрируют, а не удаляют.",
+    "consoleSuggestions": [
+      "Что он построил на платформе мобильного банкинга?",
+      "Расскажи о его карьере.",
+      "Знает ли он Kafka?",
+      "What is he learning right now?",
+      "هل يتحدث العربية؟",
+      "Как работает эта консоль?"
+    ]
+  },
+  "endpoints": {
+    "/": {
+      "title": "Sohayb Hassan",
+      "description": "индекс · кто, что, ссылки"
+    },
+    "/experience": {
+      "title": "Опыт",
+      "description": "четыре позиции, 2020 → сейчас",
+      "seo": {
+        "description": "Четыре позиции с 2020 года по сегодня: микросервисы и BFF мобильного банкинга, цифровая HR-платформа, клиенты из медиа и нефтегаза, миграция с COBOL на Spring Boot.",
+        "og": "Четыре позиции, 2020 → сейчас: микросервисы и BFF мобильного банкинга, цифровой HR, медиа, нефтегаз, COBOL → Spring Boot."
+      }
+    },
+    "/skills": {
+      "title": "Навыки",
+      "description": "шесть групп, с фильтром",
+      "seo": {
+        "description": "Java 17/21, Spring Boot 3, React и React Native, Kubernetes, Azure DevOps, PostgreSQL и другое — шесть групп, с фильтром.",
+        "og": "Java 17/21 · Spring Boot 3 · React · React Native · Kubernetes · Azure DevOps · PostgreSQL · Kafka — шесть групп, с фильтром."
+      }
+    },
+    "/projects": {
+      "title": "Проекты",
+      "description": "что он строит в свободное время",
+      "seo": {
+        "description": "Модернизация legacy с помощью LLM с проверкой дифференциальным выполнением и автоматизация инженерного рабочего процесса для банковской программы.",
+        "og": "Модернизация legacy с помощью LLM с проверкой дифференциальным выполнением. Автоматизация рабочего процесса для банковской программы."
+      }
+    },
+    "/now": {
+      "title": "Сейчас",
+      "description": "в этом месяце, с датой",
+      "seo": {
+        "description": "Над чем Sohayb Hassan работает в этом месяце.",
+        "og": "Над чем он работает в этом месяце — с датой, обновляется ежемесячно."
+      }
+    },
+    "/education": {
+      "title": "Образование",
+      "description": "дипломы, буткемп, языки",
+      "seo": {
+        "description": "Бакалавриат по компьютерным наукам в процессе в University of the People, буткемп Powercoders, четыре языка."
+      }
+    },
+    "/health": {
+      "title": "Состояние",
+      "description": "аптайм и индикаторы состояния",
+      "seo": {
+        "description": "Панель состояния: аптайм с 2020 года, текущая позиция, что изучается сейчас."
+      }
+    },
+    "/cv": {
+      "title": "Резюме",
+      "description": "pdf · json · txt · curl",
+      "seo": {
+        "description": "Скачайте резюме в PDF, JSON Resume или обычном тексте — или curl /cv.txt."
+      }
+    },
+    "/contact": {
+      "title": "Контакты",
+      "description": "почта, LinkedIn, GitHub",
+      "seo": {
+        "description": "Почта, LinkedIn и GitHub Sohayb Hassan."
+      }
+    },
+    "/hire": {
+      "title": "Нанять",
+      "description": "отправьте тело запроса, получите 202",
+      "seo": {
+        "description": "Отправьте запрос о найме как JSON-тело — откроется ваш почтовый клиент."
+      }
+    },
+    "/ask": {
+      "title": "Спросить",
+      "description": "чат-консоль · скоро",
+      "seo": {
+        "description": "Чат-консоль, отвечающая на вопросы о профиле — скоро."
+      }
+    }
+  },
+  "ui": {
+    "skip": "Перейти к содержимому",
+    "focus": "фокус",
+    "move": "переход",
+    "send": "отправить",
+    "sendButton": "Отправить ▶",
+    "email": "email",
+    "linkedin": "linkedin",
+    "github": "github",
+    "profiles": "Профили",
+    "theme": "тема",
+    "switchTheme": "Сменить тему: {theme}",
+    "dark": "тёмная",
+    "light": "светлая",
+    "language": "Язык",
+    "endpoints": "эндпоинты",
+    "request": "Запрос",
+    "endpointPath": "Путь эндпоинта",
+    "response": "Ответ",
+    "rendered": "вид",
+    "json": "json",
+    "footer": "без cookie · без аналитики · контент из content/{locale}/profile.json",
+    "links": "_links",
+    "all": "все",
+    "filter": "Фильтр",
+    "updated": "обновлено {date}",
+    "languages": "языки",
+    "inProgress": "в процессе",
+    "shipped": "выпущено",
+    "notFound": "Not Found",
+    "noSuchEndpoint": "Такого эндпоинта нет.",
+    "registryKnows": "Реестр знает эти:",
+    "basedIn": "город",
+    "terminal": "терминал",
+    "emailNote": "Почта — надёжный канал. Тема письма с позицией и городом получит ответ быстрее.",
+    "fromTerminal": "из терминала",
+    "cvNotes": {
+      "pdf": "две страницы, A4",
+      "json": "JSON Resume v1.0.0",
+      "txt": "80 колонок, ANSI",
+      "llms": "для краулеров, которые читают"
+    },
+    "health": {
+      "leds": [
+        "backend · java / spring boot",
+        "frontend · react / react native",
+        "платформа · kubernetes / azure devops",
+        "ai engineering · в работе"
+      ],
+      "status": "status",
+      "uptime": "аптайм",
+      "since": "с",
+      "currentRole": "current_role",
+      "learning": "изучает",
+      "cvVersion": "cv_version"
+    },
+    "hire": {
+      "lead": "Отредактируйте тело запроса и нажмите Отправить. Откроется ваш почтовый клиент — здесь ничего не сохраняется.",
+      "body": "тело · application/json",
+      "badRequest": "Bad Request",
+      "accepted": "Accepted"
+    },
+    "ask": {
+      "title": "Спросить — скоро",
+      "lead": "Этот эндпоинт станет чат-консолью, отвечающей на вопросы о профиле на основе того же контента, что и остальные эндпоинты: Claude с поиском по резюме, отвечает только по теме и показывает использованные источники. Консоль готова; ей нужен сервер, которого этот статический хостинг не даёт.",
+      "meanwhile": "А пока самый быстрый способ спросить — почта; ответ обычно приходит в течение дня.",
+      "unavailable": "Service Unavailable"
+    },
+    "pdf": {
+      "profile": "ПРОФИЛЬ",
+      "experience": "ОПЫТ",
+      "projects": "ПРОЕКТЫ",
+      "skills": "НАВЫКИ",
+      "education": "ОБРАЗОВАНИЕ",
+      "languages": "ЯЗЫКИ"
+    },
+    "present": "н. в."
+  }
+}

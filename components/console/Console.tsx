@@ -5,12 +5,11 @@ import { useChatStream } from "./useChatStream";
 import { Transcript } from "./Transcript";
 import { LED } from "@/components/ui/LED";
 import { cx } from "@/lib/cx";
-import { site } from "@/content/site";
-
-const suggestions = site.consoleSuggestions;
+import { useTranslations } from "next-intl";
 
 export function Console() {
   const { messages, busy, send, stop, reset } = useChatStream();
+  const suggestions = useTranslations("site").raw("consoleSuggestions") as string[];
   const [value, setValue] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
   const endRef = useRef<HTMLDivElement>(null);
@@ -72,7 +71,7 @@ export function Console() {
           ))}
         </ul>
       ) : (
-        <div className="mt-4 max-h-[60vh] overflow-y-auto pr-1">
+        <div className="mt-4 max-h-[60vh] overflow-y-auto pe-1">
           <Transcript messages={messages} busy={busy} />
           <div ref={endRef} />
         </div>

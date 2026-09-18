@@ -1,17 +1,21 @@
 "use client";
 
 import { useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "@/i18n/navigation";
 import { endpoints } from "@/content/endpoints";
 import { useExplorer } from "./ExplorerProvider";
 
 const isTyping = (el: Element | null) =>
   !!el &&
-  (el.tagName === "INPUT" || el.tagName === "TEXTAREA" || (el as HTMLElement).isContentEditable);
+  (el.tagName === "INPUT" ||
+    el.tagName === "TEXTAREA" ||
+    el.tagName === "SELECT" ||
+    (el as HTMLElement).isContentEditable);
 
 /** `/` focuses the request bar; ↑↓ move the highlight; Enter navigates; Esc blurs. */
 export function useKeyboardNav() {
   const router = useRouter();
+  const pathname = usePathname().replace(/(.)\/$/, "$1");
   const { highlight, setHighlight, markSend, focusRequestBar } = useExplorer();
 
   useEffect(() => {
@@ -26,7 +30,9 @@ export function useKeyboardNav() {
       if (e.key === "ArrowDown" || e.key === "ArrowUp") {
         e.preventDefault();
         const n = endpoints.length;
-        setHighlight((((highlight + (e.key === "ArrowDown" ? 1 : -1)) % n) + n) % n);
+        // start from the page you are on, not from nowhere
+        const from = highlight >= 0 ? highlight : endpoints.findIndex((ep) => ep.href === pathname);
+        setHighlight((((from + (e.key === "ArrowDown" ? 1 : -1)) % n) + n) % n);
       } else if (e.key === "Enter" && highlight >= 0) {
         markSend();
         router.push(endpoints[highlight].href as never);
@@ -37,5 +43,5 @@ export function useKeyboardNav() {
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [highlight, setHighlight, markSend, focusRequestBar, router]);
+  }, [highlight, setHighlight, markSend, focusRequestBar, router, pathname]);
 }

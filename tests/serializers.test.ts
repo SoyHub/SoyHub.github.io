@@ -4,6 +4,7 @@ import { endpoints } from "@/content/endpoints";
 import { plainTextCv } from "@/lib/serializers/plain-text";
 import { jsonResume } from "@/lib/serializers/json-resume";
 import { llmsTxt } from "@/lib/serializers/llms-txt";
+import { cvLabels } from "@/lib/cv-labels";
 import { stripAnsi } from "@/lib/text/ansi";
 import { wrapText } from "@/lib/text/wrap";
 import { splitRange, toIso } from "@/lib/dates";
@@ -35,13 +36,13 @@ describe("wrap", () => {
 });
 
 describe("plain-text CV", () => {
-  const txt = plainTextCv(profile, site, { ansi: false });
+  const txt = plainTextCv(profile, site, { ansi: false, labels: cvLabels("en") });
   it("fits 80 columns", () => {
     for (const line of txt.split("\n")) expect([...line].length, line).toBeLessThanOrEqual(80);
   });
   it("has no ANSI when disabled and some when enabled", () => {
     expect(txt).not.toMatch(/\x1b/);
-    const ansi = plainTextCv(profile, site, { ansi: true });
+    const ansi = plainTextCv(profile, site, { ansi: true, labels: cvLabels("en") });
     expect(ansi).toMatch(/\x1b\[1m/);
     expect(stripAnsi(ansi)).toBe(txt);
   });
@@ -51,7 +52,7 @@ describe("plain-text CV", () => {
 });
 
 describe("JSON Resume", () => {
-  const r = jsonResume(profile, site);
+  const r = jsonResume(profile, site, "en");
   it("has ISO dates and no endDate for the current role", () => {
     const first = profile.experience[0];
     expect(r.work[0].startDate).toBe(splitRange(first.dates).start);
@@ -66,8 +67,8 @@ describe("JSON Resume", () => {
 
 describe("llms.txt", () => {
   it("lists only indexable endpoints", () => {
-    const t = llmsTxt(profile, endpoints, site);
-    expect(t).toContain(`${site}/experience`);
+    const t = llmsTxt(profile, endpoints, site, "en");
+    expect(t).toContain(`${site}/en/experience/`);
     expect(t).not.toContain(`${site}/hire`);
   });
 });

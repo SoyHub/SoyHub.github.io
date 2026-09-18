@@ -1,0 +1,248 @@
+{
+  "$schema": "../profile.schema.json",
+  "meta": {
+    "cvVersion": "2026.09"
+  },
+  "header": {
+    "name": "Sohayb Hassan",
+    "title": "全栈工程师 · Java / Spring Boot · React · 银行与金融服务",
+    "location": "意大利都灵",
+    "city": "Turin",
+    "countryCode": "IT",
+    "nationality": "埃及籍",
+    "permit": "意大利工作居留许可（可续签）",
+    "email": "sohaybmohammed@icloud.com",
+    "linkedin": "https://www.linkedin.com/in/sohayb/",
+    "github": "https://github.com/soyhub"
+  },
+  "summary": "全栈工程师，在 Capgemini 工作六年，为银行、保险公司和企业客户构建后端与 Web 系统。目前在一家零售银行的移动平台上端到端交付功能：Java 17 / Spring Boot 3 微服务、基于 JDK 21 的 OpenAPI 优先 BFF 层，以及 React Native 应用。熟悉银行集成中不那么光鲜的一面（遗留主机、BPM 流程、多环境发布流水线），也熟悉让大型多仓库项目持续运转的工具链。从把 COBOL 迁移到 Spring Boot 起步；如今把个人时间投入到 LLM 辅助的现代化工具上——输出要经过验证，而不是盲目信任。",
+  "availability": {
+    "state": "employed",
+    "label": "在职 · 接受新机会"
+  },
+  "headline": [
+    {
+      "value": "6 年",
+      "label": "Capgemini · 银行与金融服务"
+    },
+    {
+      "value": "3 层",
+      "label": "微服务 · BFF · 移动应用"
+    },
+    {
+      "value": "COBOL → Java",
+      "label": "遗留系统现代化，亲手实践"
+    }
+  ],
+  "experience": [
+    {
+      "company": "Capgemini",
+      "place": "意大利都灵",
+      "role": "顾问 – 全栈",
+      "dates": "08/2023 – present",
+      "blocks": [
+        {
+          "title": "移动银行平台 — 意大利大型零售银行集团",
+          "dates": "02/2025 – present",
+          "bullets": [
+            "在全部三层端到端交付功能：Java 17 / Spring Boot 3 微服务、基于 JDK 21 的 OpenAPI 优先 BFF，以及 React Native / Redux Toolkit 应用。",
+            "设计并构建新的银行产品流程与 REST API，从 OpenAPI 契约经 BFF 和微服务直到应用状态，包括与银行 BPM 流程的交接。",
+            "通过 SOAP 与 REST 集成遗留银行系统——支付、卡片、限额与文档处理——并配以错误处理，使主机异常时应用依然可用。",
+            "生产环境中的缓存、弹性与可观测性（Hazelcast、Resilience4j、Micrometer/Prometheus、Splunk、Dynatrace）；通过 Azure DevOps 发布流水线在多个环境部署到 Kubernetes。",
+            "构建了团队内部工具：环境与 API 集合生成器、git 守卫钩子、端到端测试框架、带回归测试集的 LLM 辅助代理工作流，以及工程手册。",
+            "指导初级开发者，并主持 Spring Boot 与 React 实践的知识分享。"
+          ]
+        },
+        {
+          "title": "数字化人力资源平台 — 企业集团",
+          "dates": "08/2023 – 02/2025",
+          "bullets": [
+            "基于 SharePoint Framework 用 React + TypeScript 构建面向员工的 Web 平台，从 Figma 原型到上线；与 HR 后端做 REST 集成；与 DevOps 团队一起搭建 Azure DevOps CI/CD。"
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Capgemini",
+      "place": "意大利都灵",
+      "role": "分析顾问 – 全栈",
+      "dates": "01/2021 – 08/2023",
+      "subtitle": "媒体、保险及油气客户",
+      "blocks": [
+        {
+          "bullets": [
+            "为一家德国付费电视台开发广告受众细分工具：用于受众定向的 React 前端、基于 Akka 的微服务与 Elasticsearch 实时细分；Mocha/Chai 测试，经 UAT 发布到生产。",
+            "油气客户：基于 Hibernate/PostgreSQL 的 Spring Boot 服务为 Angular.js 仪表盘供数；并调优其背后的数据流水线。"
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Capgemini",
+      "place": "意大利都灵",
+      "role": "实习生 – 全栈",
+      "dates": "10/2020 – 01/2021",
+      "subtitle": "保险客户",
+      "blocks": [
+        {
+          "bullets": [
+            "将一套遗留的 COBOL 保单列表系统迁移为 Java Spring Boot 服务（PostgreSQL 上的 Hibernate/JDBC），由 Angular.js 前端调用；并为团队维护 Maven/Git CI 的正常运行。"
+          ]
+        }
+      ]
+    },
+    {
+      "company": "TogoMetrics",
+      "place": "意大利都灵",
+      "role": "实习生 – 全栈",
+      "dates": "06/2020 – 09/2020",
+      "blocks": [
+        {
+          "bullets": [
+            "为一家农业科技客户开发 React + TypeScript / Node.js MVP，四人团队端到端完成。"
+          ]
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "legacy-modernisation",
+      "title": "LLM 辅助的遗留系统现代化",
+      "status": "in-progress",
+      "summary": "从 COBOL 到 Spring Boot，通过差分执行验证生成的代码：先构建证明等价性的裁判，再构建写代码的代理。个人项目。",
+      "stack": [
+        "Python",
+        "Java 17",
+        "Spring Boot 3",
+        "Claude API",
+        "tool-calling agents",
+        "evaluation harness"
+      ]
+    },
+    {
+      "id": "workflow-automation",
+      "title": "工程工作流自动化",
+      "status": "shipped",
+      "summary": "面向上述银行项目：把 LLM 代理与技能接入 git 钩子、审批门禁和回归测试集，让助手遵守团队的分支与评审规则，而不是绕过它们。",
+      "stack": ["LLM agents", "git hooks", "regression suite", "Azure DevOps"]
+    }
+  ],
+  "skills": [
+    {
+      "id": "backend",
+      "label": "后端",
+      "items": [
+        "Java 17/21",
+        "Spring Boot 3",
+        "Spring Integration",
+        "Hibernate/JPA",
+        "MapStruct",
+        "Apache CXF/JAXB (SOAP)",
+        "OpenAPI Generator",
+        "Kafka",
+        "Hazelcast",
+        "Resilience4j",
+        "jBPM client",
+        "Node.js",
+        "Akka Streams"
+      ]
+    },
+    {
+      "id": "frontend",
+      "label": "前端与移动端",
+      "items": [
+        "React",
+        "TypeScript",
+        "React Native",
+        "Redux Toolkit",
+        "SharePoint Framework (SPFx)",
+        "Bootstrap",
+        "Angular.js (legacy)"
+      ]
+    },
+    {
+      "id": "data",
+      "label": "数据",
+      "items": ["Oracle", "PostgreSQL", "SQL Server", "MongoDB", "Couchbase", "Elasticsearch"]
+    },
+    {
+      "id": "platform",
+      "label": "平台",
+      "items": [
+        "Kubernetes",
+        "Docker",
+        "Jib",
+        "Istio",
+        "Azure DevOps pipelines",
+        "GitLab CI",
+        "GitHub Actions",
+        "Jenkins",
+        "WSO2 API Manager",
+        "Splunk",
+        "Dynatrace",
+        "Prometheus/Micrometer"
+      ]
+    },
+    {
+      "id": "testing",
+      "label": "测试与实践",
+      "items": [
+        "JUnit 5",
+        "Mockito",
+        "WireMock",
+        "JaCoCo",
+        "Jest",
+        "Mocha/Chai",
+        "OpenAPI-first design",
+        "Scrum",
+        "code review",
+        "Sonar"
+      ]
+    },
+    {
+      "id": "learning",
+      "label": "正在学习",
+      "items": ["Python", "LLM APIs and tool-calling agents", "evaluation harnesses"]
+    }
+  ],
+  "education": [
+    {
+      "what": "计算机科学理学学士（在线）",
+      "where": "University of the People，加州帕萨迪纳",
+      "when": "在读"
+    },
+    {
+      "what": "计算机科学副学士",
+      "where": "University of the People",
+      "when": "2020 – 2023"
+    },
+    {
+      "what": "软件开发训练营",
+      "where": "Powercoders，都灵",
+      "when": "12/2019 – 03/2020"
+    },
+    {
+      "what": "计算机科学课程",
+      "where": "俄罗斯萨拉托夫国立大学"
+    }
+  ],
+  "languages": [
+    {
+      "name": "阿拉伯语",
+      "level": "母语"
+    },
+    {
+      "name": "英语",
+      "level": "C1"
+    },
+    {
+      "name": "意大利语",
+      "level": "C1"
+    },
+    {
+      "name": "俄语",
+      "level": "B1"
+    }
+  ]
+}

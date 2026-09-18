@@ -51,7 +51,7 @@ describe("publishing rules", () => {
 
 describe("endpoint registry ↔ pages", () => {
   it("every endpoint has a page and every page an endpoint", () => {
-    const dir = join(root, "app/(explorer)");
+    const dir = join(root, "app/[locale]/(explorer)");
     const pages = readdirSync(dir, { withFileTypes: true })
       .filter((d) => d.isDirectory() && existsSync(join(dir, d.name, "page.tsx")))
       .map((d) => `/${d.name}`)

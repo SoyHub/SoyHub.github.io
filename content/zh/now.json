@@ -1,0 +1,10 @@
+{
+  "$schema": "../now.schema.json",
+  "updated": "2026-09",
+  "items": [
+    "在一家零售银行的移动平台上交付功能：Spring Boot 3 微服务、JDK 21 BFF、React Native。",
+    "为 COBOL → Spring Boot 现代化项目构建差分执行裁判——验证器先于生成器。",
+    "Python、Claude API 与评估框架，每周几个专注小时。",
+    "这个网站：一个可以浏览的 API，和一个基于检索、可以提问的控制台。"
+  ]
+}

@@ -1,6 +1,6 @@
 import type { Profile } from "@/content/profile.types";
 
-export const jsonLd = (p: Profile, site: string) => ({
+export const jsonLd = (p: Profile, site: string, locale: string) => ({
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -28,7 +28,7 @@ export const jsonLd = (p: Profile, site: string) => ({
       url: site,
       name: p.header.name,
       author: { "@id": `${site}/#person` },
-      inLanguage: "en",
+      inLanguage: locale,
     },
   ],
 });

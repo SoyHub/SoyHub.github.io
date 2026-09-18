@@ -1,15 +1,17 @@
 "use client";
 
-import Link from "next/link";
 import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import type { SkillGroup } from "@/content/profile.types";
 import { cx } from "@/lib/cx";
 
 function Matrix({ groups, active }: { groups: SkillGroup[]; active: string | null }) {
+  const t = useTranslations("ui");
   return (
     <div>
-      <nav aria-label="Filter" className="mb-4 flex flex-wrap gap-1.5">
+      <nav aria-label={t("filter")} className="mb-4 flex flex-wrap gap-1.5">
         <Link
           href="/skills"
           scroll={false}
@@ -18,7 +20,7 @@ function Matrix({ groups, active }: { groups: SkillGroup[]; active: string | nul
             !active ? "border-brass text-brass" : "border-hair hover:border-brass",
           )}
         >
-          all
+          {t("all")}
         </Link>
         {groups.map((g) => (
           <Link

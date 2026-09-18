@@ -13,10 +13,10 @@ Everything a fork changes lives here, as JSON. Nothing outside this folder menti
 
 ## When a fact changes
 
-1. Edit `profile.json` — and `knowledge/*.md` if the chat console is on.
-2. Bump `meta.cvVersion` in `profile.json` (e.g. `2026.10`). It shows in response headers, `cv.json` and the PDF footer.
+1. Edit `<lang>/profile.json` for every language you ship — and `knowledge/*.md` if the chat console is on.
+2. Bump `meta.cvVersion` in each `profile.json` (e.g. `2026.10`). It shows in response headers, `cv.json` and the PDF footer.
 3. `pnpm test` — guards fail on unfilled `[[placeholders]]`, phone numbers, birth dates, and any name listed in `denylist.local.json`.
-4. `pnpm build` regenerates the search index, `public/cv.pdf` and the favicon.
+4. `pnpm build` regenerates the search index, the PDFs and the favicon.
 
 ## Publishing rules the tests enforce
 

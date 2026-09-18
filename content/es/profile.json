@@ -1,0 +1,248 @@
+{
+  "$schema": "../profile.schema.json",
+  "meta": {
+    "cvVersion": "2026.09"
+  },
+  "header": {
+    "name": "Sohayb Hassan",
+    "title": "Ingeniero Full-Stack · Java / Spring Boot · React · Banca y servicios financieros",
+    "location": "Turín, Italia",
+    "city": "Turin",
+    "countryCode": "IT",
+    "nationality": "Egipcio",
+    "permit": "Permiso de residencia y trabajo italiano (renovable)",
+    "email": "sohaybmohammed@icloud.com",
+    "linkedin": "https://www.linkedin.com/in/sohayb/",
+    "github": "https://github.com/soyhub"
+  },
+  "summary": "Ingeniero full-stack con seis años en Capgemini construyendo sistemas backend y web para bancos, aseguradoras y clientes corporativos. Actualmente entrega funcionalidades de extremo a extremo en la plataforma móvil de un banco minorista: microservicios Java 17 / Spring Boot 3, una capa BFF OpenAPI-first sobre JDK 21 y la app React Native. Cómodo con el lado menos vistoso de la integración bancaria (sistemas legacy, procesos BPM, pipelines de release multientorno) y con las herramientas que mantienen en marcha un programa grande con muchos repositorios. Empezó migrando COBOL a Spring Boot; hoy dedica su tiempo personal a herramientas de modernización asistidas por LLM en las que el resultado se verifica, no se da por bueno.",
+  "availability": {
+    "state": "employed",
+    "label": "contratado · abierto a ofertas"
+  },
+  "headline": [
+    {
+      "value": "6 años",
+      "label": "Capgemini · banca y servicios financieros"
+    },
+    {
+      "value": "3 capas",
+      "label": "microservicios · BFF · app móvil"
+    },
+    {
+      "value": "COBOL → Java",
+      "label": "modernización legacy, con las manos en la masa"
+    }
+  ],
+  "experience": [
+    {
+      "company": "Capgemini",
+      "place": "Turín, Italia",
+      "role": "Consultor – Full Stack",
+      "dates": "08/2023 – present",
+      "blocks": [
+        {
+          "title": "Plataforma de banca móvil — gran grupo bancario minorista italiano",
+          "dates": "02/2025 – present",
+          "bullets": [
+            "Entrega funcionalidades de extremo a extremo en las tres capas: microservicios Java 17 / Spring Boot 3, un BFF OpenAPI-first sobre JDK 21 y la app React Native / Redux Toolkit.",
+            "Diseña y construye nuevos flujos de producto bancario y APIs REST, desde el contrato OpenAPI, pasando por el BFF y el microservicio, hasta el estado de la app, incluidas las entregas a los procesos BPM del banco.",
+            "Integra sistemas bancarios legacy por SOAP y REST — pagos, tarjetas, límites y procesamiento de documentos — con el manejo de errores que mantiene la app usable cuando un sistema falla.",
+            "Caché, resiliencia y observabilidad en producción (Hazelcast, Resilience4j, Micrometer/Prometheus, Splunk, Dynatrace); despliegues en Kubernetes mediante pipelines de release de Azure DevOps en varios entornos.",
+            "Construyó las herramientas internas del equipo: generadores de entornos y colecciones de API, hooks de git de protección, arneses de pruebas end-to-end, un flujo de trabajo con agentes asistido por LLM con suite de regresión y el manual de ingeniería.",
+            "Mentoriza a desarrolladores junior y dirige sesiones de transferencia de conocimiento sobre prácticas de Spring Boot y React."
+          ]
+        },
+        {
+          "title": "Plataforma digital de RR. HH. — grupo corporativo",
+          "dates": "08/2023 – 02/2025",
+          "bullets": [
+            "Construyó la plataforma web para empleados en React + TypeScript sobre SharePoint Framework, de los prototipos en Figma a producción; integración REST con el back end de RR. HH.; CI/CD en Azure DevOps configurado junto con el equipo DevOps."
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Capgemini",
+      "place": "Turín, Italia",
+      "role": "Consultor analista – Full Stack",
+      "dates": "01/2021 – 08/2023",
+      "subtitle": "Clientes de medios, seguros y oil & gas",
+      "blocks": [
+        {
+          "bullets": [
+            "Herramienta de segmentación publicitaria para una cadena alemana de televisión de pago: front end en React para segmentar audiencias, microservicios basados en Akka y Elasticsearch para segmentación en tiempo real; pruebas Mocha/Chai, releases de UAT a producción.",
+            "Cliente de oil & gas: servicios Spring Boot sobre Hibernate/PostgreSQL que alimentan paneles Angular.js; optimización del pipeline de datos subyacente."
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Capgemini",
+      "place": "Turín, Italia",
+      "role": "Becario – Full Stack",
+      "dates": "10/2020 – 01/2021",
+      "subtitle": "Cliente de seguros",
+      "blocks": [
+        {
+          "bullets": [
+            "Migró un sistema legacy en COBOL de listado de pólizas a servicios Java Spring Boot (Hibernate/JDBC sobre PostgreSQL) consumidos por un front end Angular.js; mantuvo en marcha la CI de Maven/Git para el equipo."
+          ]
+        }
+      ]
+    },
+    {
+      "company": "TogoMetrics",
+      "place": "Turín, Italia",
+      "role": "Becario – Full Stack",
+      "dates": "06/2020 – 09/2020",
+      "blocks": [
+        {
+          "bullets": [
+            "MVP en React + TypeScript / Node.js para un cliente agrotecnológico, construido de extremo a extremo en un equipo de cuatro."
+          ]
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "legacy-modernisation",
+      "title": "Modernización legacy asistida por LLM",
+      "status": "in-progress",
+      "summary": "De COBOL a Spring Boot con verificación del código generado por ejecución diferencial: el árbitro que demuestra la equivalencia se construye antes que el agente que escribe el código. Proyecto personal.",
+      "stack": [
+        "Python",
+        "Java 17",
+        "Spring Boot 3",
+        "Claude API",
+        "tool-calling agents",
+        "evaluation harness"
+      ]
+    },
+    {
+      "id": "workflow-automation",
+      "title": "Automatización del flujo de trabajo de ingeniería",
+      "status": "shipped",
+      "summary": "Para el programa bancario anterior: agentes y skills LLM conectados a hooks de git, una puerta de aprobación y una suite de regresión, para que el asistente siga las reglas de ramas y revisión del equipo en lugar de saltárselas.",
+      "stack": ["LLM agents", "git hooks", "regression suite", "Azure DevOps"]
+    }
+  ],
+  "skills": [
+    {
+      "id": "backend",
+      "label": "Backend",
+      "items": [
+        "Java 17/21",
+        "Spring Boot 3",
+        "Spring Integration",
+        "Hibernate/JPA",
+        "MapStruct",
+        "Apache CXF/JAXB (SOAP)",
+        "OpenAPI Generator",
+        "Kafka",
+        "Hazelcast",
+        "Resilience4j",
+        "jBPM client",
+        "Node.js",
+        "Akka Streams"
+      ]
+    },
+    {
+      "id": "frontend",
+      "label": "Frontend y móvil",
+      "items": [
+        "React",
+        "TypeScript",
+        "React Native",
+        "Redux Toolkit",
+        "SharePoint Framework (SPFx)",
+        "Bootstrap",
+        "Angular.js (legacy)"
+      ]
+    },
+    {
+      "id": "data",
+      "label": "Datos",
+      "items": ["Oracle", "PostgreSQL", "SQL Server", "MongoDB", "Couchbase", "Elasticsearch"]
+    },
+    {
+      "id": "platform",
+      "label": "Plataforma",
+      "items": [
+        "Kubernetes",
+        "Docker",
+        "Jib",
+        "Istio",
+        "Azure DevOps pipelines",
+        "GitLab CI",
+        "GitHub Actions",
+        "Jenkins",
+        "WSO2 API Manager",
+        "Splunk",
+        "Dynatrace",
+        "Prometheus/Micrometer"
+      ]
+    },
+    {
+      "id": "testing",
+      "label": "Pruebas y práctica",
+      "items": [
+        "JUnit 5",
+        "Mockito",
+        "WireMock",
+        "JaCoCo",
+        "Jest",
+        "Mocha/Chai",
+        "OpenAPI-first design",
+        "Scrum",
+        "code review",
+        "Sonar"
+      ]
+    },
+    {
+      "id": "learning",
+      "label": "Aprendiendo ahora",
+      "items": ["Python", "LLM APIs and tool-calling agents", "evaluation harnesses"]
+    }
+  ],
+  "education": [
+    {
+      "what": "Grado en Informática (en línea)",
+      "where": "University of the People, Pasadena, CA",
+      "when": "en curso"
+    },
+    {
+      "what": "Associate of Science en Informática",
+      "where": "University of the People",
+      "when": "2020 – 2023"
+    },
+    {
+      "what": "Bootcamp de desarrollo de software",
+      "where": "Powercoders, Turín",
+      "when": "12/2019 – 03/2020"
+    },
+    {
+      "what": "Cursos de Informática",
+      "where": "Universidad Estatal de Sarátov, Rusia"
+    }
+  ],
+  "languages": [
+    {
+      "name": "Árabe",
+      "level": "nativo"
+    },
+    {
+      "name": "Inglés",
+      "level": "C1"
+    },
+    {
+      "name": "Italiano",
+      "level": "C1"
+    },
+    {
+      "name": "Ruso",
+      "level": "B1"
+    }
+  ]
+}

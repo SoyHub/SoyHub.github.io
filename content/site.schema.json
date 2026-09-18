@@ -7,34 +7,26 @@
     },
     "theme": {
       "type": "string",
-      "enum": ["console", "paper", "terminal", "slate"],
-      "description": "Palette, from lib/themes.ts. Dark and light variants come with it."
+      "enum": ["console", "terminal", "openapi", "git", "status", "rpg"],
+      "description": "The design: console (API explorer), terminal (CLI), openapi (Swagger spec), git (repository), status (status page), rpg (character sheet)."
     },
-    "title": {
+    "locales": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 5
+      },
+      "description": "Languages the site is built in; each needs messages/<locale>.json and content/<locale>/"
+    },
+    "defaultLocale": {
       "type": "string",
-      "description": "Home <title>; other pages use “<Page> · <name>”"
-    },
-    "description": {
-      "type": "string"
-    },
-    "ogSubtitle": {
-      "type": "string",
-      "description": "Subtitle on the home page's social-preview image"
-    },
-    "locale": {
-      "type": "string",
-      "description": "Open Graph locale, e.g. en_GB"
+      "description": "Where / redirects when the visitor's language is not available"
     },
     "hero": {
       "type": "object",
       "properties": {
-        "label": {
-          "type": "string",
-          "description": "Accessible name of the animated diff"
-        },
-        "caption": {
-          "type": "string"
-        },
         "left": {
           "type": "object",
           "properties": {
@@ -74,7 +66,7 @@
           "required": ["title", "lang", "lines"]
         }
       },
-      "required": ["label", "caption", "left", "right"]
+      "required": ["left", "right"]
     },
     "easterEgg": {
       "type": "object",
@@ -82,18 +74,9 @@
         "path": {
           "type": "string",
           "description": "Typing DELETE <path> in the request bar answers with the message"
-        },
-        "message": {
-          "type": "string"
         }
       },
-      "required": ["path", "message"]
-    },
-    "consoleSuggestions": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
+      "required": ["path"]
     },
     "endpoints": {
       "minItems": 1,
@@ -111,47 +94,16 @@
           },
           "href": {
             "type": "string",
-            "description": "The page folder under app/(explorer), e.g. /skills"
-          },
-          "title": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string",
-            "description": "One line in the endpoint list"
+            "description": "The page folder under app/[locale]/(explorer), e.g. /skills"
           },
           "indexable": {
             "type": "boolean",
             "description": "In the sitemap and llms.txt; false for form-like pages"
-          },
-          "seo": {
-            "type": "object",
-            "properties": {
-              "description": {
-                "type": "string",
-                "description": "<meta name=description> of the page"
-              },
-              "og": {
-                "description": "Subtitle of the page's social-preview image",
-                "type": "string"
-              }
-            },
-            "required": ["description"]
           }
         },
-        "required": ["method", "path", "href", "title", "description", "indexable"]
+        "required": ["method", "path", "href", "indexable"]
       }
     }
   },
-  "required": [
-    "theme",
-    "title",
-    "description",
-    "ogSubtitle",
-    "locale",
-    "hero",
-    "easterEgg",
-    "consoleSuggestions",
-    "endpoints"
-  ]
+  "required": ["theme", "locales", "defaultLocale", "hero", "easterEgg", "endpoints"]
 }

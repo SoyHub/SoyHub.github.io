@@ -3,7 +3,7 @@ import { splitRange } from "@/lib/dates";
 import { handle } from "@/lib/handle";
 
 /** JSON Resume v1.0.0 — https://jsonresume.org/schema */
-export const jsonResume = (p: Profile, site: string) => ({
+export const jsonResume = (p: Profile, site: string, locale: string) => ({
   $schema: "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   basics: {
     name: p.header.name,
@@ -45,7 +45,8 @@ export const jsonResume = (p: Profile, site: string) => ({
     ...(pr.repo ? { url: pr.repo.url } : {}),
   })),
   meta: {
-    canonical: `${site}/cv.json`,
+    canonical: `${site}/${locale}/cv.json`,
+    language: locale,
     version: p.meta.cvVersion,
     lastModified: `${p.meta.cvVersion.replace(".", "-")}-01`,
   },

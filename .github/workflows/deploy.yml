@@ -27,6 +27,11 @@ jobs:
       - id: pages
         uses: actions/configure-pages@v5
       - run: pnpm install --frozen-lockfile
+      - run: pnpm lint && pnpm typecheck && pnpm test
+      # A fresh `npm create profile-api` must build: scaffold from this checkout and build it.
+      - run: |
+          node packages/create-profile-api/index.mjs /tmp/scaffold --from . --theme git
+          cd /tmp/scaffold && pnpm install --no-frozen-lockfile && NEXT_PUBLIC_SITE_URL=https://example.github.io pnpm build
       - run: pnpm build
         env:
           # The URL GitHub Pages serves this repo on — nothing to edit for a fork.

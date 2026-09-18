@@ -1,0 +1,36 @@
+{
+  "name": "create-profile-api",
+  "version": "0.1.0",
+  "description": "Scaffold a “Profile as an API” portfolio: your CV as browsable endpoints, six designs, ten languages, static, deploys to GitHub Pages.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "create-profile-api": "index.mjs"
+  },
+  "files": [
+    "index.mjs",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SoyHub/SoyHub.github.io.git",
+    "directory": "packages/create-profile-api"
+  },
+  "homepage": "https://github.com/SoyHub/SoyHub.github.io#readme",
+  "bugs": "https://github.com/SoyHub/SoyHub.github.io/issues",
+  "keywords": [
+    "portfolio",
+    "cv",
+    "resume",
+    "template",
+    "nextjs",
+    "github-pages",
+    "static-site",
+    "create",
+    "scaffold",
+    "developer-portfolio"
+  ]
+}

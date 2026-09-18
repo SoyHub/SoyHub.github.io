@@ -1,0 +1,10 @@
+{
+  "$schema": "../now.schema.json",
+  "updated": "2026-09",
+  "items": [
+    "Rilascio di funzionalità sulla piattaforma mobile di una banca retail: microservizi Spring Boot 3, BFF JDK 21, React Native.",
+    "Costruzione dell'arbitro a esecuzione differenziale per il progetto di modernizzazione COBOL → Spring Boot: il verificatore viene prima del generatore.",
+    "Python, l'API di Claude e harness di valutazione, qualche ora concentrata a settimana.",
+    "Questo sito: un'API da esplorare e una console con retrieval a cui fare domande."
+  ]
+}

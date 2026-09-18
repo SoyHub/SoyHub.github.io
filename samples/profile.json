@@ -1,0 +1,152 @@
+{
+  "$schema": "../content/profile.schema.json",
+  "meta": {
+    "cvVersion": "2026.01"
+  },
+  "header": {
+    "name": "Alex Rivera",
+    "title": "Backend Engineer · Go / PostgreSQL · Fintech",
+    "location": "Lisbon, Portugal",
+    "city": "Lisbon",
+    "countryCode": "PT",
+    "nationality": "Portuguese",
+    "permit": "",
+    "email": "alex@example.com",
+    "linkedin": "https://www.linkedin.com/in/example/",
+    "github": "https://github.com/example"
+  },
+  "summary": "Backend engineer with five years building payment and ledger services for fintech companies. Currently owns the settlement pipeline of a card-issuing platform: Go services on PostgreSQL, Kafka between them, Kubernetes underneath. Likes boring technology, explicit error handling and tests that fail for a reason. Spends personal time on a small open-source rate limiter and on learning Rust.",
+  "availability": {
+    "state": "open",
+    "label": "employed · open to offers"
+  },
+  "headline": [
+    {
+      "value": "5 yrs",
+      "label": "fintech · payments & ledgers"
+    },
+    {
+      "value": "40 rps",
+      "label": "→ 4,000 rps on the settlement pipeline"
+    },
+    {
+      "value": "0 → 1",
+      "label": "card-issuing platform, first commit to launch"
+    }
+  ],
+  "experience": [
+    {
+      "company": "Northbank Labs",
+      "place": "Lisbon, Portugal",
+      "role": "Senior Backend Engineer",
+      "dates": "03/2023 – present",
+      "blocks": [
+        {
+          "title": "Card-issuing platform — settlement and ledger",
+          "dates": "03/2023 – present",
+          "bullets": [
+            "Own the settlement pipeline end to end: Go services, PostgreSQL with strict double-entry constraints, Kafka for the event flow between issuing, clearing and reporting.",
+            "Took throughput from 40 to 4,000 requests per second by batching writes, partitioning the ledger and moving reconciliation off the request path.",
+            "Wrote the team's runbooks and the incident review template; on-call rotation lead for two quarters.",
+            "Mentor two junior engineers; run a weekly design review."
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Paylane",
+      "place": "Porto, Portugal",
+      "role": "Backend Engineer",
+      "dates": "06/2021 – 03/2023",
+      "blocks": [
+        {
+          "bullets": [
+            "Built the merchant payouts service (Go, PostgreSQL, gRPC) and its reconciliation jobs against three acquiring banks.",
+            "Introduced contract tests between services; cut integration incidents by half over a year."
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Paylane",
+      "place": "Porto, Portugal",
+      "role": "Junior Developer",
+      "dates": "09/2020 – 06/2021",
+      "blocks": [
+        {
+          "bullets": [
+            "Maintained the internal admin tool (TypeScript, React) and the nightly reporting jobs."
+          ]
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "ratelimit",
+      "title": "ratelimit-go",
+      "status": "shipped",
+      "summary": "A small, dependency-free token-bucket rate limiter for Go with a Redis-backed mode. Used in production by two companies I know of.",
+      "stack": ["Go", "Redis"],
+      "repo": {
+        "label": "github.com/example/ratelimit-go",
+        "url": "https://github.com/example/ratelimit-go"
+      }
+    },
+    {
+      "id": "ledger-kata",
+      "title": "Double-entry ledger kata",
+      "status": "in-progress",
+      "summary": "The same ledger implemented in Go, Rust and PostgreSQL-only, with one property-based test suite proving they agree. A learning project.",
+      "stack": ["Rust", "Go", "PostgreSQL", "property-based testing"]
+    }
+  ],
+  "skills": [
+    {
+      "id": "backend",
+      "label": "Backend",
+      "items": ["Go", "PostgreSQL", "Kafka", "gRPC", "Redis", "REST", "OpenAPI"]
+    },
+    {
+      "id": "platform",
+      "label": "Platform",
+      "items": ["Kubernetes", "Docker", "Terraform", "GitHub Actions", "Grafana", "Prometheus"]
+    },
+    {
+      "id": "data",
+      "label": "Data",
+      "items": ["PostgreSQL", "ClickHouse", "dbt"]
+    },
+    {
+      "id": "practice",
+      "label": "Practice",
+      "items": ["contract testing", "incident reviews", "design docs", "on-call"]
+    },
+    {
+      "id": "learning",
+      "label": "Learning now",
+      "items": ["Rust", "property-based testing"]
+    }
+  ],
+  "education": [
+    {
+      "what": "BSc Computer Engineering",
+      "where": "University of Porto",
+      "when": "2016 – 2020"
+    }
+  ],
+  "languages": [
+    {
+      "name": "Portuguese",
+      "level": "native"
+    },
+    {
+      "name": "English",
+      "level": "C1"
+    },
+    {
+      "name": "Spanish",
+      "level": "B1"
+    }
+  ]
+}

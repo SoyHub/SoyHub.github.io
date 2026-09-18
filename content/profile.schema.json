@@ -75,6 +75,21 @@
     "summary": {
       "type": "string"
     },
+    "availability": {
+      "type": "object",
+      "properties": {
+        "state": {
+          "type": "string",
+          "enum": ["employed", "open", "available"],
+          "description": "Colours the LED: employed = steady green, open = pulsing amber, available = pulsing green"
+        },
+        "label": {
+          "type": "string",
+          "description": "Shown next to the LED, e.g. \"hired · accepting offers\""
+        }
+      },
+      "required": ["state", "label"]
+    },
     "headline": {
       "minItems": 3,
       "maxItems": 3,
@@ -242,6 +257,7 @@
     "meta",
     "header",
     "summary",
+    "availability",
     "headline",
     "experience",
     "projects",

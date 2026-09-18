@@ -1,0 +1,248 @@
+{
+  "$schema": "../profile.schema.json",
+  "meta": {
+    "cvVersion": "2026.09"
+  },
+  "header": {
+    "name": "Sohayb Hassan",
+    "title": "फ़ुल-स्टैक इंजीनियर · Java / Spring Boot · React · बैंकिंग और वित्तीय सेवाएँ",
+    "location": "टूरिन, इटली",
+    "city": "Turin",
+    "countryCode": "IT",
+    "nationality": "मिस्री",
+    "permit": "इतालवी कार्य निवास परमिट (नवीकरणीय)",
+    "email": "sohaybmohammed@icloud.com",
+    "linkedin": "https://www.linkedin.com/in/sohayb/",
+    "github": "https://github.com/soyhub"
+  },
+  "summary": "Capgemini में छह वर्षों से बैंकों, बीमा कंपनियों और कॉर्पोरेट ग्राहकों के लिए बैकएंड और वेब सिस्टम बनाने वाला फ़ुल-स्टैक इंजीनियर। फ़िलहाल एक रिटेल बैंक के मोबाइल प्लेटफ़ॉर्म पर फ़ीचर एंड-टू-एंड डिलीवर करता है: Java 17 / Spring Boot 3 माइक्रोसर्विसेज़, JDK 21 पर OpenAPI-first BFF परत और React Native ऐप। बैंकिंग इंटीग्रेशन के कम चमकीले पहलुओं (लेगेसी होस्ट, BPM प्रक्रियाएँ, कई वातावरणों वाली रिलीज़ पाइपलाइन) और उन टूल्स में सहज, जो कई रिपॉज़िटरी वाले बड़े प्रोग्राम को गतिमान रखते हैं। शुरुआत COBOL को Spring Boot में माइग्रेट करने से की; अब निजी समय LLM-सहायित आधुनिकीकरण टूल्स पर लगाता है, जहाँ आउटपुट पर भरोसा नहीं, उसकी जाँच की जाती है।",
+  "availability": {
+    "state": "employed",
+    "label": "कार्यरत · प्रस्तावों के लिए खुला"
+  },
+  "headline": [
+    {
+      "value": "6 वर्ष",
+      "label": "Capgemini · बैंकिंग और वित्तीय सेवाएँ"
+    },
+    {
+      "value": "3 परतें",
+      "label": "माइक्रोसर्विसेज़ · BFF · मोबाइल ऐप"
+    },
+    {
+      "value": "COBOL → Java",
+      "label": "लेगेसी आधुनिकीकरण, व्यावहारिक अनुभव"
+    }
+  ],
+  "experience": [
+    {
+      "company": "Capgemini",
+      "place": "टूरिन, इटली",
+      "role": "कंसल्टेंट – फ़ुल स्टैक",
+      "dates": "08/2023 – present",
+      "blocks": [
+        {
+          "title": "मोबाइल बैंकिंग प्लेटफ़ॉर्म — प्रमुख इतालवी रिटेल बैंकिंग समूह",
+          "dates": "02/2025 – present",
+          "bullets": [
+            "तीनों परतों में फ़ीचर एंड-टू-एंड डिलीवर करता है: Java 17 / Spring Boot 3 माइक्रोसर्विसेज़, JDK 21 पर OpenAPI-first BFF और React Native / Redux Toolkit ऐप।",
+            "नए बैंकिंग उत्पाद प्रवाह और REST API डिज़ाइन और निर्मित करता है — OpenAPI कॉन्ट्रैक्ट से BFF और माइक्रोसर्विस होते हुए ऐप स्टेट तक, बैंक की BPM प्रक्रियाओं को हैंड-ऑफ़ सहित।",
+            "SOAP और REST पर लेगेसी बैंकिंग सिस्टम इंटीग्रेट करता है — भुगतान, कार्ड, सीमाएँ और दस्तावेज़ प्रोसेसिंग — ऐसी एरर हैंडलिंग के साथ जो किसी होस्ट के गड़बड़ करने पर भी ऐप को उपयोगी बनाए रखती है।",
+            "प्रोडक्शन में कैशिंग, रेज़िलिएंस और ऑब्ज़र्वेबिलिटी (Hazelcast, Resilience4j, Micrometer/Prometheus, Splunk, Dynatrace); Azure DevOps रिलीज़ पाइपलाइन के ज़रिए कई वातावरणों में Kubernetes डिप्लॉयमेंट।",
+            "टीम के आंतरिक टूल बनाए: एनवायरनमेंट और API-कलेक्शन जनरेटर, git गार्ड हुक, एंड-टू-एंड टेस्ट हार्नेस, रिग्रेशन सूट वाला LLM-सहायित एजेंट वर्कफ़्लो, और इंजीनियरिंग हैंडबुक।",
+            "जूनियर डेवलपर्स का मार्गदर्शन करता है और Spring Boot व React प्रैक्टिस पर ज्ञान-हस्तांतरण सत्र चलाता है।"
+          ]
+        },
+        {
+          "title": "डिजिटल HR प्लेटफ़ॉर्म — कॉर्पोरेट समूह",
+          "dates": "08/2023 – 02/2025",
+          "bullets": [
+            "SharePoint Framework पर React + TypeScript में कर्मचारियों के लिए वेब प्लेटफ़ॉर्म बनाया, Figma प्रोटोटाइप से प्रोडक्शन तक; HR बैकएंड के साथ REST इंटीग्रेशन; DevOps टीम के साथ मिलकर Azure DevOps CI/CD सेट किया।"
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Capgemini",
+      "place": "टूरिन, इटली",
+      "role": "एनालिस्ट कंसल्टेंट – फ़ुल स्टैक",
+      "dates": "01/2021 – 08/2023",
+      "subtitle": "मीडिया, बीमा और तेल-गैस के ग्राहक",
+      "blocks": [
+        {
+          "bullets": [
+            "एक जर्मन पे-टीवी प्रसारक के लिए विज्ञापन सेगमेंटेशन टूल: ऑडियंस टार्गेटिंग के लिए React फ़्रंटएंड, रीयल-टाइम सेगमेंटेशन के लिए Akka-आधारित माइक्रोसर्विसेज़ और Elasticsearch; Mocha/Chai टेस्ट, UAT से प्रोडक्शन तक रिलीज़।",
+            "तेल-गैस ग्राहक: Hibernate/PostgreSQL पर Spring Boot सेवाएँ, जो Angular.js डैशबोर्ड को डेटा देती हैं; उनके पीछे की डेटा पाइपलाइन को ट्यून किया।"
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Capgemini",
+      "place": "टूरिन, इटली",
+      "role": "इंटर्न – फ़ुल स्टैक",
+      "dates": "10/2020 – 01/2021",
+      "subtitle": "बीमा ग्राहक",
+      "blocks": [
+        {
+          "bullets": [
+            "पॉलिसी सूची वाले लेगेसी COBOL सिस्टम को Java Spring Boot सेवाओं (PostgreSQL पर Hibernate/JDBC) में माइग्रेट किया, जिन्हें Angular.js फ़्रंटएंड उपयोग करता है; टीम के लिए Maven/Git CI चालू रखा।"
+          ]
+        }
+      ]
+    },
+    {
+      "company": "TogoMetrics",
+      "place": "टूरिन, इटली",
+      "role": "इंटर्न – फ़ुल स्टैक",
+      "dates": "06/2020 – 09/2020",
+      "blocks": [
+        {
+          "bullets": [
+            "एक एग्री-टेक ग्राहक के लिए React + TypeScript / Node.js MVP, चार लोगों की टीम में एंड-टू-एंड बनाया।"
+          ]
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "legacy-modernisation",
+      "title": "LLM-सहायित लेगेसी आधुनिकीकरण",
+      "status": "in-progress",
+      "summary": "COBOL से Spring Boot, जनरेट किए गए कोड की डिफ़रेंशियल-एक्ज़ीक्यूशन जाँच के साथ: समतुल्यता सिद्ध करने वाला रेफ़री उस एजेंट से पहले बनाया जाता है जो कोड लिखता है। निजी प्रोजेक्ट।",
+      "stack": [
+        "Python",
+        "Java 17",
+        "Spring Boot 3",
+        "Claude API",
+        "tool-calling agents",
+        "evaluation harness"
+      ]
+    },
+    {
+      "id": "workflow-automation",
+      "title": "इंजीनियरिंग वर्कफ़्लो ऑटोमेशन",
+      "status": "shipped",
+      "summary": "ऊपर वाले बैंकिंग प्रोग्राम के लिए: git हुक, अनुमोदन गेट और रिग्रेशन सूट से जुड़े LLM एजेंट और स्किल्स, ताकि असिस्टेंट टीम के ब्रांच और रिव्यू नियमों को दरकिनार करने के बजाय उनका पालन करे।",
+      "stack": ["LLM agents", "git hooks", "regression suite", "Azure DevOps"]
+    }
+  ],
+  "skills": [
+    {
+      "id": "backend",
+      "label": "बैकएंड",
+      "items": [
+        "Java 17/21",
+        "Spring Boot 3",
+        "Spring Integration",
+        "Hibernate/JPA",
+        "MapStruct",
+        "Apache CXF/JAXB (SOAP)",
+        "OpenAPI Generator",
+        "Kafka",
+        "Hazelcast",
+        "Resilience4j",
+        "jBPM client",
+        "Node.js",
+        "Akka Streams"
+      ]
+    },
+    {
+      "id": "frontend",
+      "label": "फ़्रंटएंड और मोबाइल",
+      "items": [
+        "React",
+        "TypeScript",
+        "React Native",
+        "Redux Toolkit",
+        "SharePoint Framework (SPFx)",
+        "Bootstrap",
+        "Angular.js (legacy)"
+      ]
+    },
+    {
+      "id": "data",
+      "label": "डेटा",
+      "items": ["Oracle", "PostgreSQL", "SQL Server", "MongoDB", "Couchbase", "Elasticsearch"]
+    },
+    {
+      "id": "platform",
+      "label": "प्लेटफ़ॉर्म",
+      "items": [
+        "Kubernetes",
+        "Docker",
+        "Jib",
+        "Istio",
+        "Azure DevOps pipelines",
+        "GitLab CI",
+        "GitHub Actions",
+        "Jenkins",
+        "WSO2 API Manager",
+        "Splunk",
+        "Dynatrace",
+        "Prometheus/Micrometer"
+      ]
+    },
+    {
+      "id": "testing",
+      "label": "टेस्टिंग और प्रैक्टिस",
+      "items": [
+        "JUnit 5",
+        "Mockito",
+        "WireMock",
+        "JaCoCo",
+        "Jest",
+        "Mocha/Chai",
+        "OpenAPI-first design",
+        "Scrum",
+        "code review",
+        "Sonar"
+      ]
+    },
+    {
+      "id": "learning",
+      "label": "अभी सीख रहा है",
+      "items": ["Python", "LLM APIs and tool-calling agents", "evaluation harnesses"]
+    }
+  ],
+  "education": [
+    {
+      "what": "बीएससी कंप्यूटर साइंस (ऑनलाइन)",
+      "where": "University of the People, पासाडेना, कैलिफ़ोर्निया",
+      "when": "जारी"
+    },
+    {
+      "what": "एसोसिएट ऑफ़ साइंस, कंप्यूटर साइंस",
+      "where": "University of the People",
+      "when": "2020 – 2023"
+    },
+    {
+      "what": "सॉफ़्टवेयर डेवलपमेंट बूटकैंप",
+      "where": "Powercoders, टूरिन",
+      "when": "12/2019 – 03/2020"
+    },
+    {
+      "what": "कंप्यूटर साइंस कोर्सवर्क",
+      "where": "सेराटोव स्टेट यूनिवर्सिटी, रूस"
+    }
+  ],
+  "languages": [
+    {
+      "name": "अरबी",
+      "level": "मातृभाषा"
+    },
+    {
+      "name": "अंग्रेज़ी",
+      "level": "C1"
+    },
+    {
+      "name": "इतालवी",
+      "level": "C1"
+    },
+    {
+      "name": "रूसी",
+      "level": "B1"
+    }
+  ]
+}

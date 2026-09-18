@@ -1,0 +1,3 @@
+{"q":"What did they build at Northbank Labs?","expect":["exp-northbank"]}
+{"q":"Do they know Kafka?","expect":["skills"]}
+{"q":"Who is Alex Rivera?","expect":["profile-summary"]}

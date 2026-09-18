@@ -1,0 +1,182 @@
+{
+  "site": {
+    "title": "Sohayb Hassan — फ़ुल-स्टैक इंजीनियर, Java / Spring Boot, React",
+    "description": "फ़ुल-स्टैक इंजीनियर — Java / Spring Boot, React Native, Kubernetes — बैंकिंग और वित्तीय सेवाओं में छह वर्ष। प्रोफ़ाइल को API की तरह ब्राउज़ करें।",
+    "ogSubtitle": "फ़ुल-स्टैक इंजीनियर · Java / Spring Boot · React · बैंकिंग में छह वर्ष। प्रोफ़ाइल को API की तरह ब्राउज़ करें।",
+    "hero": {
+      "label": "COBOL से Java",
+      "caption": "2020: पॉलिसी सूची वाले COBOL सिस्टम को Spring Boot में माइग्रेट किया। अब: LLM-सहायित माइग्रेशन, जहाँ जनरेट किए गए कोड की समतुल्यता डिफ़रेंशियल एक्ज़ीक्यूशन से सिद्ध होती है — जारी।",
+      "kicker": "diff · पॉलिसी सूची",
+      "migrating": "माइग्रेट हो रहा है…",
+      "equivalent": "समतुल्य",
+      "replay": "दोबारा चलाएँ"
+    },
+    "easterEgg": "405 Method Not Allowed — COBOL को माइग्रेट किया जाता है, हटाया नहीं।",
+    "consoleSuggestions": [
+      "उसने मोबाइल बैंकिंग प्लेटफ़ॉर्म पर क्या बनाया?",
+      "उसके करियर के बारे में बताइए।",
+      "क्या वह Kafka जानता है?",
+      "What is he learning right now?",
+      "هل يتحدث العربية؟",
+      "यह कंसोल कैसे काम करता है?"
+    ]
+  },
+  "endpoints": {
+    "/": {
+      "title": "Sohayb Hassan",
+      "description": "रूट इंडेक्स · कौन, क्या, लिंक"
+    },
+    "/experience": {
+      "title": "अनुभव",
+      "description": "चार भूमिकाएँ, 2020 → अब तक",
+      "seo": {
+        "description": "2020 से आज तक चार भूमिकाएँ: मोबाइल बैंकिंग माइक्रोसर्विसेज़ और BFF, एक डिजिटल HR प्लेटफ़ॉर्म, मीडिया और तेल-गैस ग्राहक, और COBOL से Spring Boot माइग्रेशन।",
+        "og": "चार भूमिकाएँ, 2020 → अब तक: मोबाइल बैंकिंग माइक्रोसर्विसेज़ और BFF, डिजिटल HR, मीडिया, तेल-गैस, COBOL → Spring Boot।"
+      }
+    },
+    "/skills": {
+      "title": "कौशल",
+      "description": "छह समूह, फ़िल्टर योग्य",
+      "seo": {
+        "description": "Java 17/21, Spring Boot 3, React और React Native, Kubernetes, Azure DevOps, PostgreSQL और अधिक — छह समूह, फ़िल्टर योग्य।",
+        "og": "Java 17/21 · Spring Boot 3 · React · React Native · Kubernetes · Azure DevOps · PostgreSQL · Kafka — छह समूह, फ़िल्टर योग्य।"
+      }
+    },
+    "/projects": {
+      "title": "प्रोजेक्ट",
+      "description": "जो वह अपने समय में बनाता है",
+      "seo": {
+        "description": "डिफ़रेंशियल-एक्ज़ीक्यूशन जाँच के साथ LLM-सहायित लेगेसी आधुनिकीकरण, और एक बैंकिंग प्रोग्राम के लिए इंजीनियरिंग वर्कफ़्लो ऑटोमेशन।",
+        "og": "डिफ़रेंशियल-एक्ज़ीक्यूशन जाँच के साथ LLM-सहायित लेगेसी आधुनिकीकरण। एक बैंकिंग प्रोग्राम के लिए वर्कफ़्लो ऑटोमेशन।"
+      }
+    },
+    "/now": {
+      "title": "अभी",
+      "description": "इस महीने, दिनांकित",
+      "seo": {
+        "description": "Sohayb Hassan इस महीने किस पर काम कर रहा है।",
+        "og": "वह इस महीने किस पर काम कर रहा है — दिनांकित, हर महीने अपडेट।"
+      }
+    },
+    "/education": {
+      "title": "शिक्षा",
+      "description": "डिग्रियाँ, बूटकैंप, भाषाएँ",
+      "seo": {
+        "description": "University of the People में बीएससी कंप्यूटर साइंस जारी, Powercoders बूटकैंप, चार भाषाएँ।"
+      }
+    },
+    "/health": {
+      "title": "स्थिति",
+      "description": "अपटाइम और स्टेटस LED",
+      "seo": {
+        "description": "स्टेटस बोर्ड: 2020 से अपटाइम, वर्तमान भूमिका, अभी क्या सीखा जा रहा है।"
+      }
+    },
+    "/cv": {
+      "title": "सीवी",
+      "description": "pdf · json · txt · curl",
+      "seo": {
+        "description": "सीवी को PDF, JSON Resume या सादे टेक्स्ट में डाउनलोड करें — या curl /cv.txt।"
+      }
+    },
+    "/contact": {
+      "title": "संपर्क",
+      "description": "ईमेल, LinkedIn, GitHub",
+      "seo": {
+        "description": "Sohayb Hassan का ईमेल, LinkedIn और GitHub।"
+      }
+    },
+    "/hire": {
+      "title": "नियुक्त करें",
+      "description": "रिक्वेस्ट बॉडी भेजें, 202 पाएँ",
+      "seo": {
+        "description": "नियुक्ति अनुरोध JSON बॉडी के रूप में भेजें — यह आपका मेल क्लाइंट खोलता है।"
+      }
+    },
+    "/ask": {
+      "title": "पूछें",
+      "description": "चैट कंसोल · जल्द आ रहा है",
+      "seo": {
+        "description": "प्रोफ़ाइल के बारे में सवालों के जवाब देने वाला चैट कंसोल — जल्द आ रहा है।"
+      }
+    }
+  },
+  "ui": {
+    "skip": "सामग्री पर जाएँ",
+    "focus": "फ़ोकस",
+    "move": "जाएँ",
+    "send": "भेजें",
+    "sendButton": "भेजें ▶",
+    "email": "email",
+    "linkedin": "linkedin",
+    "github": "github",
+    "profiles": "प्रोफ़ाइल",
+    "theme": "थीम",
+    "switchTheme": "{theme} थीम पर जाएँ",
+    "dark": "डार्क",
+    "light": "लाइट",
+    "language": "भाषा",
+    "endpoints": "एंडपॉइंट",
+    "request": "रिक्वेस्ट",
+    "endpointPath": "एंडपॉइंट पथ",
+    "response": "रिस्पॉन्स",
+    "rendered": "रेंडर",
+    "json": "json",
+    "footer": "कोई कुकी नहीं · कोई एनालिटिक्स नहीं · सामग्री content/{locale}/profile.json से",
+    "links": "_links",
+    "all": "सभी",
+    "filter": "फ़िल्टर",
+    "updated": "अपडेट {date}",
+    "languages": "भाषाएँ",
+    "inProgress": "जारी",
+    "shipped": "शिप हो चुका",
+    "notFound": "Not Found",
+    "noSuchEndpoint": "ऐसा कोई एंडपॉइंट नहीं है।",
+    "registryKnows": "रजिस्ट्री इन्हें जानती है:",
+    "basedIn": "स्थान",
+    "terminal": "टर्मिनल",
+    "emailNote": "ईमेल भरोसेमंद माध्यम है। भूमिका और स्थान वाली विषय पंक्ति पर जवाब जल्दी मिलता है।",
+    "fromTerminal": "टर्मिनल से",
+    "cvNotes": {
+      "pdf": "दो पेज, A4",
+      "json": "JSON Resume v1.0.0",
+      "txt": "80 कॉलम, ANSI",
+      "llms": "पढ़ने वाले क्रॉलर के लिए"
+    },
+    "health": {
+      "leds": [
+        "बैकएंड · java / spring boot",
+        "फ़्रंटएंड · react / react native",
+        "प्लेटफ़ॉर्म · kubernetes / azure devops",
+        "एआई इंजीनियरिंग · जारी"
+      ],
+      "status": "status",
+      "uptime": "अपटाइम",
+      "since": "से",
+      "currentRole": "current_role",
+      "learning": "सीख रहा है",
+      "cvVersion": "cv_version"
+    },
+    "hire": {
+      "lead": "रिक्वेस्ट बॉडी संपादित करें, भेजें दबाएँ। यह आपका मेल क्लाइंट खोलता है — यहाँ कुछ भी संग्रहीत नहीं होता।",
+      "body": "बॉडी · application/json",
+      "badRequest": "Bad Request",
+      "accepted": "Accepted"
+    },
+    "ask": {
+      "title": "पूछें — जल्द आ रहा है",
+      "lead": "यह एंडपॉइंट एक चैट कंसोल होगा जो प्रोफ़ाइल के बारे में सवालों के जवाब देगा, उसी सामग्री के आधार पर जिस पर बाकी एंडपॉइंट टिके हैं: सीवी पर रिट्रीवल के साथ Claude, जो केवल दायरे में जवाब देता है और इस्तेमाल किए गए स्रोत दिखाता है। कंसोल बन चुका है; उसे चलाने के लिए सर्वर की प्रतीक्षा है, जो यह स्टैटिक होस्ट उपलब्ध नहीं कराता।",
+      "meanwhile": "तब तक कुछ पूछने का सबसे तेज़ तरीका ईमेल है — जवाब आमतौर पर एक दिन में आ जाता है।",
+      "unavailable": "Service Unavailable"
+    },
+    "pdf": {
+      "profile": "प्रोफ़ाइल",
+      "experience": "अनुभव",
+      "projects": "प्रोजेक्ट",
+      "skills": "कौशल",
+      "education": "शिक्षा",
+      "languages": "भाषाएँ"
+    },
+    "present": "वर्तमान"
+  }
+}

@@ -2,9 +2,9 @@ import { ImageResponse } from "next/og";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { profile } from "@/content/profile";
-import { theme } from "@/lib/themes";
+import { palette } from "@/lib/themes";
 
-const c = theme.dark;
+const c = palette;
 
 /** One design for every icon size: a dark tile, the initial in brass, a prompt chevron in green. */
 export function iconMark(size: number) {

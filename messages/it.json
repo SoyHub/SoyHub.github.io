@@ -1,0 +1,182 @@
+{
+  "site": {
+    "title": "Sohayb Hassan — Full-Stack Engineer, Java / Spring Boot, React",
+    "description": "Full-stack engineer — Java / Spring Boot, React Native, Kubernetes — sei anni nel banking e nei servizi finanziari. Esplora il profilo come un'API.",
+    "ogSubtitle": "Full-stack engineer · Java / Spring Boot · React · sei anni nel banking. Esplora il profilo come un'API.",
+    "hero": {
+      "label": "Da COBOL a Java",
+      "caption": "2020: migrazione di un sistema COBOL di elenco polizze verso Spring Boot. Oggi: migrazione assistita da LLM in cui il codice generato è dimostrato equivalente per esecuzione differenziale — in corso.",
+      "kicker": "diff · elenco polizze",
+      "migrating": "migrazione…",
+      "equivalent": "equivalente",
+      "replay": "Ripeti"
+    },
+    "easterEgg": "405 Method Not Allowed — il COBOL si migra, non si cancella.",
+    "consoleSuggestions": [
+      "Cosa ha costruito sulla piattaforma di mobile banking?",
+      "Raccontami il suo percorso.",
+      "Conosce Kafka?",
+      "What is he learning right now?",
+      "هل يتحدث العربية؟",
+      "Come funziona questa console?"
+    ]
+  },
+  "endpoints": {
+    "/": {
+      "title": "Sohayb Hassan",
+      "description": "indice · chi, cosa, link"
+    },
+    "/experience": {
+      "title": "Esperienza",
+      "description": "quattro ruoli, 2020 → oggi",
+      "seo": {
+        "description": "Quattro ruoli dal 2020 a oggi: microservizi e BFF di mobile banking, una piattaforma HR digitale, clienti media e oil & gas, e una migrazione da COBOL a Spring Boot.",
+        "og": "Quattro ruoli, 2020 → oggi: microservizi e BFF di mobile banking, HR digitale, media, oil & gas, COBOL → Spring Boot."
+      }
+    },
+    "/skills": {
+      "title": "Competenze",
+      "description": "sei gruppi, filtrabili",
+      "seo": {
+        "description": "Java 17/21, Spring Boot 3, React e React Native, Kubernetes, Azure DevOps, PostgreSQL e altro — sei gruppi, filtrabili.",
+        "og": "Java 17/21 · Spring Boot 3 · React · React Native · Kubernetes · Azure DevOps · PostgreSQL · Kafka — sei gruppi, filtrabili."
+      }
+    },
+    "/projects": {
+      "title": "Progetti",
+      "description": "cosa costruisce nel tempo libero",
+      "seo": {
+        "description": "Modernizzazione legacy assistita da LLM con verifica per esecuzione differenziale, e automazione del workflow di ingegneria per un programma bancario.",
+        "og": "Modernizzazione legacy assistita da LLM con verifica per esecuzione differenziale. Automazione del workflow per un programma bancario."
+      }
+    },
+    "/now": {
+      "title": "Adesso",
+      "description": "questo mese, con data",
+      "seo": {
+        "description": "Su cosa lavora Sohayb Hassan questo mese.",
+        "og": "Su cosa lavora questo mese — con data, aggiornato mensilmente."
+      }
+    },
+    "/education": {
+      "title": "Formazione",
+      "description": "titoli, bootcamp, lingue",
+      "seo": {
+        "description": "Laurea in Informatica in corso alla University of the People, bootcamp Powercoders, quattro lingue."
+      }
+    },
+    "/health": {
+      "title": "Stato",
+      "description": "uptime e LED di stato",
+      "seo": {
+        "description": "Pannello di stato: uptime dal 2020, ruolo attuale, cosa sta imparando adesso."
+      }
+    },
+    "/cv": {
+      "title": "CV",
+      "description": "pdf · json · txt · curl",
+      "seo": {
+        "description": "Scarica il CV in PDF, JSON Resume o testo semplice — oppure curl /cv.txt."
+      }
+    },
+    "/contact": {
+      "title": "Contatti",
+      "description": "email, LinkedIn, GitHub",
+      "seo": {
+        "description": "Email, LinkedIn e GitHub di Sohayb Hassan."
+      }
+    },
+    "/hire": {
+      "title": "Assumi",
+      "description": "invia un body, ricevi un 202",
+      "seo": {
+        "description": "Invia una richiesta di assunzione come body JSON — apre il tuo client di posta."
+      }
+    },
+    "/ask": {
+      "title": "Chiedi",
+      "description": "console chat · in arrivo",
+      "seo": {
+        "description": "Una console chat che risponde a domande sul profilo — in arrivo."
+      }
+    }
+  },
+  "ui": {
+    "skip": "Vai al contenuto",
+    "focus": "focus",
+    "move": "sposta",
+    "send": "invia",
+    "sendButton": "Invia ▶",
+    "email": "email",
+    "linkedin": "linkedin",
+    "github": "github",
+    "profiles": "Profili",
+    "theme": "tema",
+    "switchTheme": "Passa al tema {theme}",
+    "dark": "scuro",
+    "light": "chiaro",
+    "language": "Lingua",
+    "endpoints": "endpoint",
+    "request": "Richiesta",
+    "endpointPath": "Percorso dell'endpoint",
+    "response": "Risposta",
+    "rendered": "resa",
+    "json": "json",
+    "footer": "niente cookie · niente analytics · contenuti da content/{locale}/profile.json",
+    "links": "_links",
+    "all": "tutte",
+    "filter": "Filtro",
+    "updated": "aggiornato {date}",
+    "languages": "lingue",
+    "inProgress": "in corso",
+    "shipped": "rilasciato",
+    "notFound": "Not Found",
+    "noSuchEndpoint": "Endpoint inesistente.",
+    "registryKnows": "Il registro conosce questi:",
+    "basedIn": "sede",
+    "terminal": "terminale",
+    "emailNote": "L'email è il canale affidabile. Un oggetto con ruolo e sede ottiene una risposta più rapida.",
+    "fromTerminal": "da un terminale",
+    "cvNotes": {
+      "pdf": "due pagine, A4",
+      "json": "JSON Resume v1.0.0",
+      "txt": "80 colonne, ANSI",
+      "llms": "per i crawler che leggono"
+    },
+    "health": {
+      "leds": [
+        "backend · java / spring boot",
+        "frontend · react / react native",
+        "piattaforma · kubernetes / azure devops",
+        "ai engineering · in corso"
+      ],
+      "status": "status",
+      "uptime": "uptime",
+      "since": "dal",
+      "currentRole": "current_role",
+      "learning": "in apprendimento",
+      "cvVersion": "cv_version"
+    },
+    "hire": {
+      "lead": "Modifica il body della richiesta e premi Invia. Si apre il tuo client di posta — qui non viene salvato nulla.",
+      "body": "body · application/json",
+      "badRequest": "Bad Request",
+      "accepted": "Accepted"
+    },
+    "ask": {
+      "title": "Chiedi — in arrivo",
+      "lead": "Questo endpoint sarà una console chat che risponde a domande sul profilo, basata sugli stessi contenuti degli altri endpoint: Claude con retrieval sul CV, che risponde solo in ambito e mostra le fonti usate. La console è pronta; aspetta un server su cui girare, che questo hosting statico non offre.",
+      "meanwhile": "Nel frattempo il modo più rapido per chiedere qualcosa è l'email — di solito la risposta arriva entro un giorno.",
+      "unavailable": "Service Unavailable"
+    },
+    "pdf": {
+      "profile": "PROFILO",
+      "experience": "ESPERIENZA",
+      "projects": "PROGETTI",
+      "skills": "COMPETENZE",
+      "education": "FORMAZIONE",
+      "languages": "LINGUE"
+    },
+    "present": "oggi"
+  }
+}

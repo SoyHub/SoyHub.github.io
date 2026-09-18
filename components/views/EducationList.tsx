@@ -1,9 +1,13 @@
-import { profile } from "@/content/profile";
+import { getLocale, getTranslations } from "next-intl/server";
+import { getProfile } from "@/content";
 
-export function EducationList() {
+export async function EducationList() {
+  const locale = await getLocale();
+  const profile = getProfile(locale);
+  const t = await getTranslations();
   return (
     <div>
-      <h1 className="text-ink text-[15px] font-semibold">Education</h1>
+      <h1 className="text-ink text-[15px] font-semibold">{t("endpoints./education.title")}</h1>
       <ul className="divide-hair mt-3 divide-y">
         {profile.education.map((e) => (
           <li key={e.what} className="flex flex-wrap items-baseline justify-between gap-x-4 py-2">
@@ -15,7 +19,7 @@ export function EducationList() {
           </li>
         ))}
       </ul>
-      <h2 className="lbl mt-6">languages</h2>
+      <h2 className="lbl mt-6">{t("ui.languages")}</h2>
       <ul className="mt-2 flex flex-wrap gap-1.5">
         {profile.languages.map((l) => (
           <li

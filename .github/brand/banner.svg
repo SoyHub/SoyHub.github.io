@@ -13,11 +13,11 @@
   <text x="32.0" y="180.0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.4" fill="#7d949d">200 OK</text>
 </g>
 <text x="316" y="128" font-family="Georgia, 'Times New Roman', serif" font-size="60" font-weight="600" fill="#e6ecee">Profile as an API</text>
-<text x="318" y="172" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="20" fill="#7d949d">A portfolio template where every section of your CV is an endpoint.</text>
-<text x="318" y="202" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="20" fill="#7d949d">Static export · SEO-ready · deploys to GitHub Pages on push.</text>
+<text x="318" y="172" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="20" fill="#7d949d">Your CV as a browsable API. Six designs, ten languages, one JSON file.</text>
+<text x="318" y="202" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="20" fill="#7d949d">Static · SEO-ready · npm create profile-api · GitHub Pages in one push.</text>
 <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="16" transform="translate(318,250)">
   <rect x="-1" y="-18" width="66" height="26" fill="#172c24" stroke="#6fb08d" stroke-opacity="0.4"/>
   <text x="8" y="0" fill="#6fb08d">200 OK</text>
-  <text x="82" y="0" fill="#7d949d">content-type: text/html  ·  x-source: content/profile.ts</text>
+  <text x="82" y="0" fill="#7d949d">content-type: text/html  ·  x-source: content/en/profile.json</text>
 </g>
 </svg>

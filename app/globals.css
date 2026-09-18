@@ -1,26 +1,150 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/* Palette: dark by default, light via [data-theme="light"]. */
+:root,
+[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #0b171d;
+  --surface: #122630;
+  --sunk: #0e1f27;
+  --ink: #e6ecee;
+  --body: #b9c8ce;
+  --muted: #7d949d;
+  --hair: #24404c;
+  --brass: #d5a93f;
+  --brass-soft: #2e2716;
+  --verdant: #6fb08d;
+  --verdant-soft: #172c24;
+  --signal: #e3796a;
+  --signal-soft: #33201d;
+  --shadow: 0 1px 0 rgba(0, 0, 0, 0.4), 0 12px 32px -16px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --paper: #edf0f1;
+  --surface: #ffffff;
+  --sunk: #e3e8ea;
+  --ink: #10222b;
+  --body: #2c424e;
+  --muted: #61757f;
+  --hair: #cbd5d9;
+  --brass: #8f6a1b;
+  --brass-soft: #ebdfc4;
+  --verdant: #2c6349;
+  --verdant-soft: #d8e7df;
+  --signal: #a8332a;
+  --signal-soft: #f2dcd9;
+  --shadow: 0 1px 0 rgba(16, 34, 43, 0.06), 0 12px 32px -16px rgba(16, 34, 43, 0.25);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-paper: var(--paper);
+  --color-surface: var(--surface);
+  --color-sunk: var(--sunk);
+  --color-ink: var(--ink);
+  --color-body: var(--body);
+  --color-muted: var(--muted);
+  --color-hair: var(--hair);
+  --color-brass: var(--brass);
+  --color-brass-soft: var(--brass-soft);
+  --color-verdant: var(--verdant);
+  --color-verdant-soft: var(--verdant-soft);
+  --color-signal: var(--signal);
+  --color-signal-soft: var(--signal-soft);
+  --font-sans: var(--font-plex-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, "SF Mono", Menlo, monospace;
+  --font-serif: var(--font-plex-serif), Georgia, serif;
+  --radius-sm: 2px;
+  --shadow-panel: var(--shadow);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  background: var(--paper);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(color-mix(in oklab, var(--hair) 40%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in oklab, var(--hair) 40%, transparent) 1px, transparent 1px);
+  background-size: 24px 24px;
+  color: var(--body);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--brass);
+  color: var(--paper);
+}
+
+:focus-visible {
+  outline: 2px solid var(--brass);
+  outline-offset: 2px;
+}
+
+/* Mono uppercase label, the console's typographic unit. */
+.lbl {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* Diff reveal: each line carries --i; left column first, then right. Without motion the
+   final state shows: lines visible, "equivalent" chip, no "migrating" LED. */
+.diff-status-busy {
+  display: none;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .diff-anim .diff-line {
+    opacity: 0;
+    transform: translateY(4px);
+    animation: diff-in 260ms ease-out forwards;
+    animation-delay: calc(var(--i) * 90ms + var(--col-offset, 0ms));
+  }
+  .diff-anim .diff-status-busy {
+    display: inline-flex;
+    animation: fade-swap 1ms linear forwards;
+    animation-delay: var(--diff-total, 2400ms);
+  }
+  .diff-anim .diff-status-ok {
+    opacity: 0;
+    animation: fade-in 200ms ease-out forwards;
+    animation-delay: var(--diff-total, 2400ms);
+  }
+  .led-busy {
+    animation: led-pulse 1.2s ease-in-out infinite;
+  }
+}
+
+@keyframes diff-in {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade-swap {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes led-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
 }

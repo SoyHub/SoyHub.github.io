@@ -1,0 +1,27 @@
+{"q": "What did he build on the mobile banking platform?", "expect": ["exp-bank-overview", "exp-bank-legacy-integration"]}
+{"q": "Walk me through his career", "expect": ["exp-capgemini-overview"]}
+{"q": "Does he know Kafka?", "expect": ["skills-backend"]}
+{"q": "Which databases has he used?", "expect": ["skills-data"]}
+{"q": "Has he worked with Kubernetes?", "expect": ["skills-platform", "exp-bank-platform-observability"]}
+{"q": "What is he learning right now?", "expect": ["skills-learning-now", "meta-now"]}
+{"q": "Tell me about the COBOL migration", "expect": ["exp-cobol-migration", "proj-legacy-modernisation"]}
+{"q": "What is his personal project?", "expect": ["proj-legacy-modernisation"]}
+{"q": "How does this chatbot work?", "expect": ["meta-bot"]}
+{"q": "How can I contact him?", "expect": ["meta-contact"]}
+{"q": "What languages does he speak?", "expect": ["profile-languages"]}
+{"q": "Where is he based?", "expect": ["profile-location-eligibility"]}
+{"q": "What did he do with SOAP and legacy hosts?", "expect": ["exp-bank-legacy-integration"]}
+{"q": "Does he mentor people?", "expect": ["exp-bank-mentoring"]}
+{"q": "What did he build for the HR platform?", "expect": ["exp-hr-platform"]}
+{"q": "Experience with Elasticsearch?", "expect": ["skills-data", "exp-pay-tv-segmentation"]}
+{"q": "What was his first job?", "expect": ["exp-togometrics", "edu-powercoders"]}
+{"q": "What degree does he have?", "expect": ["edu-uopeople"]}
+{"q": "Which testing frameworks does he use?", "expect": ["skills-testing-practice"]}
+{"q": "What React Native work has he done?", "expect": ["exp-bank-overview", "skills-frontend-mobile"]}
+{"q": "How is this website built?", "expect": ["proj-this-site"]}
+{"q": "What about observability and monitoring?", "expect": ["exp-bank-platform-observability", "skills-platform"]}
+{"q": "Has he used LLM agents at work?", "expect": ["exp-bank-tooling", "proj-workflow-automation"]}
+{"q": "Cosa sta imparando adesso?", "expect": ["skills-learning-now", "meta-now"]}
+{"q": "Che esperienza ha con Spring Boot?", "expect": ["skills-backend", "exp-bank-overview"]}
+{"q": "هل يتحدث العربية؟", "expect": ["profile-languages"]}
+{"q": "What will this bot refuse to answer?", "expect": ["meta-scope-policy"]}

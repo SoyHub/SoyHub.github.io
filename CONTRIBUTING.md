@@ -37,10 +37,14 @@ or `messages/` — the tests enforce it. Describe clients by sector.
 ## Publishing the scaffolder
 
 `packages/create-mycv` has no dependencies and fetches the `main` tarball at run time, so
-it only needs a new version when its own script changes:
+it only needs a new version when its own script or README changes. Bump the version first — both
+registries refuse a version they already have:
 
 ```
 cd packages/create-mycv
-npm version patch
-npm publish
+npm version patch          # updates package.json; commit it
+npm publish                # npmjs.org — `npm create mycv`
 ```
+
+A GitHub release then mirrors the same version to GitHub Packages as `@soyhub/create-mycv`
+(`.github/workflows/github-packages.yml`); it can also be run by hand from the Actions tab.

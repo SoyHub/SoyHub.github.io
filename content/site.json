@@ -3,6 +3,9 @@
   "theme": "console",
   "locales": ["en", "it", "ar", "es", "fr", "de", "pt", "ru", "hi", "zh"],
   "defaultLocale": "en",
+  "verification": {
+    "google": "IpJ0stTDix34LLJi-NnT-aRt4PFs4-hUaePvudfsu78"
+  },
   "hero": {
     "left": {
       "title": "POLICY-LIST.cbl",

@@ -3,6 +3,7 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { getProfile } from "@/content";
+import { site } from "@/content/site";
 import { routing, rtl } from "@/i18n/routing";
 import { SITE_URL } from "@/lib/site";
 import { languageAlternates } from "@/lib/seo";
@@ -29,6 +30,10 @@ export async function generateMetadata({ params }: LayoutProps<"/[locale]">): Pr
     },
     twitter: { card: "summary_large_image" },
     robots: { index: true, follow: true },
+    verification: {
+      google: site.verification?.google,
+      other: site.verification?.bing ? { "msvalidate.01": site.verification.bing } : undefined,
+    },
     alternates: { canonical: `/${locale}/`, languages: languageAlternates("/") },
   };
 }

@@ -24,6 +24,18 @@
       "type": "string",
       "description": "Where / redirects when the visitor's language is not available"
     },
+    "verification": {
+      "description": "Search Console / Webmaster Tools HTML-tag tokens; rendered as <meta> on every page",
+      "type": "object",
+      "properties": {
+        "google": {
+          "type": "string"
+        },
+        "bing": {
+          "type": "string"
+        }
+      }
+    },
     "hero": {
       "type": "object",
       "properties": {

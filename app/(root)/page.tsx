@@ -1,11 +1,8 @@
 import type { Metadata } from "next";
-import { site } from "@/content/site";
 import { LocaleRedirect } from "@/components/LocaleRedirect";
+import { shareMetadata } from "@/lib/share";
 
-export const metadata: Metadata = {
-  robots: { index: false, follow: true },
-  alternates: { canonical: `/${site.defaultLocale}/` },
-};
+export const metadata: Metadata = shareMetadata();
 
 export default function Root() {
   return <LocaleRedirect />;

@@ -95,6 +95,10 @@ export const SiteSchema = z.object({
   defaultLocale: z
     .string()
     .describe("Where / redirects when the visitor's language is not available"),
+  verification: z
+    .object({ google: z.string().optional(), bing: z.string().optional() })
+    .optional()
+    .describe("Search Console / Webmaster Tools HTML-tag tokens; rendered as <meta> on every page"),
   hero: z.object({ left: diffSide, right: diffSide }),
   easterEgg: z.object({
     path: z.string().describe("Typing DELETE <path> in the request bar answers with the message"),
